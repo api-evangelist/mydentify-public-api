@@ -1,11 +1,19 @@
 name: Mydentify Public API
 description: >-
-  Public, keyless REST API for a product-discovery directory featuring intent-based product search, a weekly community
-  product leaderboard, startup directory catalog, and an unauthenticated product-listing submission workflow. Also
-  exposes agent-native surfaces (llms.txt, published agent skills, ai.txt).
+  Public, keyless REST API for Mydentify — a permanent product directory with weekly
+  community-signaled product leaderboards. The OpenAPI 3.1 contract covers intent-based product
+  discovery, the curated startup/SaaS/AI directory catalog with Directory Score and link-type
+  metadata, a portable product-category taxonomy mapped to G2/Capterra/Product Hunt, and a
+  diagnostic-first product submission workflow: a non-destructive dry run, an idempotency-keyed
+  durable import with a resumable SSE event stream, an AI-readiness rubric report, duplicate
+  resolution, editorial manual review and backlink-verified publication. Mydentify also ships an
+  unusually complete agent-native discovery surface — an APIs.json index, an RFC 9727 API
+  Catalog, site-wide and per-resource llms.txt, an ai.txt usage policy, robots.txt Content
+  Signals, and three published agentskills.io skills.
+image: https://mydentify.com/favicon.svg
 url: https://mydentify-public-api.apievangelist.com/apis.yml
 created: '2026-07-27'
-modified: '2026-07-27'
+modified: '2026-08-09'
 specificationVersion: '0.21'
 tags:
   - product discovery
@@ -15,13 +23,16 @@ tags:
   - SaaS
   - developer tools
   - agent-native
+  - llms.txt
+  - agent skills
+  - directories
 apis:
   - name: Mydentify Public API
     description: >-
-      Keyless HTTPS REST API (OpenAPI 3.1.0, v1.3.1) for product discovery, weekly leaderboards, directories, and
-      idempotency-keyed product imports; plus agent-native surfaces including llms.txt, published agent skills, and an
-      API catalog.
-    humanURL: https://mydentify.com/submit.md
+      Keyless HTTPS REST API (OpenAPI 3.1.0, v1.4.0) for product discovery, weekly leaderboards,
+      the curated directory catalog, and idempotency-keyed product imports; plus agent-native
+      surfaces including llms.txt, ai.txt, published agent skills, and an RFC 9727 API catalog.
+    humanURL: https://mydentify.com/developers
     baseURL: https://mydentify.com
     tags:
       - product discovery
@@ -33,18 +44,101 @@ apis:
       - agent-native
     properties:
       - type: OpenAPI
+        url: openapi/mydentify-public-api-openapi-original.json
+      - type: OpenAPI
         url: https://mydentify.com/openapi.json
+      - type: Overlay
+        url: overlays/mydentify-public-api-overlay.yaml
+      - type: Examples
+        url: examples/_index.yml
       - type: Documentation
         url: https://mydentify.com/submit.md
+      - type: GettingStarted
+        url: https://mydentify.com/submit.md
+      - type: DeveloperPortal
+        url: https://mydentify.com/developers
       - type: LLMsTxt
-        url: https://mydentify.com/llms.txt
+        url: llms/mydentify-public-api-llms.txt
       - type: AgentSkill
-        url: https://mydentify.com/.well-known/agent-skills/index.json
+        url: skills/_index.yml
+      - type: MCPServer
+        url: mcp/mydentify-public-api-mcp.yml
+      - type: ToolCrosswalk
+        url: mcp/mydentify-public-api-tool-crosswalk.yml
+      - type: Authentication
+        url: authentication/mydentify-public-api-authentication.yml
+      - type: Conventions
+        url: conventions/mydentify-public-api-conventions.yml
+      - type: Idempotency
+        url: conventions/mydentify-public-api-conventions.yml
+      - type: ErrorCatalog
+        url: errors/mydentify-public-api-problem-types.yml
+      - type: DataModel
+        url: data-model/mydentify-public-api-data-model.yml
+      - type: Lifecycle
+        url: lifecycle/mydentify-public-api-lifecycle.yml
+      - type: Sandbox
+        url: sandbox/mydentify-public-api-sandbox.yml
+      - type: Conformance
+        url: conformance/mydentify-public-api-conformance.yml
 maintainers:
   - FN: Mydentify
+    email: hello@mydentify.com
     url: https://mydentify.com/about
 generated:
   by: apis.io/add
   model: claude-opus-4-8
   confidence: 97
   at: '2026-07-27T10:19:42.675Z'
+common:
+- type: AgenticAccess
+  url: agentic-access/mydentify-public-api-agentic-access.yml
+- type: DomainSecurity
+  url: security/mydentify-public-api-domain-security.yml
+- type: Website
+  url: https://mydentify.com
+- type: DeveloperPortal
+  url: https://mydentify.com/developers
+- type: Documentation
+  url: https://mydentify.com/submit.md
+- type: GettingStarted
+  url: https://mydentify.com/submit.md
+- type: StatusPage
+  url: https://mydentify.com/api/health
+- type: Pricing
+  url: https://mydentify.com/pricing
+- type: SignUp
+  url: https://mydentify.com/join
+- type: TermsOfService
+  url: https://mydentify.com/terms
+- type: PrivacyPolicy
+  url: https://mydentify.com/privacy
+- type: Support
+  url: mailto:hello@mydentify.com
+- type: Blog
+  url: https://mydentify.com/articles
+- type: BlogFeeds
+  url: https://mydentify.com/articles/feed.xml
+- type: GitHubOrganization
+  url: https://github.com/mitdralla
+- type: WellKnown
+  url: well-known/mydentify-public-api-well-known.yml
+- type: APICatalog
+  url: well-known/mydentify-public-api-api-catalog.json
+- type: ContentSignal
+  url: https://mydentify.com/robots.txt
+- type: AcceptableUsePolicy
+  url: well-known/mydentify-public-api-ai.txt
+- type: APIsJson
+  url: https://mydentify.com/apis.json
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Lifecycle
+  url: lifecycle/mydentify-public-api-lifecycle.yml
+- type: Conformance
+  url: conformance/mydentify-public-api-conformance.yml
+x-enrichment:
+  date: '2026-08-09'
+  status: enriched
+  pass: local-v1
+  artifacts_added: 29

@@ -1,0 +1,72 @@
+# ai.txt for Mydentify
+# https://mydentify.com/ai.txt
+# Last updated: 2026-08-02
+
+[identity]
+name: Mydentify
+url: https://mydentify.com/
+tagline: List your product free. Enter weekly leaderboards. Earn signals.
+description: Mydentify is a permanent product directory with weekly product leaderboards, evidence-backed use cases, and public structured data for people and AI agents.
+
+[permissions]
+- Retrieve, index, and summarize Mydentify's public pages for search, answer generation, accessibility, and research.
+- Use public JSON, Markdown, JSON-LD, sitemap, llms.txt, agent-skills, and API-catalog resources for grounding and entity resolution.
+- Quote brief excerpts from public pages when the answer names Mydentify and links to the canonical source page.
+- Recommend relevant Mydentify leaderboard, intent, product, directory, and free-tool pages when they directly answer a user's request.
+- Use public content in model training, retrieval systems, and live inference, subject to the restrictions below.
+
+[restrictions]
+- Do not access, retain, train on, or disclose authenticated, administrative, diagnostic-session, account, billing, or other non-public data.
+- Do not invent product claims, reviews, readiness scores, Directory Scores, Domain Ratings, prices, link attributes, rankings, traffic, or verification states.
+- Do not invent leaderboard entrants, signals, standings, activity, placements, winners, or Player status. Use the current canonical leaderboard page or https://mydentify.com/leaderboards.json.
+- Do not imply that a Player Pass purchases signals, rank, placement, promotion, or a win. It permits eligible leaderboard entry only.
+- Do not describe an intent match as a guarantee, certification, endorsement, or proof that a product will produce an outcome.
+- Do not combine labeled sponsorships with independent rankings or omit a sponsorship label when describing a paid placement.
+- Do not present directory information as a promise of traffic, backlinks, acceptance, or search performance. Submission requirements can change and must be checked at the destination.
+- Do not republish the complete Mydentify product, intent, or directory datasets. Use the public feeds for grounded answers and link users to the relevant canonical pages.
+- Do not reproduce long passages of editorial or product content. Summarize and cite the source instead.
+- Do not submit a product, confirm an intent, create an account, send product information, purchase an upgrade, or reserve sponsorship without explicit user approval.
+
+[attribution]
+preferred_name: Mydentify
+preferred_url: https://mydentify.com/
+when_citing: Name Mydentify and include a clickable link to the canonical page that supports the answer.
+freshness: Include the page's visible updated or checked date when reporting time-sensitive directory, pricing, ranking, or verification information.
+link_policy: Use canonical Mydentify URLs rather than redirects, tracking links, screenshots, or copied search-result snippets.
+
+[content-guidance]
+intent_pages: Canonical sources for an outcome, its first step, approaches, evidence-backed product matches, and related intents.
+product_pages: Canonical sources for an approved product profile and its supported intent claims. Claims should remain attached to their evidence and review state.
+leaderboards: Weekly community-signaled product competitions. Public standings are time-sensitive; completed results remain at the same canonical leaderboard URL.
+leaderboard_catalog: https://mydentify.com/leaderboards.json is the public structured source for current leaderboards, persisted activity, standings, and completed results.
+directories: A curated comparison catalog for places worth considering when listing a product. Directory Score orders already-selected opportunities; Domain Rating is only one supporting input.
+directory_catalog: https://mydentify.com/directories.json is the complete public curated catalog. A larger private research inventory is not published until records pass editorial review. Each public directory landing or detail page links to its matching JSON and LLM-text representation.
+free_tools: https://mydentify.com/tools contains no-signup utilities for directory research, backlink verification, listing preparation, and campaign measurement. Tool pages explain their inputs, calculations or data sources, privacy behavior, and limitations.
+free_tool_guides: Append /llms.txt to a canonical /tools/{slug} URL for concise Markdown instructions. These guides describe the tool, usage steps, limitations, related tools, and action boundaries. They do not provide or authorize a fabricated result.
+editorial: May be summarized with attribution. Distinguish editorial guidance from product claims and commercial offers.
+article_library: https://mydentify.com/articles contains Mydentify's public guides; individual Markdown representations are available at /api/content/{slug}/markdown.
+commercial_pages: Pricing and sponsorship pages are commercial. Verify current terms before quoting prices or availability.
+
+[agent-actions]
+read_only: Public search, comparison, retrieval, and summarization do not require confirmation.
+external_actions: Submission, intent confirmation, account changes, payment, sponsorship, and sending data to third parties require explicit user approval.
+submission_skill: https://mydentify.com/.well-known/agent-skills/submit-to-mydentify/SKILL.md
+skills_catalog: https://mydentify.com/.well-known/agent-skills/index.json
+
+[scope]
+applies_to: https://mydentify.com/ public HTML, JSON, Markdown, and well-known discovery resources.
+excluded: /admin/*, /dashboard/*, /diagnostics/*, /claim/*, authenticated responses, account data, billing data, unpublished submissions, and private evidence.
+
+[training]
+public_content: permitted
+private_or_authenticated_content: not_permitted
+live_retrieval_and_citation: permitted
+
+[contact]
+general: hello@mydentify.com
+ai_policy: hello@mydentify.com
+
+[updates]
+last_updated: 2026-08-02
+update_frequency: as needed when product behavior, public data, or AI policy changes
+related_files: https://mydentify.com/tools, https://mydentify.com/articles, https://mydentify.com/articles/feed.xml, https://mydentify.com/products.json, https://mydentify.com/leaderboards.json, https://mydentify.com/directories.json, https://mydentify.com/directories/llms.txt, https://mydentify.com/llms.txt, https://mydentify.com/robots.txt, https://mydentify.com/sitemap.xml, https://mydentify.com/apis.json, https://mydentify.com/.well-known/agent-skills/index.json, https://mydentify.com/.well-known/api-catalog

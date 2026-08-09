@@ -1,0 +1,60 @@
+generated: '2026-08-09'
+method: searched
+source: https://mydentify.com/submit.md
+docs:
+  - https://mydentify.com/submit.md
+  - https://mydentify.com/.well-known/agent-skills/submit-to-mydentify/SKILL.md
+model: dry-run-and-diagnostic-mode
+detail: >-
+  Mydentify publishes no separate sandbox host, test-mode key prefix, or fixture credentials —
+  the API is keyless, so there is no test-vs-live key separation to capture. What it does publish
+  is a non-destructive path through the production API: a dry-run endpoint and a diagnostic mode
+  that produce a full readiness report and duplicate verdict without creating a listing. That is
+  the provider's own recommended first call.
+surfaces:
+  - name: dry run
+    operation: POST /api/imports/dry-run
+    destructive: false
+    creates_listing: false
+    body: '{"url":"https://product.example"}'
+    returns: DryRunResult — normalizedUrl, finalUrl, canonicalUrl, identity, discovered, duplicate, nextAction
+    verified:
+      date: '2026-08-09'
+      request: anonymous POST with {"url":"https://apievangelist.com"}
+      http_status: 200
+      example: examples/mydentify-public-api-imports-dry-run-response.json
+  - name: diagnostic mode
+    operation: POST /api/imports
+    body_fragment: '{"mode":"diagnostic"}'
+    destructive: false
+    creates_listing: false
+    detail: >-
+      `mode: diagnostic` runs the full durable import — readiness rubric, evidence collection,
+      duplicate detection — and stops at `ready_for_confirmation`. A listing is created only
+      after an explicit confirmation call (POST /api/imports/{id}/goals).
+  - name: health probe
+    operation: GET /api/health
+    destructive: false
+    returns: per-subsystem readiness booleans
+    example: examples/mydentify-public-api-health-response.json
+safe_repetition:
+  idempotency_key: Idempotency-Key on POST /api/imports
+  detail: Replaying a key with the same body returns the original import rather than a second one.
+  see: conventions/mydentify-public-api-conventions.yml
+test_values:
+  published: false
+  note: >-
+    Mydentify publishes no magic test URLs, fixture products or simulated failure triggers. The
+    dry run is exercised against a real public product URL. NEVER invent test values here.
+agent_guardrails:
+  source: https://mydentify.com/ai.txt
+  rules:
+    - Read-only calls need no user confirmation.
+    - Submission, intent confirmation, payment and sponsorship require explicit user approval.
+    - Never send private URLs, credentials, personal data, or unpublished product content.
+x-evidence:
+  fetched: '2026-08-09'
+  urls:
+    - {url: 'https://mydentify.com/api/imports/dry-run', http_status: 200}
+    - {url: 'https://mydentify.com/api/health', http_status: 200}
+    - {url: 'https://mydentify.com/submit.md', http_status: 200}

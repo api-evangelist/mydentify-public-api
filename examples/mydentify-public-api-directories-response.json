@@ -1,0 +1,343 @@
+{
+ "schemaVersion": "1.0",
+ "type": "directory-catalog",
+ "name": "Mydentify curated directory catalog",
+ "description": "Editorially selected product directories, launch platforms, review sites, software discovery sites, and showcases.",
+ "generatedAt": "2026-08-09T22:03:36.315Z",
+ "humanUrl": "https://mydentify.com/directories",
+ "jsonUrl": "https://mydentify.com/directories.json",
+ "llmsTextUrl": "https://mydentify.com/directories/llms.txt",
+ "siteLlmsUrl": "https://mydentify.com/llms.txt",
+ "aiPolicyUrl": "https://mydentify.com/ai.txt",
+ "agentSkillUrl": "https://mydentify.com/.well-known/agent-skills/research-product-directories/SKILL.md",
+ "limitations": [
+  "Directory pricing, submission rules, link attributes, and operating status can change after review.",
+  "Directory Score is a Mydentify comparison metric; Domain Rating is one authority input and is attributed to Ahrefs when available.",
+  "Machine-readable access improves retrieval but does not guarantee model ingestion, citation, ranking, acceptance, traffic, or backlinks."
+ ],
+ "totalRecords": 38,
+ "defaultOrder": "editorial Directory Score",
+ "collections": [
+  {
+   "slug": "saas",
+   "name": "Best SaaS Directories to Submit Your Product (2026)",
+   "description": "Compare SaaS directories, software-review sites, and discovery platforms by Directory Score, pricing, link type, and submission evidence.",
+   "humanUrl": "https://mydentify.com/directories/saas",
+   "jsonUrl": "https://mydentify.com/api/directories/saas/json",
+   "llmsTextUrl": "https://mydentify.com/directories/saas/llms.txt"
+  },
+  {
+   "slug": "indie-makers",
+   "name": "Best Directories for Indie Makers and Founders (2026)",
+   "description": "Compare launch platforms and startup directories for indie makers by fit, submission access, pricing, link type, and Directory Score.",
+   "humanUrl": "https://mydentify.com/directories/indie-makers",
+   "jsonUrl": "https://mydentify.com/api/directories/indie-makers/json",
+   "llmsTextUrl": "https://mydentify.com/directories/indie-makers/llms.txt"
+  },
+  {
+   "slug": "developer-tools",
+   "name": "Best Developer Tool Directories (2026)",
+   "description": "Find developer tool directories and technical discovery platforms with known submission paths, ranked by fit and listing value.",
+   "humanUrl": "https://mydentify.com/directories/developer-tools",
+   "jsonUrl": "https://mydentify.com/api/directories/developer-tools/json",
+   "llmsTextUrl": "https://mydentify.com/directories/developer-tools/llms.txt"
+  },
+  {
+   "slug": "startup-directories",
+   "name": "Best Startup Directories to Submit Your Startup (2026)",
+   "description": "Find startup directories that accept founder and product submissions. Compare pricing, link type, Domain Rating, and Directory Score.",
+   "humanUrl": "https://mydentify.com/directories/startup-directories",
+   "jsonUrl": "https://mydentify.com/api/directories/startup-directories/json",
+   "llmsTextUrl": "https://mydentify.com/directories/startup-directories/llms.txt"
+  },
+  {
+   "slug": "product-launch-sites",
+   "name": "Best Product Launch Sites for Startups (2026)",
+   "description": "Compare product launch sites for startups, SaaS products, and indie projects by pricing, link type, Domain Rating, and submission details.",
+   "humanUrl": "https://mydentify.com/directories/product-launch-sites",
+   "jsonUrl": "https://mydentify.com/api/directories/product-launch-sites/json",
+   "llmsTextUrl": "https://mydentify.com/directories/product-launch-sites/llms.txt"
+  },
+  {
+   "slug": "builders",
+   "name": "Best Directories for Product Builders and Makers (2026)",
+   "description": "Find directories for product builders, makers, and small software teams. Compare submission cost, links, Domain Rating, and Directory Score.",
+   "humanUrl": "https://mydentify.com/directories/builders",
+   "jsonUrl": "https://mydentify.com/api/directories/builders/json",
+   "llmsTextUrl": "https://mydentify.com/directories/builders/llms.txt"
+  },
+  {
+   "slug": "bootstrapped-startups",
+   "name": "Best Directories for Bootstrapped Startups (2026)",
+   "description": "Find affordable directories for bootstrapped startups and indie products. Compare free submission, link type, Domain Rating, and fit.",
+   "humanUrl": "https://mydentify.com/directories/bootstrapped-startups",
+   "jsonUrl": "https://mydentify.com/api/directories/bootstrapped-startups/json",
+   "llmsTextUrl": "https://mydentify.com/directories/bootstrapped-startups/llms.txt"
+  },
+  {
+   "slug": "dofollow",
+   "name": "Best Dofollow Startup Directories (2026)",
+   "description": "Find startup directories currently marked dofollow. Compare category, pricing, Domain Rating, Directory Score, and submission details.",
+   "humanUrl": "https://mydentify.com/directories/dofollow",
+   "jsonUrl": "https://mydentify.com/api/directories/dofollow/json",
+   "llmsTextUrl": "https://mydentify.com/directories/dofollow/llms.txt"
+  },
+  {
+   "slug": "free-dofollow",
+   "name": "Best Free Dofollow Startup Directories (2026)",
+   "description": "Find startup directories with free submission and dofollow links. Compare Domain Rating, Directory Score, category, and submission details.",
+   "humanUrl": "https://mydentify.com/directories/free-dofollow",
+   "jsonUrl": "https://mydentify.com/api/directories/free-dofollow/json",
+   "llmsTextUrl": "https://mydentify.com/directories/free-dofollow/llms.txt"
+  },
+  {
+   "slug": "free-saas-directories",
+   "name": "Best Free SaaS Directories (2026)",
+   "description": "Find free SaaS directories and software listing sites. Compare link type, Domain Rating, Directory Score, and submission details.",
+   "humanUrl": "https://mydentify.com/directories/free-saas-directories",
+   "jsonUrl": "https://mydentify.com/api/directories/free-saas-directories/json",
+   "llmsTextUrl": "https://mydentify.com/directories/free-saas-directories/llms.txt"
+  },
+  {
+   "slug": "paid-startup-directories",
+   "name": "Best Paid Startup Directories (2026)",
+   "description": "Compare paid startup directories by category, Domain Rating, Directory Score, link type, and submission value before spending money.",
+   "humanUrl": "https://mydentify.com/directories/paid-startup-directories",
+   "jsonUrl": "https://mydentify.com/api/directories/paid-startup-directories/json",
+   "llmsTextUrl": "https://mydentify.com/directories/paid-startup-directories/llms.txt"
+  },
+  {
+   "slug": "freemium-startup-directories",
+   "name": "Best Freemium Startup Directories (2026)",
+   "description": "Find startup directories with a free listing and optional paid upgrades. Compare placement, link type, Domain Rating, and Directory Score.",
+   "humanUrl": "https://mydentify.com/directories/freemium-startup-directories",
+   "jsonUrl": "https://mydentify.com/api/directories/freemium-startup-directories/json",
+   "llmsTextUrl": "https://mydentify.com/directories/freemium-startup-directories/llms.txt"
+  },
+  {
+   "slug": "founder-communities",
+   "name": "Best Founder Communities to Share Your Startup (2026)",
+   "description": "Find founder communities and launch directories where builders can share products, ask for feedback, and meet other founders.",
+   "humanUrl": "https://mydentify.com/directories/founder-communities",
+   "jsonUrl": "https://mydentify.com/api/directories/founder-communities/json",
+   "llmsTextUrl": "https://mydentify.com/directories/founder-communities/llms.txt"
+  },
+  {
+   "slug": "design-tools",
+   "name": "Best Directories for Design Tools (2026)",
+   "description": "Find directories and showcases for design tools, creative software, UI products, and visual resources. Compare cost, links, and DR.",
+   "humanUrl": "https://mydentify.com/directories/design-tools",
+   "jsonUrl": "https://mydentify.com/api/directories/design-tools/json",
+   "llmsTextUrl": "https://mydentify.com/directories/design-tools/llms.txt"
+  },
+  {
+   "slug": "app-directories",
+   "name": "Best App Directories to Submit Your App (2026)",
+   "description": "Find app directories and product showcases for web apps, SaaS products, and mobile apps. Compare pricing, links, DR, and fit.",
+   "humanUrl": "https://mydentify.com/directories/app-directories",
+   "jsonUrl": "https://mydentify.com/api/directories/app-directories/json",
+   "llmsTextUrl": "https://mydentify.com/directories/app-directories/llms.txt"
+  },
+  {
+   "slug": "free",
+   "name": "Best Free Startup Directories (2026)",
+   "description": "Find startup directories with free submission and compare Directory Score, product category, link type, Domain Rating, and evidence.",
+   "humanUrl": "https://mydentify.com/directories/free",
+   "jsonUrl": "https://mydentify.com/api/directories/free/json",
+   "llmsTextUrl": "https://mydentify.com/directories/free/llms.txt"
+  },
+  {
+   "slug": "software-discovery-sites",
+   "name": "Best Software Discovery Sites (2026)",
+   "description": "Find software discovery sites for SaaS products, tools, and alternatives. Compare pricing, link type, Directory Score, and DR.",
+   "humanUrl": "https://mydentify.com/directories/software-discovery-sites",
+   "jsonUrl": "https://mydentify.com/api/directories/software-discovery-sites/json",
+   "llmsTextUrl": "https://mydentify.com/directories/software-discovery-sites/llms.txt"
+  },
+  {
+   "slug": "nofollow-directories",
+   "name": "Best Nofollow Startup Directories (2026)",
+   "description": "Find startup directories currently marked nofollow. Compare audience fit, pricing, Directory Score, and Domain Rating.",
+   "humanUrl": "https://mydentify.com/directories/nofollow-directories",
+   "jsonUrl": "https://mydentify.com/api/directories/nofollow-directories/json",
+   "llmsTextUrl": "https://mydentify.com/directories/nofollow-directories/llms.txt"
+  },
+  {
+   "slug": "conditional-link-directories",
+   "name": "Best Conditional-Link Startup Directories (2026)",
+   "description": "Find directories where link type depends on listing tier or placement. Compare conditions, pricing, Directory Score, and DR.",
+   "humanUrl": "https://mydentify.com/directories/conditional-link-directories",
+   "jsonUrl": "https://mydentify.com/api/directories/conditional-link-directories/json",
+   "llmsTextUrl": "https://mydentify.com/directories/conditional-link-directories/llms.txt"
+  },
+  {
+   "slug": "unconfirmed-link-type",
+   "name": "Startup Directories With Unconfirmed Link Type (2026)",
+   "description": "Research directories whose current listing link attribute is not confirmed. Verify the live listing before making an SEO decision.",
+   "humanUrl": "https://mydentify.com/directories/unconfirmed-link-type",
+   "jsonUrl": "https://mydentify.com/api/directories/unconfirmed-link-type/json",
+   "llmsTextUrl": "https://mydentify.com/directories/unconfirmed-link-type/llms.txt"
+  },
+  {
+   "slug": "best-directory-score",
+   "name": "Best Startup Directories by Directory Score (2026)",
+   "description": "Compare active startup directories by Mydentify Directory Score, including fit, access, listing value, pricing, links, and DR.",
+   "humanUrl": "https://mydentify.com/directories/best-directory-score",
+   "jsonUrl": "https://mydentify.com/api/directories/best-directory-score/json",
+   "llmsTextUrl": "https://mydentify.com/directories/best-directory-score/llms.txt"
+  },
+  {
+   "slug": "highest-domain-rating",
+   "name": "Highest Domain Rating Startup Directories (2026)",
+   "description": "Browse startup directories from highest to lowest Ahrefs Domain Rating. Compare DR with pricing, link type, category, and Directory Score.",
+   "humanUrl": "https://mydentify.com/directories/highest-domain-rating",
+   "jsonUrl": "https://mydentify.com/api/directories/highest-domain-rating/json",
+   "llmsTextUrl": "https://mydentify.com/directories/highest-domain-rating/llms.txt"
+  },
+  {
+   "slug": "lowest-domain-rating",
+   "name": "Lowest Domain Rating Startup Directories (2026)",
+   "description": "Research active startup directories from lowest to highest Ahrefs Domain Rating while comparing fit, pricing, links, and score.",
+   "humanUrl": "https://mydentify.com/directories/lowest-domain-rating",
+   "jsonUrl": "https://mydentify.com/api/directories/lowest-domain-rating/json",
+   "llmsTextUrl": "https://mydentify.com/directories/lowest-domain-rating/llms.txt"
+  },
+  {
+   "slug": "startup-directories-a-z",
+   "name": "Startup Directories A\u2013Z (2026)",
+   "description": "Browse the complete active startup directory dataset alphabetically from A to Z with category, pricing, link type, score, and DR.",
+   "humanUrl": "https://mydentify.com/directories/startup-directories-a-z",
+   "jsonUrl": "https://mydentify.com/api/directories/startup-directories-a-z/json",
+   "llmsTextUrl": "https://mydentify.com/directories/startup-directories-a-z/llms.txt"
+  },
+  {
+   "slug": "startup-directories-z-a",
+   "name": "Startup Directories Z\u2013A (2026)",
+   "description": "Browse the complete active startup directory dataset alphabetically from Z to A with category, pricing, link type, score, and DR.",
+   "humanUrl": "https://mydentify.com/directories/startup-directories-z-a",
+   "jsonUrl": "https://mydentify.com/api/directories/startup-directories-z-a/json",
+   "llmsTextUrl": "https://mydentify.com/directories/startup-directories-z-a/llms.txt"
+  }
+ ],
+ "records": [
+  {
+   "type": "directory-record",
+   "id": "bb029538-17b3-4a55-999e-9fdca2d72469",
+   "name": "Peerlist",
+   "slug": "peerlist-io",
+   "domain": "peerlist.io",
+   "websiteUrl": "https://peerlist.io",
+   "logoUrl": "https://ik.imagekit.io/cbjtr6zof/directories/logos/bb029538-17b3-4a55-999e-9fdca2d72469_2oiZNXoXg.image",
+   "submissionUrl": "https://peerlist.io/user/projects/add-project",
+   "canonicalUrl": "https://mydentify.com/directories/peerlist-io",
+   "jsonUrl": "https://mydentify.com/api/directories/peerlist-io/json",
+   "llmsTextUrl": "https://mydentify.com/directories/peerlist-io/llms.txt",
+   "description": "Peerlist Launchpad is a weekly product launch platform for developers, designers, and independent builders. Makers add a complete project to their profile before launching it to the Peerlist community.",
+   "editorialNote": "Strong fit when the builder story matters alongside the product. The product submission is connected to a maker identity rather than an anonymous listing.",
+   "curatedAt": "2026-07-17T00:00:00.000Z",
+   "category": "Launch platform",
+   "productTypes": [
+    "SaaS",
+    "Startup"
+   ],
+   "bestFor": "Developer and designer products whose makers maintain a credible professional profile.",
+   "caveats": "A verified individual profile and a 100% complete project are required before launching. Launchpad opens weekly on Monday, with scheduling available in advance.",
+   "pricing": {
+    "type": "free",
+    "notes": "Peerlist documents a free project-creation and weekly Launchpad workflow for verified individual profiles."
+   },
+   "accountRequired": true,
+   "estimatedEffortMinutes": 20,
+   "link": {
+    "type": "unknown",
+    "notes": null
+   },
+   "directoryScore": 90,
+   "scoreConfidence": 1,
+   "scoreReasons": [
+    "Strong product fit",
+    "Visible, lasting listing",
+    "Active submission opportunity"
+   ],
+   "domainRating": 77,
+   "domainRatingSource": "Ahrefs API v3 public Domain Rating",
+   "domainRatingCheckedAt": "2026-07-14T04:10:05.811Z",
+   "verificationStatus": "verified",
+   "operatingStatus": "active",
+   "evidenceSources": [
+    "https://github.com/OnlyTraction/awesome-saas-submission-sites/blob/HEAD/README.md",
+    "https://github.com/andrew-whitefield/saas-directories-list/blob/HEAD/README.md",
+    "https://github.com/theshubh77/awesome-saas-directories/blob/HEAD/README.md",
+    "https://github.com/theshubh77/awesome-saas-directories/blob/HEAD/launchdb.json",
+    "https://github.com/ngfw/Awesome-Launch-Platforms/blob/HEAD/README.md",
+    "https://github.com/avinashvagh/startup-promotion-sites/blob/HEAD/01-directories.md",
+    "https://github.com/avinashvagh/startup-promotion-sites/blob/HEAD/05-launch-platforms.md",
+    "https://github.com/SrikanthSur/awesome-indie-launch/blob/HEAD/README.zh.md",
+    "https://help.peerlist.io/individual/launchpad/how-to-launch-a-project-on-peerlist-launchpad",
+    "https://peerlist.io/user/projects/add-project",
+    "https://help.peerlist.io/individual/launchpad/guidelines-faqs"
+   ],
+   "lastCheckedAt": "2026-07-14T05:19:39.255Z",
+   "updatedAt": "2026-07-29T12:51:57.297Z"
+  },
+  {
+   "type": "directory-record",
+   "id": "e853ca53-15f6-45ab-afdf-c8a06c900ac0",
+   "name": "MicroLaunch",
+   "slug": "microlaunch-net",
+   "domain": "microlaunch.net",
+   "websiteUrl": "https://microlaunch.net",
+   "logoUrl": "https://ik.imagekit.io/cbjtr6zof/directories/logos/e853ca53-15f6-45ab-afdf-c8a06c900ac0_vmByAvS9s.image",
+   "submissionUrl": "https://tally.so/r/mYaR6N",
+   "canonicalUrl": "https://mydentify.com/directories/microlaunch-net",
+   "jsonUrl": "https://mydentify.com/api/directories/microlaunch-net/json",
+   "llmsTextUrl": "https://mydentify.com/directories/microlaunch-net/llms.txt",
+   "description": "Microlaunch provides a unique launch platform for makers & startups to distribute their products. Launch, get feedback and make first sales.",
+   "editorialNote": "Useful as a focused launch experiment for indie products. Treat it as a chance to learn from a launch cohort rather than a guaranteed traffic source.",
+   "curatedAt": "2026-07-17T00:00:00.000Z",
+   "category": "Launch platform",
+   "productTypes": [
+    "SaaS",
+    "Startup"
+   ],
+   "bestFor": "Bootstrapped and early-stage products that benefit from a smaller recurring launch community.",
+   "caveats": null,
+   "pricing": {
+    "type": "free",
+    "notes": "Reported by a public source list; confirm current pricing with the destination."
+   },
+   "accountRequired": null,
+   "estimatedEffortMinutes": null,
+   "link": {
+    "type": "dofollow",
+    "notes": "132/132 sampled external homepage links did not use rel=nofollow or rel=sponsored on 2026-07-14; individual listing tiers may differ."
+   },
+   "directoryScore": 87,
+   "scoreConfidence": 1,
+   "scoreReasons": [
+    "Strong product fit",
+    "Active submission opportunity",
+    "Visible, lasting listing"
+   ],
+   "domainRating": 61,
+   "domainRatingSource": "Ahrefs API v3 public Domain Rating",
+   "domainRatingCheckedAt": "2026-07-14T04:20:04.269Z",
+   "verificationStatus": "verified",
+   "operatingStatus": "active",
+   "evidenceSources": [
+    "https://github.com/OnlyTraction/awesome-startup-directories/blob/HEAD/README.md",
+    "https://github.com/andrew-whitefield/saas-directories-list/blob/HEAD/README.md",
+    "https://github.com/submitaitools/Free-AI-Directories/blob/HEAD/README.md",
+    "https://github.com/theshubh77/awesome-saas-directories/blob/HEAD/README.md",
+    "https://github.com/theshubh77/awesome-saas-directories/blob/HEAD/launchdb.json",
+    "https://github.com/tomrzv/AI-Directories/blob/HEAD/README.md",
+    "https://github.com/avinashvagh/startup-promotion-sites/blob/HEAD/05-launch-platforms.md",
+    "https://github.com/SrikanthSur/awesome-indie-launch/blob/HEAD/README.zh.md",
+    "https://microlaunch.net/"
+   ],
+   "lastCheckedAt": "2026-07-14T05:18:34.677Z",
+   "updatedAt": "2026-07-29T12:51:54.982Z"
+  }
+ ],
+ "x-apievangelist-note": "Truncated to the first 2 of 38 records for size; fetched verbatim from https://mydentify.com/directories.json"
+}

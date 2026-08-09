@@ -1,0 +1,55 @@
+generated: '2026-08-09'
+method: searched
+source: openapi/mydentify-public-api-openapi-original.json
+docs: https://mydentify.com/developers
+summary:
+  types: []
+  model: anonymous
+  api_key_in: []
+  oauth2_flows: []
+  detail: >-
+    Mydentify's public API is deliberately keyless. The OpenAPI 3.1 document declares a top-level
+    `security: []` and defines no `components.securitySchemes`; the developer guide states "No API
+    key required — public read routes work without a token, login, or paid plan." This applies to
+    the write surface too: the diagnostic/submission workflow (POST /api/imports*) is
+    unauthenticated, with the Idempotency-Key header and the durable import id acting as the
+    only client-held identifiers.
+schemes: []
+transport:
+  https_required: true
+  hsts: true
+  hsts_max_age: 31536000
+  tls_version: TLSv1.3
+  cors:
+    enabled: true
+    allow_origins: ['*']
+    scope: directory JSON endpoints
+    source: openapi x-cors extension
+authorization_model:
+  public_read: unrestricted
+  writes:
+    surface: POST /api/imports, /api/imports/{id}/{retry,manual-review,goals,verify-badge}
+    control: >-
+      No credential. Access to an import is bearer-by-URL — knowledge of the UUID import id
+      returned in ImportAccepted.statusUrl / eventsUrl. Publication is additionally gated by an
+      out-of-band proof: Mydentify verifies a followed backlink or the official listing badge on
+      the submitted page before a free listing goes live.
+    escalation: POST /api/imports/{id}/verify-badge, POST /api/imports/{id}/manual-review
+  agent_boundaries:
+    source: https://mydentify.com/ai.txt
+    read_only: no user confirmation required
+    external_actions: >-
+      Submission, intent confirmation, account changes, payment and sponsorship require explicit
+      user approval.
+  excluded_from_public_api: ['/admin/*', '/dashboard/*', '/diagnostics/*', '/claim/*', authenticated responses, billing data]
+gaps:
+  - No authenticated tier is published, so there is no documented way to raise limits, claim a
+    listing programmatically, or read private diagnostic sessions via the API.
+  - There is no rate-limit contract to accompany the anonymous write surface; the only throttle
+    signal in the spec is a 429 on the retry operation.
+x-evidence:
+  fetched: '2026-08-09'
+  urls:
+    - {url: 'https://mydentify.com/openapi.json', http_status: 200}
+    - {url: 'https://mydentify.com/developers', http_status: 200}
+    - {url: 'https://mydentify.com/api/imports/dry-run', http_status: 200, note: 'anonymous POST accepted, returned a DryRunResult'}

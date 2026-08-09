@@ -1,0 +1,87 @@
+generated: '2026-08-09'
+method: derived
+source: openapi/mydentify-public-api-openapi-original.json
+enriched_from: https://mydentify.com/submit.md
+format: custom-json
+rfc9457: false
+envelope:
+  schema: '#/components/schemas/Error'
+  shape: '{"error": {"code": string, "message": string, "retryable": boolean, "retryAfter": date-time}}'
+  media_type: application/json
+  note: >-
+    Mydentify does not use application/problem+json. The `code` value space is not published;
+    only the envelope shape is. `retryable` + `retryAfter` carry the retry contract.
+problems:
+  - status: 404
+    title: Leaderboard not found
+    source_operation: openapi/mydentify-public-api-openapi-original.json#get /api/leaderboards/{slug}/json
+  - status: 404
+    title: Directory page not found
+    source_operation: openapi/mydentify-public-api-openapi-original.json#get /api/directories/{slug}/json
+  - status: 404
+    title: Directory page not found
+    source_operation: openapi/mydentify-public-api-openapi-original.json#get /directories/{slug}/llms.txt
+  - status: 422
+    title: Unprocessable submission URL
+    source_operation: openapi/mydentify-public-api-openapi-original.json#post /api/imports/dry-run
+  - status: 503
+    title: Diagnostic service unavailable
+    retryable: true
+    source_operation: openapi/mydentify-public-api-openapi-original.json#post /api/imports/dry-run
+  - status: 409
+    title: Idempotency key reused with a different body
+    schema: '#/components/responses/ImportError'
+    remediation: Reuse the original key with the original body, or issue a new key.
+    source_operation: openapi/mydentify-public-api-openapi-original.json#post /api/imports
+  - status: 404
+    title: Import not found
+    source_operation: openapi/mydentify-public-api-openapi-original.json#get /api/imports/{id}
+  - status: 409
+    title: Import is not in a retryable state
+    schema: '#/components/responses/ImportError'
+    source_operation: openapi/mydentify-public-api-openapi-original.json#post /api/imports/{id}/retry
+  - status: 429
+    title: Too many retries
+    retryable: true
+    remediation: Honour `retryAfter` on the error envelope before retrying.
+    source_operation: openapi/mydentify-public-api-openapi-original.json#post /api/imports/{id}/retry
+  - status: 409
+    title: Import is not eligible for manual review
+    source_operation: openapi/mydentify-public-api-openapi-original.json#post /api/imports/{id}/manual-review
+  - status: 400
+    title: Invalid or unsupported intent/goal
+    source_operation: openapi/mydentify-public-api-openapi-original.json#post /api/imports/{id}/goals
+  - status: 409
+    title: Goals already confirmed for this import
+    source_operation: openapi/mydentify-public-api-openapi-original.json#post /api/imports/{id}/goals
+  - status: 403
+    title: Badge or backlink verification not permitted
+    source_operation: openapi/mydentify-public-api-openapi-original.json#post /api/imports/{id}/verify-badge
+  - status: 409
+    title: Badge verification not applicable in the current state
+    source_operation: openapi/mydentify-public-api-openapi-original.json#post /api/imports/{id}/verify-badge
+rejection_categories:
+  note: >-
+    Editorial rejection categories returned on `rejection.category` when an import reaches the
+    `rejected` state — a business-outcome vocabulary, distinct from the HTTP error envelope.
+  source: openapi/mydentify-public-api-openapi-original.json#/components/schemas/Rejection
+  fields: [category, message, correctionHint, publicNote]
+  categories:
+    - identity_unclear
+    - insufficient_public_evidence
+    - unsupported_or_private_source
+    - duplicate_listing
+    - inaccurate_claims
+    - unsafe_or_prohibited
+remediation_actions:
+  note: >-
+    On the `failed` state, clients must use only the returned `remediation.actions`
+    (https://mydentify.com/submit.md).
+  source: openapi/mydentify-public-api-openapi-original.json#/components/schemas/Remediation
+  types: [retry, retry_after, try_another_url, manual_review]
+duplicate_classifications:
+  source: openapi/mydentify-public-api-openapi-original.json#/components/schemas/DuplicateResolution
+  values: [exact_duplicate, probable_duplicate, renamed_product]
+  note: >-
+    Surfaced on a 200 (dry-run or `duplicate_detected` state), not as an HTTP error; the
+    permitted follow-ups are whatever appears in `allowedActions`.

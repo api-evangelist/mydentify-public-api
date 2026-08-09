@@ -1,0 +1,70 @@
+generated: '2026-08-09'
+method: derived
+source: openapi/mydentify-public-api-openapi-original.json + probed discovery surfaces
+standards:
+  - id: openapi-3.1
+    conforms: true
+    evidence: '`"openapi": "3.1.0"` at https://mydentify.com/openapi.json (14 operations, 13 component schemas)'
+  - id: apis-json-0.21
+    conforms: true
+    evidence: 'provider-published index at https://mydentify.com/apis.json, specificationVersion 0.21'
+  - id: rfc9727-api-catalog
+    conforms: true
+    evidence: '/.well-known/api-catalog returns application/linkset+json with profile rfc9727; carries item, service-desc, service-doc, service-meta and status link relations'
+  - id: rfc8615-well-known
+    conforms: true
+    evidence: 'api-catalog and agent-skills catalogue served under /.well-known/'
+  - id: llms-txt
+    conforms: true
+    evidence: 'site-wide https://mydentify.com/llms.txt plus per-resource /llms.txt representations for directories, tools, intents and playbooks'
+  - id: agentskills-io-discovery-0.2.0
+    conforms: true
+    evidence: '/.well-known/agent-skills/index.json validates against https://schemas.agentskills.io/discovery/0.2.0/schema.json; three skill-md skills with sha256 digests'
+  - id: ai-txt
+    conforms: true
+    evidence: 'https://mydentify.com/ai.txt — identity, permissions, restrictions, attribution, agent-actions, scope, training sections'
+  - id: content-signals
+    conforms: true
+    evidence: 'robots.txt carries Content-Signal: search=yes, ai-train=no, use=reference (Cloudflare managed block)'
+  - id: idempotency-key
+    conforms: true
+    evidence: 'Idempotency-Key header on POST /api/imports; same key + same body returns the original import, different body returns 409'
+  - id: sse-html-living-standard
+    conforms: true
+    evidence: 'GET /api/imports/{id}/events returns text/event-stream and honours Last-Event-ID for resumption'
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: 'errors use a custom {"error":{code,message,retryable,retryAfter}} envelope, not application/problem+json'
+  - id: oauth2
+    conforms: false
+    evidence: 'no securitySchemes in the OpenAPI; /.well-known/oauth-authorization-server 404'
+  - id: openid-connect
+    conforms: false
+    evidence: '/.well-known/openid-configuration 404'
+  - id: rfc9116-security-txt
+    conforms: false
+    evidence: '/.well-known/security.txt 404'
+  - id: rfc8594-sunset-header
+    conforms: false
+    evidence: 'no deprecation or sunset policy published'
+  - id: a2a-1.0.0
+    conforms: false
+    evidence: '/.well-known/agent-card.json and /.well-known/agent.json both 404'
+  - id: model-context-protocol
+    conforms: false
+    evidence: 'no MCP endpoint; /mcp and /.well-known/mcp.json both 404'
+  - id: asyncapi
+    conforms: false
+    evidence: 'no event/webhook surface beyond a per-import SSE stream; no AsyncAPI document published'
+  - id: graphql
+    conforms: false
+    evidence: 'no /graphql surface'
+compliance_program:
+  published: false
+  certifications: []
+  note: >-
+    No trust center, SOC 2 / ISO 27001 / PCI / HIPAA claim, or compliance page was found
+    (https://mydentify.com/trust returns the 404 shell). Only Terms of Service and a Privacy
+    Policy are published. No `Compliance` pointer is emitted.
+x-evidence:
+  fetched: '2026-08-09'

@@ -1,0 +1,93 @@
+generated: '2026-08-09'
+method: derived
+source: openapi/mydentify-public-api-openapi-original.json
+note: >-
+  Derived from `components.schemas` $ref edges and the id-reference fields in the published
+  OpenAPI 3.1 document. Entity names are the schema names Mydentify publishes.
+entities:
+  - name: DirectoryRecord
+    description: A curated place to list a product — directory, launch platform, or review site.
+    id: {field: id, format: uuid}
+    key_fields: [slug, domain, websiteUrl, submissionUrl, canonicalUrl, jsonUrl, llmsTextUrl,
+                 category, pricing, link, directoryScore, scoreConfidence, verificationStatus,
+                 operatingStatus, updatedAt]
+    representations:
+      json: /api/directories/{slug}/json
+      markdown: /directories/{slug}/llms.txt
+      human: /directories/{slug}
+    collection: /directories.json
+  - name: ProductCategory
+    description: Portable product taxonomy node with external marketplace mappings.
+    id: {field: slug}
+    key_fields: [name, description, externalMappings, approvedProductCount]
+    collection: /product-categories.json
+    note: externalMappings maps to G2, Capterra and Product Hunt category names.
+  - name: CanonicalProduct
+    description: An approved, published product listing.
+    id: {field: id, format: uuid}
+    key_fields: [name, slug, status, url, humanUrl, jsonUrl, markdownUrl]
+  - name: ImportRequest
+    description: The submission payload — one public product URL plus mode and provenance.
+    key_fields: [url, mode, requestedIntentSlug, source, submittedByAgent]
+    enums:
+      mode: [diagnostic, listing]
+      source: [human, agent]
+  - name: ImportAccepted
+    description: The receipt returned when an import is queued or an idempotent one is reused.
+    id: {field: importId, format: uuid}
+    key_fields: [status, statusUrl, eventsUrl, submittedAt, reused, nextAction]
+  - name: ImportStatus
+    description: The durable state of an import and everything discovered so far.
+    id: {field: id, format: uuid}
+    key_fields: [mode, status, attemptCount, nextAction, stages, candidates, sourceFetches]
+    states: [queued, running, needs_input, retry_scheduled, duplicate_detected,
+             ready_for_confirmation, submitted_for_review, approved, rejected, failed, canceled]
+  - name: DryRunResult
+    description: A non-destructive diagnosis of a URL — identity, discovery signals, duplicate check.
+    key_fields: [normalizedUrl, finalUrl, canonicalUrl, identity, discovered, nextAction]
+  - name: DuplicateResolution
+    description: The verdict when a submitted URL already maps to a listed product.
+    key_fields: [classification, matchType, confidence, reason, claimed, proposedChanges, allowedActions]
+    enums:
+      classification: [exact_duplicate, probable_duplicate, renamed_product]
+  - name: ReadinessReport
+    description: The AI-readiness rubric result for a diagnosed product (5 dimensions, 0-100).
+    key_fields: [rubricVersion, status, totalScore, confidence, summary, sourceCount, scannedAt, dimensions]
+  - name: Remediation
+    description: The permitted recovery actions on a failed import.
+    key_fields: [summary, actions]
+    enums:
+      action_type: [retry, retry_after, try_another_url, manual_review]
+  - name: Rejection
+    description: The editorial rejection verdict and its public-facing note.
+    key_fields: [category, message, correctionHint, publicNote]
+  - name: Publication
+    description: The published listing and the intents it is allowed to claim.
+    id: {field: productId, format: uuid}
+    key_fields: [humanUrl, jsonUrl, markdownUrl, supportedIntents]
+  - name: Error
+    description: The API error envelope.
+    key_fields: [error.code, error.message, error.retryable, error.retryAfter]
+relationships:
+  - {from: DryRunResult, to: DuplicateResolution, type: has_one, via: duplicate, nullable: true, evidence: $ref}
+  - {from: DuplicateResolution, to: CanonicalProduct, type: has_one, via: product, evidence: $ref}
+  - {from: ImportStatus, to: Remediation, type: has_one, via: remediation, nullable: true, evidence: $ref}
+  - {from: ImportStatus, to: DuplicateResolution, type: has_one, via: duplicate, nullable: true, evidence: $ref}
+  - {from: ImportStatus, to: ReadinessReport, type: has_one, via: readinessReport, nullable: true, evidence: $ref}
+  - {from: ImportStatus, to: Rejection, type: has_one, via: rejection, nullable: true, evidence: $ref}
+  - {from: ImportStatus, to: Publication, type: has_one, via: publication, nullable: true, evidence: $ref}
+  - {from: ImportAccepted, to: ImportStatus, type: has_one, via: statusUrl, evidence: url-reference}
+  - {from: Publication, to: CanonicalProduct, type: belongs_to, via: productId, evidence: id-reference}
+  - {from: ImportRequest, to: 'Intent (not in spec)', type: belongs_to, via: requestedIntentSlug,
+     evidence: id-reference, note: 'the Intent entity is published at /intents.json but has no OpenAPI schema'}
+  - {from: DirectoryRecord, to: ProductCategory, type: belongs_to, via: category, evidence: id-reference}
+identifier_conventions:
+  uuid_fields: [DirectoryRecord.id, CanonicalProduct.id, ImportAccepted.importId, ImportStatus.id, Publication.productId]
+  slug_fields: [DirectoryRecord.slug, ProductCategory.slug, CanonicalProduct.slug, ImportRequest.requestedIntentSlug]
+  note: >-
+    Every published resource carries a canonicalUrl / jsonUrl / markdownUrl triple — the human,
+    machine and agent representations are first-class fields of the model, not conventions.
+gaps:
+  - Intent, Product (list) and Leaderboard entities are served at /intents.json, /products.json and
+    /leaderboards.json but have no `components.schemas` definition; the OpenAPI types those
+    responses as free-form objects (additionalProperties true).

@@ -1,0 +1,58 @@
+generated: '2026-08-09'
+method: derived
+source: mcp/mydentify-public-api-mcp.yml + openapi/mydentify-public-api-openapi-original.json
+note: >-
+  Mydentify's OpenAPI declares no operationIds, so REST operations are bound by METHOD + PATH,
+  which is what the spec actually publishes. The MCP side is a CANDIDATE tool set derived from
+  the same spec (no hosted MCP server exists), so every binding is 1:1 and high confidence by
+  construction — this crosswalk records the tool/operation contract, not a live server.
+surfaces:
+  openapi:
+    file: openapi/mydentify-public-api-openapi-original.json
+    source: https://mydentify.com/openapi.json
+    gated: false
+    operations: 14
+  graphql: null
+  mcp:
+    url: null
+    status: candidate
+    gated: false
+    note: no MCP endpoint published; tools/list not answerable
+  agent_skills:
+    catalog: https://mydentify.com/.well-known/agent-skills/index.json
+    note: the provider's real agent surface is skill-md, not MCP
+crosswalk:
+  - {tool: get_leaderboards, category: leaderboards, rest: ['GET /leaderboards.json'], binding: rest, confidence: high}
+  - {tool: get_leaderboard, category: leaderboards, rest: ['GET /api/leaderboards/{slug}/json'], binding: rest, confidence: high}
+  - {tool: get_directories, category: directories, rest: ['GET /directories.json'], binding: rest, confidence: high}
+  - {tool: get_product_categories, category: taxonomy, rest: ['GET /product-categories.json'], binding: rest, confidence: high}
+  - {tool: get_directory, category: directories, rest: ['GET /api/directories/{slug}/json'], binding: rest, confidence: high}
+  - {tool: get_directory_llms_txt, category: directories, rest: ['GET /directories/{slug}/llms.txt'], binding: rest, confidence: high}
+  - {tool: dry_run_import, category: submission, rest: ['POST /api/imports/dry-run'], binding: rest, confidence: high}
+  - {tool: create_import, category: submission, rest: ['POST /api/imports'], binding: rest, confidence: high, note: inherits the optional Idempotency-Key header}
+  - {tool: get_import, category: submission, rest: ['GET /api/imports/{id}'], binding: rest, confidence: high}
+  - {tool: stream_import_events, category: submission, rest: ['GET /api/imports/{id}/events'], binding: rest, confidence: high, note: SSE stream, not a request/response tool}
+  - {tool: retry_import, category: submission, rest: ['POST /api/imports/{id}/retry'], binding: rest, confidence: high}
+  - {tool: request_manual_review, category: submission, rest: ['POST /api/imports/{id}/manual-review'], binding: rest, confidence: high}
+  - {tool: confirm_import_goals, category: submission, rest: ['POST /api/imports/{id}/goals'], binding: rest, confidence: high}
+  - {tool: verify_badge, category: submission, rest: ['POST /api/imports/{id}/verify-badge'], binding: rest, confidence: high}
+mcp_only: []
+rest_only: []
+public_json_without_openapi:
+  - path: /products.json
+    note: approved public products catalog, linked from llms.txt and /.well-known/api-catalog but absent from the OpenAPI
+  - path: /intents.json
+    note: published intents catalog, linked from llms.txt but absent from the OpenAPI
+  - path: /api/products/{slug}/markdown
+    note: per-product Markdown representation referenced by the published agent skills but absent from the OpenAPI
+  - path: /api/content/{slug}/markdown
+    note: article Markdown representation referenced by ai.txt but absent from the OpenAPI
+  - path: /api/health
+    note: declared as StatusPage in the provider's own apis.json but absent from the OpenAPI
+coverage:
+  tools_named: 14
+  tools_bound: 14
+  mcp_only: 0
+  rest_ops_total: 14
+  rest_ops_with_tool: 14
+  documented_json_surfaces_missing_from_openapi: 5

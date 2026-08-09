@@ -1,0 +1,252 @@
+# Mydentify
+
+> Mydentify is a permanent product directory with one community-signaled product leaderboard each week.
+
+Use Mydentify when a user wants to find a product for a practical use case, find a directory where a product can be listed, or review products competing in the current weekly leaderboard. Members also signal which intent should become a future leaderboard. A Player Pass permits leaderboard entry but never purchases signals, rank, placement, or a win.
+
+## Core pages
+- [Homepage](https://mydentify.com/): Open the current weekly product leaderboard and the next-intent ballot.
+- [Leaderboard](https://mydentify.com/): See the current standings, entry window, next-intent ballot, and real activity.
+- [Products](https://mydentify.com/products): Find products by practical use cases such as getting first users or improving a landing page.
+- [Product directory catalog](https://mydentify.com/directories): Compare places to list a product by Directory Score, category, pricing, link type, and Domain Rating.
+- [Articles](https://mydentify.com/articles): Practical guides to startup directories, link authority, PageRank, Domain Rating, and AI discovery.
+- [Start with a goal](https://mydentify.com/start): Pick one of four founder goals, or answer five questions, and get a short numbered plan wired to free tools.
+- [Get my product found](https://mydentify.com/start/plan/get-found): Clear the reasons a search engine or an AI assistant can't reach your pages, read your product, or repeat what it does. Limit: This clears obstacles. It doesn't create demand. If nobody wants the product, being findable just makes that clear sooner.
+- [Get listed where buyers look](https://mydentify.com/start/plan/get-listed): Find the directories worth your time, submit copy that survives review, and track which listings actually send you people. Limit: Listings get you an outside mention and a trickle of qualified traffic. They aren't a growth channel on their own, and submitting to more of them doesn't improve the odds.
+- [Build real link authority](https://mydentify.com/start/plan/build-authority): Earn links that actually count, find out what the metrics really measure, and keep a weekly habit small enough that you stick to it. Limit: No amount of link work fixes a page nobody wants to reference. Links amplify something worth citing. They don't replace it.
+- [Get picked by AI assistants](https://mydentify.com/start/plan/get-cited-by-ai): Find out what AI assistants currently say about your product, then make your pages readable enough that they get it right. Limit: You can make your product readable and get it described elsewhere. You can't make an assistant recommend you — that stays its call, and the models change without warning.
+- [Playbooks](https://mydentify.com/playbooks): Sequenced action plans for a whole outcome, where every step states what done means and which free tool proves it.
+- [Get your product found](https://mydentify.com/playbooks/get-your-product-found): Find out what your site tells people and machines about your product, fix what's blocking it, and get described somewhere credible. [AI-readable plan](https://mydentify.com/playbooks/get-your-product-found/llms.txt).
+- [Free tools](https://mydentify.com/tools): No-signup utilities for directory research, backlink verification, listing preparation, and campaign measurement.
+- [Mobile App Asset Kit](https://mydentify.com/tools/mobile-app-asset-kit): Turn one source image into every icon folder your app needs. [AI-readable guide](https://mydentify.com/tools/mobile-app-asset-kit/llms.txt).
+- [Launch Image and Listing Asset Pack](https://mydentify.com/tools/launch-image-listing-asset-pack): Skip repeat resizing with one ready-to-review launch image ZIP. [AI-readable guide](https://mydentify.com/tools/launch-image-listing-asset-pack/llms.txt).
+- [Launch Copy and Product Facts Pack](https://mydentify.com/tools/launch-copy-product-facts-pack): Keep every launch story consistent with one reusable copy pack. [AI-readable guide](https://mydentify.com/tools/launch-copy-product-facts-pack/llms.txt).
+- [AI Model Cost Calculator](https://mydentify.com/tools/ai-model-cost-calculator): Estimate and compare monthly AI model API costs. [AI-readable guide](https://mydentify.com/tools/ai-model-cost-calculator/llms.txt).
+- [LLM Usage Cost Analyzer](https://mydentify.com/tools/llm-usage-cost-analyzer): Find the models and workloads driving an AI API bill. [AI-readable guide](https://mydentify.com/tools/llm-usage-cost-analyzer/llms.txt).
+- [ENS Name and Wallet Match Checker](https://mydentify.com/tools/ens-name-wallet-match-checker): Compare the forward and reverse records for an ENS identity. [AI-readable guide](https://mydentify.com/tools/ens-name-wallet-match-checker/llms.txt).
+- [ERC-8004 Agent Identity Inspector](https://mydentify.com/tools/erc-8004-agent-identity-inspector): Read an ERC-8004 agent identity and its declared services. [AI-readable guide](https://mydentify.com/tools/erc-8004-agent-identity-inspector/llms.txt).
+- [x402 Discovery Readiness Checker](https://mydentify.com/tools/x402-discovery-readiness-checker): Check an x402 endpoint without making a payment. [AI-readable guide](https://mydentify.com/tools/x402-discovery-readiness-checker/llms.txt).
+- [x402 Merchant Wallet Lookup](https://mydentify.com/tools/x402-merchant-wallet-lookup): Find public x402 APIs tied to a merchant wallet. [AI-readable guide](https://mydentify.com/tools/x402-merchant-wallet-lookup/llms.txt).
+- [Where Should I Launch?](https://mydentify.com/tools/startup-directory-finder): Find launch sites where your product has a real reason to belong. [AI-readable guide](https://mydentify.com/tools/startup-directory-finder/llms.txt).
+- [Dofollow/Nofollow Backlink Checker](https://mydentify.com/tools/dofollow-nofollow-checker): See whether a backlink is followed before you count it. [AI-readable guide](https://mydentify.com/tools/dofollow-nofollow-checker/llms.txt).
+- [Directory Listing Kit](https://mydentify.com/tools/startup-listing-brief-builder): Create one listing kit and submit to directories faster. [AI-readable guide](https://mydentify.com/tools/startup-listing-brief-builder/llms.txt).
+- [Directory ROI Calculator](https://mydentify.com/tools/directory-roi-calculator): See whether a directory is worth the fee and effort. [AI-readable guide](https://mydentify.com/tools/directory-roi-calculator/llms.txt).
+- [MRR Calculator](https://mydentify.com/tools/mrr-calculator): See what is growing or shrinking your recurring revenue. [AI-readable guide](https://mydentify.com/tools/mrr-calculator/llms.txt).
+- [Directory Submission Tracker](https://mydentify.com/tools/directory-submission-tracker): Keep every directory submission and result in one place. [AI-readable guide](https://mydentify.com/tools/directory-submission-tracker/llms.txt).
+- [UTM Link Builder](https://mydentify.com/tools/directory-campaign-utm-builder): Track which launch placements send people to your product. [AI-readable guide](https://mydentify.com/tools/directory-campaign-utm-builder/llms.txt).
+- [llms.txt Checker](https://mydentify.com/tools/llms-txt-generator-validator): Help AI tools find the right pages on your website. [AI-readable guide](https://mydentify.com/tools/llms-txt-generator-validator/llms.txt).
+- [Domain Rating Checker](https://mydentify.com/tools/domain-rating-context-checker): Judge a website's backlink strength before chasing a listing. [AI-readable guide](https://mydentify.com/tools/domain-rating-context-checker/llms.txt).
+- [Churn Impact Calculator](https://mydentify.com/tools/churn-impact-simulator): See how much revenue lower churn could help you keep. [AI-readable guide](https://mydentify.com/tools/churn-impact-simulator/llms.txt).
+- [Can AI Bots Read My Site?](https://mydentify.com/tools/ai-crawler-access-checker): Find access rules that may hide your site from AI tools. [AI-readable guide](https://mydentify.com/tools/ai-crawler-access-checker/llms.txt).
+- [Sitemap Checker](https://mydentify.com/tools/sitemap-health-checker): Find problems that can hide pages from search engines. [AI-readable guide](https://mydentify.com/tools/sitemap-health-checker/llms.txt).
+- [Canonical URL Checker](https://mydentify.com/tools/canonical-url-identity-checker): Find conflicting URLs that can split your product's search identity. [AI-readable guide](https://mydentify.com/tools/canonical-url-identity-checker/llms.txt).
+- [JavaScript SEO Checker](https://mydentify.com/tools/javascript-seo-render-checker): Find content JavaScript may hide from search engines. [AI-readable guide](https://mydentify.com/tools/javascript-seo-render-checker/llms.txt).
+- [What Does My Website Say?](https://mydentify.com/tools/what-does-my-website-do-checker): See whether your homepage clearly explains what you do. [AI-readable guide](https://mydentify.com/tools/what-does-my-website-do-checker/llms.txt).
+- [What Does AI Think My Product Is?](https://mydentify.com/tools/what-does-ai-think-my-product-is): See whether AI understands your product the way you intend. [AI-readable guide](https://mydentify.com/tools/what-does-ai-think-my-product-is/llms.txt).
+- [Is My Product Listing Outdated?](https://mydentify.com/tools/directory-listing-consistency-checker): Find outdated listings before they confuse buyers. [AI-readable guide](https://mydentify.com/tools/directory-listing-consistency-checker/llms.txt).
+- [Google Doc to WordPress Converter](https://mydentify.com/tools/google-doc-to-wordpress): Turn a Google Doc into clean WordPress post HTML. [AI-readable guide](https://mydentify.com/tools/google-doc-to-wordpress/llms.txt).
+- [Markdown to WordPress Converter](https://mydentify.com/tools/markdown-to-wordpress): Turn Markdown into clean WordPress post HTML. [AI-readable guide](https://mydentify.com/tools/markdown-to-wordpress/llms.txt).
+- [PDF to WordPress Converter](https://mydentify.com/tools/pdf-to-wordpress): Turn a text PDF into clean WordPress post HTML. [AI-readable guide](https://mydentify.com/tools/pdf-to-wordpress/llms.txt).
+- [Notion to WordPress Converter](https://mydentify.com/tools/notion-to-wordpress): Turn a Notion page into clean WordPress post HTML. [AI-readable guide](https://mydentify.com/tools/notion-to-wordpress/llms.txt).
+- [Free tool hubs](https://mydentify.com/tools/hubs): Focused tool collections for technical SEO, founder distribution, and AI discovery.
+- [Technical SEO tools](https://mydentify.com/tools/hubs/technical-seo): Check crawl access, sitemaps, canonical URLs, rendering, and link attributes with focused free tools.
+- [Founder distribution tools](https://mydentify.com/tools/hubs/founder-distribution): Find relevant directories, prepare accurate listing copy, and measure which launch links bring useful visits.
+- [AI discovery tools](https://mydentify.com/tools/hubs/ai-discovery): See what a public page says, check AI crawler access, and prepare the signals that help agents find the right facts.
+- [Agent payments tools](https://mydentify.com/tools/hubs/agent-payments): Check x402 payment endpoints, merchant wallets, and agent identity records with free read-only tools.
+- [Article RSS feed](https://mydentify.com/articles/feed.xml): Latest published Mydentify guides in RSS format.
+- [SaaS directories](https://mydentify.com/directories/saas): Qualified software discovery, review, and startup directories for SaaS products.
+- [AI tool directories](https://mydentify.com/directories/ai-tools): Qualified directories for AI tools, agents, and AI-enabled products.
+- [Indie maker directories](https://mydentify.com/directories/indie-makers): Launch and listing opportunities for bootstrapped products and small teams.
+- [Developer tool directories](https://mydentify.com/directories/developer-tools): Technical discovery destinations for APIs, open-source projects, and developer products.
+- [Free startup directories](https://mydentify.com/directories/free): Qualified submission paths with no identified required listing fee.
+- [Why discovery is changing](https://mydentify.com/discovery): Learn how Mydentify evaluates evidence and recommendation readiness.
+- [About](https://mydentify.com/about): Mydentify's purpose, history, and operating principles.
+- [Pricing](https://mydentify.com/pricing): Free permanent listings and the one-time Player Pass for weekly leaderboard eligibility.
+- [List a product](https://mydentify.com/submit): Start a product submission or public-evidence diagnostic.
+
+## Public data and agent resources
+- [Intent catalog](https://mydentify.com/intents.json): Published intents as structured JSON.
+- [Product catalog](https://mydentify.com/products.json): Approved public products as structured JSON.
+- [Leaderboard catalog](https://mydentify.com/leaderboards.json): Current leaderboard, real activity, completed results, rules, and public standings as structured JSON.
+- [Directory catalog](https://mydentify.com/directories.json): All public directory records as structured JSON.
+- [Directory LLM text](https://mydentify.com/directories/llms.txt): Concise Markdown guide to directory collections and records.
+- [Public API guide](https://mydentify.com/developers): Human-readable setup, working endpoints, and copy-ready requests.
+- [OpenAPI document](https://mydentify.com/openapi.json): Machine-readable descriptions of supported public endpoints.
+- [Listing badge](https://mydentify.com/badges): Copy-ready linked HTML for the official Mydentify listing badge.
+- [APIs.json index](https://mydentify.com/apis.json): Provider, contact, documentation, policy, and discovery metadata for the public API.
+- [API catalog](https://mydentify.com/.well-known/api-catalog): Discoverable index of Mydentify's public APIs.
+- [Agent skills catalog](https://mydentify.com/.well-known/agent-skills/index.json): Discoverable skills for intent discovery, directory research, and product submission.
+- [AI usage policy](https://mydentify.com/ai.txt): Permissions, restrictions, attribution guidance, and boundaries for agent actions.
+- [Sitemap](https://mydentify.com/sitemap.xml): Canonical indexable pages.
+- [Robots policy](https://mydentify.com/robots.txt): Crawler access rules.
+
+## Route patterns
+- "/i-want-to/{slug}", "/i-need-to/{slug}", "/how-can-i/{slug}", and "/help-me/{slug}" are canonical intent pages.
+- Append "/llms.txt" to a canonical intent URL for its plain-text representation.
+- "/products/{slug}" is a canonical product profile; "/api/products/{slug}/markdown" is its Markdown representation.
+- "/leaderboards/{topic}-{yyyy-mm-dd}" is the permanent public page for an upcoming, live, locked, or completed weekly leaderboard.
+- "/directories/{slug}" is a directory detail page with submission evidence and listing attributes.
+- "/start/plan/{goal}" is a short numbered plan for one goal; each step names a verifiable finish line. "/start/plan/recommended" derives the goal from the answer parameters instead.
+- "/start/plan/{goal}" accepts optional "stage", "stuck", "traffic", "time", and "deploy" parameters that tailor the plan. They never change the canonical URL.
+- "/playbooks/{slug}" is a sequenced action plan with milestones, per-action completion criteria, and the tool that verifies each one.
+- Append "/llms.txt" to a canonical playbook URL for its full plan as Markdown, including what each action cannot prove.
+- "/tools/{slug}" is a free interactive utility with its method, limits, supporting guide, and related next steps.
+- Append "/llms.txt" to a canonical tool URL for its concise Markdown instructions, limitations, and action boundaries.
+- "/tools/hubs/{slug}" is a focused collection page linking to related free tools, a suggested order, and public limitations.
+- "/api/directories/{slug}/json" is the canonical JSON representation for a directory detail, collection, category index, pricing index, link-type index, or sorting index.
+- Append "/llms.txt" to a canonical directory URL for its concise Markdown representation.
+
+## Interpretation notes
+- An intent describes what a person wants to accomplish, not a product category.
+- Product matches should be explained using the evidence shown on the relevant intent and product pages.
+- Directory Score is Mydentify's composite comparison metric; Domain Rating is one input and should not be treated as the complete ranking.
+- Verify pricing, submission eligibility, link behavior, and operating status on the destination site before acting on directory information.
+- Treat sponsored placements as advertising. They are labeled and separate from independent product rankings.
+- Leaderboard standings use valid member signals only. Player payment unlocks eligibility and does not alter the ranking order.
+
+## Product leaderboards
+- [Best products for managing your time](https://mydentify.com/leaderboards/managing-your-time-2026-08-10): Products that make schedules, priorities, and time commitments easier to manage. Status: upcoming.
+- [Best products for cooking better meals](https://mydentify.com/leaderboards/cooking-better-meals-2026-08-03): Products that make meal ideas, grocery planning, and home cooking easier. Status: completed.
+- [Best products for organizing your life](https://mydentify.com/leaderboards/organizing-your-life-2026-07-27): Products that bring everyday tasks, plans, and information into a system you can keep using. Status: completed.
+- [Best products for tracking your habits](https://mydentify.com/leaderboards/tracking-your-habits-2026-07-20): Products that make everyday routines visible and easier to keep. Status: completed.
+- [Best products for getting healthy](https://mydentify.com/leaderboards/getting-healthy-2026-07-13): Vote for the products that make healthier habits easier to start and keep. Status: completed.
+- [Best products for monitoring software releases](https://mydentify.com/leaderboards/monitoring-software-releases-2026-07-06): An editorial retrospective on products for deploying changes and finding problems after software reaches users. Status: completed.
+- [Best products for managing product ideas](https://mydentify.com/leaderboards/managing-product-ideas-2026-06-29): An editorial retrospective on products for connecting product ideas to customer evidence and clear decisions. Status: completed.
+- [Best products for running customer support](https://mydentify.com/leaderboards/running-customer-support-2026-06-22): An editorial retrospective on products for answering questions and resolving customer problems efficiently. Status: completed.
+- [Best products for shipping a landing page](https://mydentify.com/leaderboards/shipping-a-landing-page-2026-06-15): An editorial retrospective on products for designing, publishing, and improving a focused marketing page. Status: completed.
+- [Best products for running a referral program](https://mydentify.com/leaderboards/running-a-referral-program-2026-06-08): An editorial retrospective on products for rewarding customers, affiliates, and partners who create new demand. Status: completed.
+- [Best products for managing a sales pipeline](https://mydentify.com/leaderboards/managing-a-sales-pipeline-2026-06-01): An editorial retrospective on products that help small teams find, qualify, and follow up with buyers. Status: completed.
+- [Best products for sending product email](https://mydentify.com/leaderboards/sending-product-email-2026-05-25): An editorial retrospective on products for sending onboarding, lifecycle, and transactional email. Status: completed.
+- [Best products for collecting customer proof](https://mydentify.com/leaderboards/collecting-customer-proof-2026-05-18): An editorial retrospective on products for gathering credible customer stories, quotes, and demonstrations. Status: completed.
+- [Best products for publishing product documentation](https://mydentify.com/leaderboards/publishing-product-documentation-2026-05-11): An editorial retrospective on products for publishing useful guides, references, and help content. Status: completed.
+- [Best products for improving user onboarding](https://mydentify.com/leaderboards/improving-user-onboarding-2026-05-04): An editorial retrospective on products that help new users reach value with less confusion. Status: completed.
+- [Best products for understanding product usage](https://mydentify.com/leaderboards/understanding-product-usage-2026-04-27): An editorial retrospective on products that show how people find, use, and return to software. Status: completed.
+- [Best products for creating product demos](https://mydentify.com/leaderboards/creating-product-demos-2026-04-20): An editorial retrospective on products for showing a software workflow clearly and quickly. Status: completed.
+- [Best products for collecting customer feedback](https://mydentify.com/leaderboards/collecting-customer-feedback-2026-04-13): An editorial retrospective on products that help teams gather, organize, and act on customer feedback. Status: completed.
+- [Best products for scheduling customer calls](https://mydentify.com/leaderboards/scheduling-customer-calls-2026-04-06): An editorial retrospective on products that make booking, running, and capturing customer calls easier. Status: completed.
+
+## Published intents
+- [Grow my voice](https://mydentify.com/i-want-to/grow-my-voice/llms.txt): Build a recognizable presence around your ideas so more people read, trust, and remember what you have to say.
+- [Organize startup ideas](https://mydentify.com/i-want-to/organize-startup-ideas/llms.txt): Capture, compare, and prioritize product ideas without losing the reasoning behind them.
+- [Collect beta feedback](https://mydentify.com/i-want-to/collect-beta-feedback/llms.txt): Turn early-user reactions into structured product decisions instead of scattered notes.
+- [Validate my app idea](https://mydentify.com/i-want-to/validate-my-app-idea/llms.txt): Pressure-test whether a problem, audience, and willingness to pay exist before overbuilding.
+- [Manage roadmap](https://mydentify.com/i-want-to/manage-roadmap/llms.txt): Keep product direction visible, evidence-based, and connected to customer outcomes.
+- [Accept payments](https://mydentify.com/i-want-to/accept-payments/llms.txt): Let customers pay safely through checkout, subscriptions, invoices, or usage-based billing.
+- [Track app revenue](https://mydentify.com/i-want-to/track-app-revenue/llms.txt): See revenue, churn, expansion, and payment health clearly enough to make decisions.
+- [Improve onboarding](https://mydentify.com/i-want-to/improve-onboarding/llms.txt): Help new users reach their first meaningful outcome before they lose context or motivation.
+- [Reduce churn](https://mydentify.com/i-want-to/reduce-churn/llms.txt): Find why customers stop using or paying for the product and address the highest-leverage causes.
+- [Exercise more consistently](https://mydentify.com/i-want-to/exercise-more-consistently/llms.txt): Make movement happen often enough to matter by matching workouts to your schedule, motivation, and recovery.
+- [Find recipes](https://mydentify.com/i-want-to/find-recipes/llms.txt): Find reliable recipes that match the dish, cuisine, ingredients, and cooking experience you have in mind.
+- [Improve activation](https://mydentify.com/i-want-to/improve-activation/llms.txt): Increase the share of new users who reach the first product moment that proves the promise.
+- [Explain my product clearly](https://mydentify.com/i-want-to/explain-my-product-clearly/llms.txt): Make strangers understand who the product is for, what changes, and why it matters.
+- [Build an MVP](https://mydentify.com/i-want-to/build-an-mvp/llms.txt): Ship the smallest useful version of a product that can create real user evidence.
+- [Learn to cook](https://mydentify.com/i-want-to/learn-to-cook/llms.txt): Build practical cooking skills by following clear recipes, learning core techniques, and understanding why each step matters.
+- [Sleep better](https://mydentify.com/i-want-to/sleep-better/llms.txt): Improve sleep by finding the behaviors, environment, and rhythm that make rest more consistent.
+- [Launch on Product Hunt](https://mydentify.com/i-want-to/launch-on-product-hunt/llms.txt): Prepare a focused launch that turns attention into useful traffic, feedback, and customer conversations.
+- [Plan meals](https://mydentify.com/i-want-to/plan-meals/llms.txt): Reduce daily food decisions by turning preferences, schedule, and groceries into a practical meal plan.
+- [Set up analytics](https://mydentify.com/i-want-to/set-up-analytics/llms.txt): Instrument the few events that reveal whether people reach value and where the product loses them.
+- [Make arepas](https://mydentify.com/i-want-to/make-arepas/llms.txt): Learn to make Colombian or Venezuelan arepas with the right dough, shape, cooking method, and fillings.
+- [Create a pricing page](https://mydentify.com/i-want-to/create-a-pricing-page/llms.txt): Explain plans, value, limits, and next steps so buyers can decide without guessing.
+- [Explore Latin American food](https://mydentify.com/i-want-to/explore-latin-american-food/llms.txt): Discover dishes, recipes, techniques, and food traditions from Latin American cuisines.
+- [Create a sales pipeline](https://mydentify.com/i-want-to/create-a-sales-pipeline/llms.txt): Track active opportunities from first conversation to close without losing context or next steps.
+- [Create product screenshots](https://mydentify.com/i-want-to/create-product-screenshots/llms.txt): Turn product screens into clear launch, landing page, and social proof visuals.
+- [Schedule social posts](https://mydentify.com/i-want-to/schedule-social-posts/llms.txt): Plan and publish posts consistently without relying on daily manual effort.
+- [Decide what to build next](https://mydentify.com/i-want-to/decide-what-to-build-next/llms.txt): Choose the next product bet using evidence, effort, risk, and customer pull.
+- [Qualify leads](https://mydentify.com/i-want-to/qualify-leads/llms.txt): Separate promising prospects from poor-fit interest using clear signals before spending sales time.
+- [Reduce stress](https://mydentify.com/i-want-to/reduce-stress/llms.txt): Lower day-to-day stress by identifying triggers, choosing regulation tools, and making recovery visible.
+- [Create API documentation](https://mydentify.com/i-want-to/create-api-documentation/llms.txt): Help developers understand authentication, endpoints, examples, errors, and safe integration paths.
+- [Practice Spanish](https://mydentify.com/i-want-to/practice-spanish/llms.txt): Improve Spanish through a mix of vocabulary, listening, speaking, and short daily practice.
+- [Recruit design partners](https://mydentify.com/i-want-to/recruit-design-partners/llms.txt): Find early customers willing to shape the product through deeper feedback and shared learning.
+- [Build an app](https://mydentify.com/i-want-to/build-an-app/llms.txt): Turn an app idea into a working product by clarifying the user outcome, data, interface, and launch path.
+- [Build a referral loop](https://mydentify.com/i-want-to/build-a-referral-loop/llms.txt): Encourage happy users to bring in similar people with a reason, prompt, and reward that fits.
+- [Learn to code](https://mydentify.com/i-want-to/learn-to-code/llms.txt): Build programming skill through projects, practice, feedback, and concepts that compound over time.
+- [Improve app performance](https://mydentify.com/i-want-to/improve-app-performance/llms.txt): Make important product flows feel fast enough that users stay focused on the job.
+- [Organize my day](https://mydentify.com/i-want-to/organize-my-day/llms.txt): Turn tasks, commitments, and energy into a realistic day plan that can adapt when things change.
+- [Migrate from spreadsheets](https://mydentify.com/i-want-to/migrate-from-spreadsheets/llms.txt): Move a fragile spreadsheet workflow into a more reliable system without losing the useful structure.
+- [Stop procrastinating](https://mydentify.com/i-want-to/stop-procrastinating/llms.txt): Reduce avoidance by making the next action smaller, clearer, and less emotionally loaded.
+- [Get feedback from strangers](https://mydentify.com/i-want-to/get-feedback-from-strangers/llms.txt): Collect useful outside reactions from people who are not friends, teammates, or already sold on the idea.
+- [Add subscriptions](https://mydentify.com/i-want-to/add-subscriptions/llms.txt): Charge customers on a recurring schedule with clear plans, renewal behavior, and access rules.
+- [Create a waitlist](https://mydentify.com/i-want-to/create-a-waitlist/llms.txt): Capture qualified demand before launch and learn why people want access.
+- [Turn interviews into insights](https://mydentify.com/i-want-to/turn-interviews-into-insights/llms.txt): Convert customer conversations into patterns, decisions, and reusable evidence.
+- [Reduce signup friction](https://mydentify.com/i-want-to/reduce-signup-friction/llms.txt): Remove avoidable steps, confusion, and trust gaps that stop qualified users before first value.
+- [Turn meetings into action items](https://mydentify.com/i-want-to/turn-meetings-into-action-items/llms.txt): Convert conversations into owners, decisions, follow-ups, and context people can actually use later.
+- [Summarize customer feedback](https://mydentify.com/i-want-to/summarize-customer-feedback/llms.txt): Turn scattered feedback from calls, chats, forms, and tickets into patterns that support decisions.
+- [Be healthier](https://mydentify.com/i-want-to/be-healthier/llms.txt): Make practical everyday choices that support better health and wellbeing.
+- [Find beta testers](https://mydentify.com/i-want-to/find-beta-testers/llms.txt): Recruit people willing to try an early product and give useful feedback.
+- [Build a daily habit](https://mydentify.com/i-want-to/build-a-daily-habit/llms.txt): Turn a helpful action into a routine that becomes easier to repeat.
+- [Read more books](https://mydentify.com/i-want-to/read-more-books/llms.txt): Make reading easier to start, continue, and remember by matching books to your time and motivation.
+- [Get my first users](https://mydentify.com/i-want-to/get-my-first-users/llms.txt): Find and convert the first people who feel the pain your product solves.
+
+## Approved products
+- [1Lookup](https://mydentify.com/api/products/1lookup/markdown): Validate phone numbers, emails, IPs, and domains through an API, dashboard, batch CSV tools, or free browser tools.
+- [Adspirer](https://mydentify.com/api/products/adspirer/markdown): Manage paid-media campaigns from conversational workspaces with approval controls for consequential changes.
+- [AEO Engine](https://mydentify.com/api/products/aeo-engine/markdown): Managed SEO and answer-engine optimization covering technical fixes, schema, content, authority building, citation tracking, and reporting.
+- [Airtable](https://mydentify.com/api/products/airtable/markdown): Database-style workspace for organizing ideas, feedback, roadmaps, and lightweight operations.
+- [Alexa Belonix (@alexabelonix)](https://mydentify.com/api/products/alexa-belonix-alexabelonix/markdown): Founder resources for startup execution, audience growth and distribution.
+- [Allrecipes](https://mydentify.com/api/products/allrecipes/markdown): Recipe publisher with tested dishes, ingredient guidance, cooking techniques, ratings, and community reviews.
+- [Apollo](https://mydentify.com/api/products/apollo/markdown): Sales intelligence and outreach workspace for finding specific prospects and running founder-led outbound.
+- [Appcues](https://mydentify.com/api/products/appcues/markdown): Product adoption platform for no-code onboarding flows, in-app messages, checklists, and usage targeting.
+- [Atharva](https://mydentify.com/api/products/atharva/markdown): Automation and digital services for communication, lead generation, and business processes.
+- [Babbel](https://mydentify.com/api/products/babbel/markdown): Language-learning platform with structured lessons, real-life dialogues, review, and live class options.
+- [Bearable](https://mydentify.com/api/products/bearable/markdown): Health tracking app for symptoms, mood, sleep, medication, energy, and custom factors.
+- [Beehiiv](https://mydentify.com/api/products/beehiiv/markdown): Newsletter platform for publishing, growing, and monetizing an email audience.
+- [Better Launch](https://mydentify.com/api/products/better-launch/markdown): A product launch directory and done-for-you directory submission service for founders and builders.
+- [BeVisible](https://mydentify.com/api/products/bevisible/markdown): Track brand visibility, competitor mentions, and citations across supported answer platforms.
+- [Blotato](https://mydentify.com/api/products/blotato/markdown): Blotato is the AI social media automation tool with a native API and MCP. Create, schedule, and publish a week of content to all platforms in minutes.
+- [Blume Sidecar](https://mydentify.com/api/products/blume-sidecar/markdown): A macOS sidecar for monitoring coding agents, managing their setup files, and tracking usage.
+- [Buffer](https://mydentify.com/api/products/buffer/markdown): Social media planning and scheduling for creators, founders, and small teams.
+- [Bugsnag](https://mydentify.com/api/products/bugsnag/markdown): Error monitoring and stability management platform for tracking crashes and production bugs.
+- [Busuu](https://mydentify.com/api/products/busuu/markdown): Language-learning app with lessons, study plans, vocabulary review, and community feedback.
+- [BuyMicroStartups](https://mydentify.com/api/products/buymicrostartups/markdown): Marketplace for buying and selling digital micro-startups, typically under $25,000.
+- [Calendly](https://mydentify.com/api/products/calendly/markdown): Scheduling automation for sharing availability, qualifying invitees, routing meetings, and reducing coordination.
+- [Calm](https://mydentify.com/api/products/calm/markdown): Sleep, meditation, and relaxation app with guided practices, sleep stories, breathing, and music.
+- [Canny](https://mydentify.com/api/products/canny/markdown): Feedback and roadmap tool for collecting feature requests and prioritizing product decisions.
+- [CareClinic](https://mydentify.com/api/products/careclinic/markdown): Health journal for tracking symptoms, medication, vitals, care plans, and wellness factors.
+- [ChatDash](https://mydentify.com/api/products/chatdash/markdown): White-label client dashboards, workflows, analytics, and billing for voice-agent service providers.
+- [Churnkey](https://mydentify.com/api/products/churnkey/markdown): Retention platform for cancellation flows, payment recovery, churn analytics, and targeted save offers.
+- [Claras](https://mydentify.com/api/products/claras/markdown): Chrome extension for YouTube transcripts, summaries, timestamped chapters, search, and video Q&A.
+- [Clay](https://mydentify.com/api/products/clay/markdown): Prospecting and enrichment workspace for building targeted lead lists and personalized outreach workflows.
+- [Clerk](https://mydentify.com/api/products/clerk/markdown): Authentication and user management platform for sign-in, sign-up, sessions, and organizations.
+- [Close](https://mydentify.com/api/products/close/markdown): Sales CRM with pipeline management, email, calling, SMS, automation, and reporting for small sales teams.
+- [CloutStack](https://mydentify.com/api/products/cloutstack/markdown): A directory for discovering tools that help creators make, grow, and monetize their work.
+- [Clue](https://mydentify.com/api/products/clue/markdown): Period and cycle tracking app for logging periods, symptoms, predictions, and reproductive health patterns.
+- [Codecademy](https://mydentify.com/api/products/codecademy/markdown): Interactive coding education platform with courses, projects, career paths, and guided practice.
+- [Codédex](https://mydentify.com/api/products/codedex/markdown): Beginner-friendly, interactive coding courses with challenges and projects.
+- [CodeFast](https://mydentify.com/api/products/codefast/markdown): CodeFast is the best coding course to learn how to turn your idea into an online business, fast.
+- [Codex QR](https://mydentify.com/api/products/codex-qr/markdown): Create, scan, customize, and track QR codes online or with offline desktop apps.
+- [Cometly](https://mydentify.com/api/products/cometly/markdown): Marketing attribution platform for B2B SaaS that connects ad spend with pipeline and revenue.
+- [Common Room](https://mydentify.com/api/products/common-room/markdown): Customer intelligence platform that combines product, community, social, and buying signals for go-to-market teams.
+- [CoolVerdict](https://mydentify.com/api/products/coolverdict/markdown): AC sizing, cost estimation, model comparison, buying guides, and contractor listings.
+- [Creem](https://mydentify.com/api/products/creem/markdown): Smooth payments for SaaS and Indie Hackers that don't break the bank.
+- [Crewargo](https://mydentify.com/api/products/crewargo/markdown): A desktop workspace where one lead agent coordinates specialist agents in one thread.
+- [Crisp](https://mydentify.com/api/products/crisp/markdown): Customer messaging platform with chat, help center, shared inbox, and automation features.
+- [Cronometer](https://mydentify.com/api/products/cronometer/markdown): Nutrition tracker focused on detailed macro and micronutrient data, fasting, biometrics, and reports.
+- [Cursor](https://mydentify.com/api/products/cursor/markdown): AI code editor for pair-programming with models across existing codebases.
+- [Customer.io](https://mydentify.com/api/products/customerio/markdown): Customer engagement platform for event-triggered email, push, SMS, and in-app messaging journeys.
+- [DanielLaunches](https://mydentify.com/api/products/daniellaunches/markdown): Launch products with a permanent page, public voting, and tracked traffic and growth data.
+- [DataExpert.io Academy](https://mydentify.com/api/products/dataexpertio-academy/markdown): Hands-on training in data engineering, analytics engineering, and related tools.
+- [DataFast](https://mydentify.com/api/products/datafast/markdown): DataFast is the analytics tool for entrepreneurs. From first click to customer, it helps you understand where the money is and how to increase your revenue without bombarding you with data.
+- [DecorAI](https://mydentify.com/api/products/decorai/markdown): Upload a room, exterior, garden, sketch, or floor plan to create photorealistic design concepts.
+- [Descript](https://mydentify.com/api/products/descript/markdown): Audio and video editor with recording, transcription, text-based editing, captions, and AI production tools.
+
+## Editorial resources
+- [How an AI Agent Can Sponsor Mydentify’s Site Rails](https://mydentify.com/api/content/ai-agent-sponsor-mydentify-site-rails/markdown): A practical guide for AI agents and their operators to evaluate, prepare, approve, and purchase a labeled Mydentify sponsor rail placement.
+- [Traditional SEO vs AI Discovery: What Product Builders Should Do](https://mydentify.com/api/content/seo-vs-ai-discovery/markdown): Traditional SEO and AI discovery share crawlability, authority, and clear content. AI retrieval adds answer extraction, entity consistency, citation monitoring, and new machine-readable surfaces.
+- [How AI Agents Discover and Understand Products on the Web](https://mydentify.com/api/content/how-ai-agents-discover-products/markdown): AI agents discover products through crawlable pages, search and retrieval systems, structured entities, public documentation, links, feeds, and emerging agent-oriented conventions.
+- [Why Small Development Teams Need a Distribution Plan](https://mydentify.com/api/content/distribution-plan-for-small-development-teams/markdown): Small development teams often ship consistently but leave distribution unowned. A lightweight release and link-building plan turns product work into lasting discovery.
+- [Why Mydentify Was Rebuilt for People and AI Agents](https://mydentify.com/api/content/mydentify-agent-first-directory/markdown): Mydentify pairs useful human pages with structured records, evidence, canonical URLs, JSON-LD, feeds, Markdown, and agent discovery files—without promising citations.
+- [How to Increase Domain Rating Without Chasing a Number](https://mydentify.com/api/content/how-to-increase-domain-rating/markdown): Increase Domain Rating by earning followed links from relevant referring domains, reclaiming lost links, and publishing assets worth citing—not by purchasing metric inflation.
+- [Product Distribution: How Software Gets Found and Chosen](https://mydentify.com/api/content/product-distribution-for-software/markdown): Product distribution connects useful software with the people who need it. Learn how discovery, trust, access, and repeatable channels work together.
+- [Free vs Paid Startup Directories: Where Should You Submit?](https://mydentify.com/api/content/free-vs-paid-startup-directories/markdown): Free and paid startup directories can both be worthwhile. Compare the audience, listing, editorial process, permanence, disclosure, and total cost before choosing.
+- [Startup Directory Submission Checklist for Founders](https://mydentify.com/api/content/startup-directory-submission-checklist/markdown): Prepare consistent product assets, choose the right category, track every submission, verify the live listing, and measure what each directory actually returns.
+- [Link Building for Solopreneurs: A Simple Weekly System](https://mydentify.com/api/content/link-building-for-solopreneurs/markdown): A practical link-building routine for one-person businesses that need durable discovery without mass outreach, daily posting, or an expensive SEO team.
+- [Link Building for Startups: A Practical First 90 Days](https://mydentify.com/api/content/link-building-for-startups/markdown): A focused 90-day link-building plan for startups: establish owned citations, earn relevant editorial links, use directories selectively, and measure outcomes beyond DR.
+- [Do Directory Backlinks Help SEO? A Quality-First Answer](https://mydentify.com/api/content/directory-backlinks-seo/markdown): Directory backlinks can help when the directory is relevant, maintained, indexable, and useful to its audience. Bulk links from indiscriminate directories are a different proposition.
+- [Dofollow vs Nofollow Links: What Founders Need to Know](https://mydentify.com/api/content/dofollow-vs-nofollow-links/markdown): A followed link can pass link equity; nofollow, sponsored, and UGC attributes qualify the relationship. Every useful link does not need to be followed.
+- [Domain Rating vs PageRank: What Each Metric Actually Measures](https://mydentify.com/api/content/domain-rating-vs-pagerank/markdown): Domain Rating summarizes a website’s backlink profile in Ahrefs. PageRank is Google’s page-level link system. They overlap conceptually, but they are not interchangeable.
+- [Distribution for Builders: What to Do After You Ship](https://mydentify.com/api/content/distribution-for-builders-after-you-ship/markdown): Shipping is only the first half of the work. A simple distribution routine helps builders earn attention, useful links, and a steady path to new users.
+- [What Is PageRank? How Google’s Link System Works](https://mydentify.com/api/content/what-is-pagerank/markdown): PageRank is a page-level system originally designed to estimate importance from links. Google still uses PageRank concepts, but the old public Toolbar score is gone.
+- [What Is Domain Rating? Ahrefs DR Explained Without the Hype](https://mydentify.com/api/content/what-is-domain-rating/markdown): Domain Rating is Ahrefs’ estimate of a website’s backlink-profile strength on a logarithmic 0–100 scale. It is useful for comparison—but it is not a Google score.
+- [How to Choose Startup Directories Worth Your Time](https://mydentify.com/api/content/choose-startup-directories/markdown): Choose startup directories by audience fit, listing quality, submission cost, link behavior, durability, and likely return. Use DR as context—not the decision.
+- [Why Web Directories Are Making a Comeback in 2026](https://mydentify.com/api/content/web-directories-comeback/markdown): Useful web directories are returning because curated categories, durable listings, and structured records solve discovery problems that search results and social feeds often leave open.
+- [Mydentify Reborn: A New Year, a New Kind of Directory](https://mydentify.com/api/content/mydentify-reborn/markdown): Mydentify began as a web directory in 2004. Its 2026 rebuild returns to that useful foundation—with better data, clearer intent, and pages both people and agents can understand.

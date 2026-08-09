@@ -1,0 +1,1 @@
+{"ok":true,"ready":true,"checks":{"database":true,"appUrl":true,"adminAuth":true,"memberAuth":true,"email":true,"assetStorage":true,"productPolish":true,"stripe":true,"monitoring":true},"service":"mydentify","timestamp":"2026-08-09T22:03:48.966Z"}

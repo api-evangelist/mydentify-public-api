@@ -1,0 +1,68 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for the Mydentify Public API
+  version: 1.0.0
+extends: openapi/mydentify-public-api-openapi-original.json
+x-apievangelist:
+  generated: '2026-08-09'
+  method: generated
+  source: openapi/mydentify-public-api-openapi-original.json (v1.4.0)
+  rationale: >-
+    The published spec declares no operationIds and no tags — both are contract-quality signals
+    that agents and code generators depend on. This overlay adds them without mutating the
+    provider's document, plus the discovery surfaces the provider publishes outside the spec.
+    Nothing here changes behaviour; it names what already exists.
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-profile: https://apievangelist.com/providers/mydentify-public-api
+      x-apis-io: https://apis.io/provider/mydentify-public-api
+  - target: $
+    update:
+      tags:
+        - name: leaderboards
+          description: Weekly community-signaled product leaderboards and their public standings.
+        - name: directories
+          description: The curated startup / product directory catalog and its per-record representations.
+        - name: taxonomy
+          description: The portable product-category taxonomy and its external marketplace mappings.
+        - name: imports
+          description: Diagnostic-first product submission — dry run, durable import, events, review and publication.
+  - target: $.paths['/leaderboards.json'].get
+    update: {operationId: getLeaderboards, tags: [leaderboards]}
+  - target: $.paths['/api/leaderboards/{slug}/json'].get
+    update: {operationId: getLeaderboard, tags: [leaderboards]}
+  - target: $.paths['/directories.json'].get
+    update: {operationId: getDirectories, tags: [directories]}
+  - target: $.paths['/product-categories.json'].get
+    update: {operationId: getProductCategories, tags: [taxonomy]}
+  - target: $.paths['/api/directories/{slug}/json'].get
+    update: {operationId: getDirectory, tags: [directories]}
+  - target: $.paths['/directories/{slug}/llms.txt'].get
+    update: {operationId: getDirectoryLlmsTxt, tags: [directories]}
+  - target: $.paths['/api/imports/dry-run'].post
+    update: {operationId: dryRunImport, tags: [imports]}
+  - target: $.paths['/api/imports'].post
+    update:
+      operationId: createImport
+      tags: [imports]
+      x-idempotency:
+        header: Idempotency-Key
+        required: false
+        scope: same key + same body returns the original import; same key + different body returns 409
+        source: https://mydentify.com/submit.md
+  - target: $.paths['/api/imports/{id}'].get
+    update: {operationId: getImport, tags: [imports]}
+  - target: $.paths['/api/imports/{id}/events'].get
+    update:
+      operationId: streamImportEvents
+      tags: [imports]
+      x-streaming: {protocol: sse, resume_header: Last-Event-ID}
+  - target: $.paths['/api/imports/{id}/retry'].post
+    update: {operationId: retryImport, tags: [imports]}
+  - target: $.paths['/api/imports/{id}/manual-review'].post
+    update: {operationId: requestManualReview, tags: [imports]}
+  - target: $.paths['/api/imports/{id}/goals'].post
+    update: {operationId: confirmImportGoals, tags: [imports]}
+  - target: $.paths['/api/imports/{id}/verify-badge'].post
+    update: {operationId: verifyBadge, tags: [imports]}
