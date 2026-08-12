@@ -27,60 +27,237 @@ tags:
   - agent skills
   - directories
 apis:
-  - name: Mydentify Public API
-    description: >-
-      Keyless HTTPS REST API (OpenAPI 3.1.0, v1.4.0) for product discovery, weekly leaderboards,
-      the curated directory catalog, and idempotency-keyed product imports; plus agent-native
-      surfaces including llms.txt, ai.txt, published agent skills, and an RFC 9727 API catalog.
-    humanURL: https://mydentify.com/developers
-    baseURL: https://mydentify.com
-    tags:
-      - product discovery
-      - startup directories
-      - leaderboards
-      - research
-      - SaaS
-      - developer tools
-      - agent-native
-    properties:
-      - type: OpenAPI
-        url: openapi/mydentify-public-api-openapi-original.json
-      - type: OpenAPI
-        url: https://mydentify.com/openapi.json
-      - type: Overlay
-        url: overlays/mydentify-public-api-overlay.yaml
-      - type: Examples
-        url: examples/_index.yml
-      - type: Documentation
-        url: https://mydentify.com/submit.md
-      - type: GettingStarted
-        url: https://mydentify.com/submit.md
-      - type: DeveloperPortal
-        url: https://mydentify.com/developers
-      - type: LLMsTxt
-        url: llms/mydentify-public-api-llms.txt
-      - type: AgentSkill
-        url: skills/_index.yml
-      - type: MCPServer
-        url: mcp/mydentify-public-api-mcp.yml
-      - type: ToolCrosswalk
-        url: mcp/mydentify-public-api-tool-crosswalk.yml
-      - type: Authentication
-        url: authentication/mydentify-public-api-authentication.yml
-      - type: Conventions
-        url: conventions/mydentify-public-api-conventions.yml
-      - type: Idempotency
-        url: conventions/mydentify-public-api-conventions.yml
-      - type: ErrorCatalog
-        url: errors/mydentify-public-api-problem-types.yml
-      - type: DataModel
-        url: data-model/mydentify-public-api-data-model.yml
-      - type: Lifecycle
-        url: lifecycle/mydentify-public-api-lifecycle.yml
-      - type: Sandbox
-        url: sandbox/mydentify-public-api-sandbox.yml
-      - type: Conformance
-        url: conformance/mydentify-public-api-conformance.yml
+- aid: mydentify-public-api:mydentify-public-api-directories-api
+  name: Mydentify Public API Directories API
+  description: The Directories API from Mydentify Public API — 2 operation(s) for directories.
+  humanURL: https://mydentify.com/developers
+  baseURL: https://mydentify.com
+  tags:
+  - Directories
+  properties:
+  - type: OpenAPI
+    url: openapi/mydentify-public-api-directories-api-openapi.yml
+  - type: Examples
+    url: examples/_index.yml
+  - type: Documentation
+    url: https://mydentify.com/submit.md
+  - type: GettingStarted
+    url: https://mydentify.com/submit.md
+  - type: DeveloperPortal
+    url: https://mydentify.com/developers
+  - type: LLMsTxt
+    url: llms/mydentify-public-api-llms.txt
+  - type: ToolCrosswalk
+    url: mcp/mydentify-public-api-tool-crosswalk.yml
+  - type: Authentication
+    url: authentication/mydentify-public-api-authentication.yml
+  - type: Conventions
+    url: conventions/mydentify-public-api-conventions.yml
+  - type: Idempotency
+    url: conventions/mydentify-public-api-conventions.yml
+  - type: ErrorCatalog
+    url: errors/mydentify-public-api-problem-types.yml
+  - type: DataModel
+    url: data-model/mydentify-public-api-data-model.yml
+  - type: Lifecycle
+    url: lifecycle/mydentify-public-api-lifecycle.yml
+  - type: Sandbox
+    url: sandbox/mydentify-public-api-sandbox.yml
+  - type: Conformance
+    url: conformance/mydentify-public-api-conformance.yml
+- aid: mydentify-public-api:mydentify-public-api-directories-json-api
+  name: Mydentify Public API Directories.json API
+  description: >-
+    The Directories.json API from Mydentify Public API — 1 operation(s) for directories.json.
+  humanURL: https://mydentify.com/developers
+  baseURL: https://mydentify.com
+  tags:
+  - Directories.json
+  properties:
+  - type: OpenAPI
+    url: openapi/mydentify-public-api-directories-json-api-openapi.yml
+  - type: Examples
+    url: examples/_index.yml
+  - type: Documentation
+    url: https://mydentify.com/submit.md
+  - type: GettingStarted
+    url: https://mydentify.com/submit.md
+  - type: DeveloperPortal
+    url: https://mydentify.com/developers
+  - type: LLMsTxt
+    url: llms/mydentify-public-api-llms.txt
+  - type: ToolCrosswalk
+    url: mcp/mydentify-public-api-tool-crosswalk.yml
+  - type: Authentication
+    url: authentication/mydentify-public-api-authentication.yml
+  - type: Conventions
+    url: conventions/mydentify-public-api-conventions.yml
+  - type: Idempotency
+    url: conventions/mydentify-public-api-conventions.yml
+  - type: ErrorCatalog
+    url: errors/mydentify-public-api-problem-types.yml
+  - type: DataModel
+    url: data-model/mydentify-public-api-data-model.yml
+  - type: Lifecycle
+    url: lifecycle/mydentify-public-api-lifecycle.yml
+  - type: Sandbox
+    url: sandbox/mydentify-public-api-sandbox.yml
+  - type: Conformance
+    url: conformance/mydentify-public-api-conformance.yml
+- aid: mydentify-public-api:mydentify-public-api-imports-api
+  name: Mydentify Public API Imports API
+  description: The Imports API from Mydentify Public API — 8 operation(s) for imports.
+  humanURL: https://mydentify.com/developers
+  baseURL: https://mydentify.com
+  tags:
+  - Imports
+  properties:
+  - type: OpenAPI
+    url: openapi/mydentify-public-api-imports-api-openapi.yml
+  - type: Examples
+    url: examples/_index.yml
+  - type: Documentation
+    url: https://mydentify.com/submit.md
+  - type: GettingStarted
+    url: https://mydentify.com/submit.md
+  - type: DeveloperPortal
+    url: https://mydentify.com/developers
+  - type: LLMsTxt
+    url: llms/mydentify-public-api-llms.txt
+  - type: ToolCrosswalk
+    url: mcp/mydentify-public-api-tool-crosswalk.yml
+  - type: Authentication
+    url: authentication/mydentify-public-api-authentication.yml
+  - type: Conventions
+    url: conventions/mydentify-public-api-conventions.yml
+  - type: Idempotency
+    url: conventions/mydentify-public-api-conventions.yml
+  - type: ErrorCatalog
+    url: errors/mydentify-public-api-problem-types.yml
+  - type: DataModel
+    url: data-model/mydentify-public-api-data-model.yml
+  - type: Lifecycle
+    url: lifecycle/mydentify-public-api-lifecycle.yml
+  - type: Sandbox
+    url: sandbox/mydentify-public-api-sandbox.yml
+  - type: Conformance
+    url: conformance/mydentify-public-api-conformance.yml
+- aid: mydentify-public-api:mydentify-public-api-leaderboards-api
+  name: Mydentify Public API Leaderboards API
+  description: The Leaderboards API from Mydentify Public API — 1 operation(s) for leaderboards.
+  humanURL: https://mydentify.com/developers
+  baseURL: https://mydentify.com
+  tags:
+  - Leaderboards
+  properties:
+  - type: OpenAPI
+    url: openapi/mydentify-public-api-leaderboards-api-openapi.yml
+  - type: Examples
+    url: examples/_index.yml
+  - type: Documentation
+    url: https://mydentify.com/submit.md
+  - type: GettingStarted
+    url: https://mydentify.com/submit.md
+  - type: DeveloperPortal
+    url: https://mydentify.com/developers
+  - type: LLMsTxt
+    url: llms/mydentify-public-api-llms.txt
+  - type: ToolCrosswalk
+    url: mcp/mydentify-public-api-tool-crosswalk.yml
+  - type: Authentication
+    url: authentication/mydentify-public-api-authentication.yml
+  - type: Conventions
+    url: conventions/mydentify-public-api-conventions.yml
+  - type: Idempotency
+    url: conventions/mydentify-public-api-conventions.yml
+  - type: ErrorCatalog
+    url: errors/mydentify-public-api-problem-types.yml
+  - type: DataModel
+    url: data-model/mydentify-public-api-data-model.yml
+  - type: Lifecycle
+    url: lifecycle/mydentify-public-api-lifecycle.yml
+  - type: Sandbox
+    url: sandbox/mydentify-public-api-sandbox.yml
+  - type: Conformance
+    url: conformance/mydentify-public-api-conformance.yml
+- aid: mydentify-public-api:mydentify-public-api-leaderboards-json-api
+  name: Mydentify Public API Leaderboards.json API
+  description: >-
+    The Leaderboards.json API from Mydentify Public API — 1 operation(s) for leaderboards.json.
+  humanURL: https://mydentify.com/developers
+  baseURL: https://mydentify.com
+  tags:
+  - Leaderboards.json
+  properties:
+  - type: OpenAPI
+    url: openapi/mydentify-public-api-leaderboards-json-api-openapi.yml
+  - type: Examples
+    url: examples/_index.yml
+  - type: Documentation
+    url: https://mydentify.com/submit.md
+  - type: GettingStarted
+    url: https://mydentify.com/submit.md
+  - type: DeveloperPortal
+    url: https://mydentify.com/developers
+  - type: LLMsTxt
+    url: llms/mydentify-public-api-llms.txt
+  - type: ToolCrosswalk
+    url: mcp/mydentify-public-api-tool-crosswalk.yml
+  - type: Authentication
+    url: authentication/mydentify-public-api-authentication.yml
+  - type: Conventions
+    url: conventions/mydentify-public-api-conventions.yml
+  - type: Idempotency
+    url: conventions/mydentify-public-api-conventions.yml
+  - type: ErrorCatalog
+    url: errors/mydentify-public-api-problem-types.yml
+  - type: DataModel
+    url: data-model/mydentify-public-api-data-model.yml
+  - type: Lifecycle
+    url: lifecycle/mydentify-public-api-lifecycle.yml
+  - type: Sandbox
+    url: sandbox/mydentify-public-api-sandbox.yml
+  - type: Conformance
+    url: conformance/mydentify-public-api-conformance.yml
+- aid: mydentify-public-api:mydentify-public-api-product-categories-json-api
+  name: Mydentify Public API Product Categories.json API
+  description: >-
+    The Product Categories.json API from Mydentify Public API — 1 operation(s) for product categories.json.
+  humanURL: https://mydentify.com/developers
+  baseURL: https://mydentify.com
+  tags:
+  - Product Categories.json
+  properties:
+  - type: OpenAPI
+    url: openapi/mydentify-public-api-product-categories-json-api-openapi.yml
+  - type: Examples
+    url: examples/_index.yml
+  - type: Documentation
+    url: https://mydentify.com/submit.md
+  - type: GettingStarted
+    url: https://mydentify.com/submit.md
+  - type: DeveloperPortal
+    url: https://mydentify.com/developers
+  - type: LLMsTxt
+    url: llms/mydentify-public-api-llms.txt
+  - type: ToolCrosswalk
+    url: mcp/mydentify-public-api-tool-crosswalk.yml
+  - type: Authentication
+    url: authentication/mydentify-public-api-authentication.yml
+  - type: Conventions
+    url: conventions/mydentify-public-api-conventions.yml
+  - type: Idempotency
+    url: conventions/mydentify-public-api-conventions.yml
+  - type: ErrorCatalog
+    url: errors/mydentify-public-api-problem-types.yml
+  - type: DataModel
+    url: data-model/mydentify-public-api-data-model.yml
+  - type: Lifecycle
+    url: lifecycle/mydentify-public-api-lifecycle.yml
+  - type: Sandbox
+    url: sandbox/mydentify-public-api-sandbox.yml
+  - type: Conformance
+    url: conformance/mydentify-public-api-conformance.yml
 maintainers:
   - FN: Mydentify
     email: hello@mydentify.com
@@ -91,6 +268,10 @@ generated:
   confidence: 97
   at: '2026-07-27T10:19:42.675Z'
 common:
+- type: MCPServer
+  url: mcp/mydentify-public-api-mcp.yml
+- type: Overlay
+  url: overlays/mydentify-public-api-overlay.yaml
 - type: AgenticAccess
   url: agentic-access/mydentify-public-api-agentic-access.yml
 - type: DomainSecurity
