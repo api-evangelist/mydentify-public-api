@@ -11,7 +11,7 @@ description: >-
   Catalog, site-wide and per-resource llms.txt, an ai.txt usage policy, robots.txt Content
   Signals, and three published agentskills.io skills.
 image: https://mydentify.com/favicon.svg
-url: https://mydentify-public-api.apievangelist.com/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/mydentify-public-api/refs/heads/main/apis.yml
 created: '2026-07-27'
 modified: '2026-08-09'
 specificationVersion: '0.21'
