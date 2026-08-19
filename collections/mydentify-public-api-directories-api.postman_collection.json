@@ -1,0 +1,287 @@
+{
+  "item": [
+    {
+      "id": "2c3978fe-287e-4520-83bc-05f47e05c4d8",
+      "name": "Directories",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "48176663-e0cf-4bc5-ae80-1783768ba8c5",
+          "name": "Get structured data for a directory record, collection, or facet index",
+          "request": {
+            "name": "Get structured data for a directory record, collection, or facet index",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "directories",
+                ":slug",
+                "json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0505f572-46c3-4673-8c75-68bff6379a70",
+              "name": "Page-specific directory payload",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "directories",
+                    ":slug",
+                    "json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": true,\n  \"key_1\": true\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "67fc2605-2964-4cad-b15d-287ad6b1c75e",
+              "name": "Directory page not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "directories",
+                    ":slug",
+                    "json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a855267e-a700-4464-8fe6-fc40a8a2becf",
+          "name": "Get the concise Markdown representation of a directory record, collection, or facet index",
+          "request": {
+            "name": "Get the concise Markdown representation of a directory record, collection, or facet index",
+            "description": {},
+            "url": {
+              "path": [
+                "directories",
+                ":slug",
+                "llms.txt"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/markdown"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a2a7a7c6-12df-4157-87cd-92e7d02ccabe",
+              "name": "LLM-readable directory page",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "directories",
+                    ":slug",
+                    "llms.txt"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "text/markdown"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/markdown"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "c2722346-9cca-4722-ad07-f5dc54e26a13",
+              "name": "Directory page not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "directories",
+                    ":slug",
+                    "llms.txt"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://mydentify.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "993029b2-f908-4cd3-881f-6f93ef35dae6",
+    "name": "Mydentify Public Directories API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Read product directories and weekly leaderboard data or create a product. Public endpoints use HTTPS and need no API key. Directory JSON endpoints allow browser requests from any origin.",
+      "type": "text/plain"
+    }
+  }
+}

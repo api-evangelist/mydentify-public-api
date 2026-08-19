@@ -1,0 +1,99 @@
+{
+  "item": [
+    {
+      "id": "d36778ca-ee9d-4b59-9239-6ed8f86dab4e",
+      "name": "Leaderboards.json",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e8d690fd-59de-4641-8717-472ba1122736",
+          "name": "Get the current product leaderboard, real activity, and completed results",
+          "request": {
+            "name": "Get the current product leaderboard, real activity, and completed results",
+            "description": {},
+            "url": {
+              "path": [
+                "leaderboards.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1de3f54c-c08a-490f-9e39-ad5d3bb3184b",
+              "name": "Public leaderboard catalog",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "leaderboards.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": \"string\",\n  \"key_1\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://mydentify.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "63bf6d44-1897-4460-b41a-07441569fa1e",
+    "name": "Mydentify Public Leaderboards.json API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Read product directories and weekly leaderboard data or create a product. Public endpoints use HTTPS and need no API key. Directory JSON endpoints allow browser requests from any origin.",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "provider": "mydentify-public-api",
+  "sources": [
+    "mydentify-public-api-directories-api-openapi.yml",
+    "mydentify-public-api-directories-json-api-openapi.yml",
+    "mydentify-public-api-imports-api-openapi.yml",
+    "mydentify-public-api-leaderboards-api-openapi.yml",
+    "mydentify-public-api-leaderboards-json-api-openapi.yml",
+    "mydentify-public-api-product-categories-json-api-openapi.yml"
+  ],
+  "outputs": [
+    "mydentify-public-api-directories-api-openapi.yml",
+    "mydentify-public-api-directories-json-api-openapi.yml",
+    "mydentify-public-api-imports-api-openapi.yml",
+    "mydentify-public-api-leaderboards-api-openapi.yml",
+    "mydentify-public-api-leaderboards-json-api-openapi.yml",
+    "mydentify-public-api-product-categories-json-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "mydentify-public-api-directories-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "mydentify-public-api-directories-json-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "mydentify-public-api-imports-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "mydentify-public-api-leaderboards-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "mydentify-public-api-leaderboards-json-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "mydentify-public-api-product-categories-json-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": []
+}

@@ -1,0 +1,43 @@
+openapi: 3.2.0
+info:
+  title: Mydentify Public Leaderboards API
+  version: 1.4.0
+  description: Read product directories and weekly leaderboard data or create a product. Public endpoints use HTTPS and need no API key. Directory JSON endpoints allow browser requests from any origin.
+servers:
+- url: https://mydentify.com
+security: []
+tags:
+- name: Leaderboards
+paths:
+  /api/leaderboards/{slug}/json:
+    get:
+      summary: Get a permanent weekly leaderboard record and its public standings
+      parameters:
+      - $ref: '#/components/parameters/LeaderboardSlug'
+      responses:
+        '200':
+          description: Leaderboard data
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '404':
+          description: Leaderboard not found
+      tags:
+      - Leaderboards
+components:
+  parameters:
+    LeaderboardSlug:
+      in: path
+      name: slug
+      required: true
+      schema:
+        type: string
+externalDocs:
+  description: Use the Mydentify public API
+  url: https://mydentify.com/developers
+x-cors:
+  description: Directory JSON endpoints allow browser requests from any origin.
+  allowOrigins:
+  - '*'

@@ -5,68 +5,72 @@ source: openapi/mydentify-public-api-openapi-original.json
 search_result:
   official_hosted_server: none
   probes:
-    - url: https://mydentify.com/mcp
-      method: GET
-      status: 404
-    - url: https://mydentify.com/.well-known/mcp.json
-      method: GET
-      status: 404
-  notes: >-
-    Mydentify publishes no MCP server. Its agent surface is agentskills.io skill-md files
-    (/.well-known/agent-skills/index.json), llms.txt, ai.txt and an RFC 9727 API Catalog —
-    not Model Context Protocol. The tools below are a CANDIDATE mapping derived from the
-    provider's own OpenAPI 3.1 document; no endpoint serves them.
+  - url: https://mydentify.com/mcp
+    method: GET
+    status: 404
+  - url: https://mydentify.com/.well-known/mcp.json
+    method: GET
+    status: 404
+  notes: Mydentify publishes no MCP server. Its agent surface is agentskills.io skill-md files (/.well-known/agent-skills/index.json),
+    llms.txt, ai.txt and an RFC 9727 API Catalog — not Model Context Protocol. The tools below are a CANDIDATE
+    mapping derived from the provider's own OpenAPI 3.1 document; no endpoint serves them.
 server:
   name: mydentify
   transport: http
   url: null
 tools:
-  - name: get_leaderboards
-    description: Get the current product leaderboard, real activity, and completed results
-    source_operation: openapi/mydentify-public-api-openapi-original.json#get /leaderboards.json
-  - name: get_leaderboard
-    description: Get a permanent weekly leaderboard record and its public standings
-    source_operation: openapi/mydentify-public-api-openapi-original.json#get /api/leaderboards/{slug}/json
-  - name: get_directories
-    description: Get the complete public product-directory catalog
-    source_operation: openapi/mydentify-public-api-openapi-original.json#get /directories.json
-  - name: get_product_categories
-    description: Get the portable product category taxonomy and directory mappings
-    source_operation: openapi/mydentify-public-api-openapi-original.json#get /product-categories.json
-  - name: get_directory
-    description: Get structured data for a directory record, collection, or facet index
-    source_operation: openapi/mydentify-public-api-openapi-original.json#get /api/directories/{slug}/json
-  - name: get_directory_llms_txt
-    description: Get the concise Markdown representation of a directory record or collection
-    source_operation: openapi/mydentify-public-api-openapi-original.json#get /directories/{slug}/llms.txt
-  - name: dry_run_import
-    description: Diagnose a public product URL and detect duplicates without creating a listing
-    source_operation: openapi/mydentify-public-api-openapi-original.json#post /api/imports/dry-run
-  - name: create_import
-    description: Create or reuse a durable product diagnostic or product import (Idempotency-Key)
-    source_operation: openapi/mydentify-public-api-openapi-original.json#post /api/imports
-  - name: get_import
-    description: Get the durable state of an import
-    source_operation: openapi/mydentify-public-api-openapi-original.json#get /api/imports/{id}
-  - name: stream_import_events
-    description: Stream durable import events (SSE, resumable with Last-Event-ID)
-    source_operation: openapi/mydentify-public-api-openapi-original.json#get /api/imports/{id}/events
-  - name: retry_import
-    description: Retry a transiently failed import
-    source_operation: openapi/mydentify-public-api-openapi-original.json#post /api/imports/{id}/retry
-  - name: request_manual_review
-    description: Escalate an import to editorial manual review
-    source_operation: openapi/mydentify-public-api-openapi-original.json#post /api/imports/{id}/manual-review
-  - name: confirm_import_goals
-    description: Confirm the intent/goal for an import and request publication
-    source_operation: openapi/mydentify-public-api-openapi-original.json#post /api/imports/{id}/goals
-  - name: verify_badge
-    description: Ask Mydentify to re-verify the required followed backlink or listing badge
-    source_operation: openapi/mydentify-public-api-openapi-original.json#post /api/imports/{id}/verify-badge
+- name: get_leaderboards
+  description: Get the current product leaderboard, real activity, and completed results
+  source_operation: openapi/mydentify-public-api-openapi-original.json#get /leaderboards.json
+- name: get_leaderboard
+  description: Get a permanent weekly leaderboard record and its public standings
+  source_operation: openapi/mydentify-public-api-openapi-original.json#get /api/leaderboards/{slug}/json
+- name: get_directories
+  description: Get the complete public product-directory catalog
+  source_operation: openapi/mydentify-public-api-openapi-original.json#get /directories.json
+- name: get_product_categories
+  description: Get the portable product category taxonomy and directory mappings
+  source_operation: openapi/mydentify-public-api-openapi-original.json#get /product-categories.json
+- name: get_directory
+  description: Get structured data for a directory record, collection, or facet index
+  source_operation: openapi/mydentify-public-api-openapi-original.json#get /api/directories/{slug}/json
+- name: get_directory_llms_txt
+  description: Get the concise Markdown representation of a directory record or collection
+  source_operation: openapi/mydentify-public-api-openapi-original.json#get /directories/{slug}/llms.txt
+- name: dry_run_import
+  description: Diagnose a public product URL and detect duplicates without creating a listing
+  source_operation: openapi/mydentify-public-api-openapi-original.json#post /api/imports/dry-run
+- name: create_import
+  description: Create or reuse a durable product diagnostic or product import (Idempotency-Key)
+  source_operation: openapi/mydentify-public-api-openapi-original.json#post /api/imports
+- name: get_import
+  description: Get the durable state of an import
+  source_operation: openapi/mydentify-public-api-openapi-original.json#get /api/imports/{id}
+- name: stream_import_events
+  description: Stream durable import events (SSE, resumable with Last-Event-ID)
+  source_operation: openapi/mydentify-public-api-openapi-original.json#get /api/imports/{id}/events
+- name: retry_import
+  description: Retry a transiently failed import
+  source_operation: openapi/mydentify-public-api-openapi-original.json#post /api/imports/{id}/retry
+- name: request_manual_review
+  description: Escalate an import to editorial manual review
+  source_operation: openapi/mydentify-public-api-openapi-original.json#post /api/imports/{id}/manual-review
+- name: confirm_import_goals
+  description: Confirm the intent/goal for an import and request publication
+  source_operation: openapi/mydentify-public-api-openapi-original.json#post /api/imports/{id}/goals
+- name: verify_badge
+  description: Ask Mydentify to re-verify the required followed backlink or listing badge
+  source_operation: openapi/mydentify-public-api-openapi-original.json#post /api/imports/{id}/verify-badge
 x-evidence:
   fetched: '2026-08-09'
   urls:
-    - url: https://mydentify.com/mcp
-      http_status: 404
-    - url: https://mydentify.com/.well-known/mcp.json
-      http_status: 404
+  - url: https://mydentify.com/mcp
+    http_status: 404
+  - url: https://mydentify.com/.well-known/mcp.json
+    http_status: 404
+deployment:
+  mode: none
+  verified: derived
+  tools: 14
+  checked: '2026-08-12'
+  source: catalog MCP census

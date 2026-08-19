@@ -1,0 +1,54 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Mydentify Public Directories API",
+    "version": "1.4.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Directories",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get structured data for a directory record, collection, or facet index",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://mydentify.com/api/directories/:slug/json",
+            "params": [
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get structured data for a directory record, collection, or facet index"
+        },
+        {
+          "info": {
+            "name": "Get the concise Markdown representation of a directory record, collection, or facet index",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://mydentify.com/directories/:slug/llms.txt",
+            "params": [
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the concise Markdown representation of a directory record, collection, or facet index"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

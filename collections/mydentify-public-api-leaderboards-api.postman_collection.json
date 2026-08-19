@@ -1,0 +1,161 @@
+{
+  "item": [
+    {
+      "id": "d82efabb-80d2-4f14-87f3-9619c4f135eb",
+      "name": "Leaderboards",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "39c3561b-db76-46d1-96a0-eebcea907e60",
+          "name": "Get a permanent weekly leaderboard record and its public standings",
+          "request": {
+            "name": "Get a permanent weekly leaderboard record and its public standings",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "leaderboards",
+                ":slug",
+                "json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c91d8220-4e51-4e4c-9692-cfd7d1c869b2",
+              "name": "Leaderboard data",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "leaderboards",
+                    ":slug",
+                    "json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": 9672.620922102351,\n  \"key_1\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "3fc0cc2d-508d-415f-9b98-ce5ead2895c3",
+              "name": "Leaderboard not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "leaderboards",
+                    ":slug",
+                    "json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://mydentify.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "fc47eaea-a6ac-45f9-980b-63b8b90a42fe",
+    "name": "Mydentify Public Leaderboards API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Read product directories and weekly leaderboard data or create a product. Public endpoints use HTTPS and need no API key. Directory JSON endpoints allow browser requests from any origin.",
+      "type": "text/plain"
+    }
+  }
+}

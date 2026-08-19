@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Mydentify Public Leaderboards.json API",
+    "version": "1.4.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Leaderboards.json",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get the current product leaderboard, real activity, and completed results",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://mydentify.com/leaderboards.json"
+          },
+          "docs": "Get the current product leaderboard, real activity, and completed results"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

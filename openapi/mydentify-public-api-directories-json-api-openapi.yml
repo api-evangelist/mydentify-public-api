@@ -1,0 +1,143 @@
+openapi: 3.2.0
+info:
+  title: Mydentify Public Directories.json API
+  version: 1.4.0
+  description: Read product directories and weekly leaderboard data or create a product. Public endpoints use HTTPS and need no API key. Directory JSON endpoints allow browser requests from any origin.
+servers:
+- url: https://mydentify.com
+security: []
+tags:
+- name: Directories.json
+paths:
+  /directories.json:
+    get:
+      summary: Get the complete public product-directory catalog
+      responses:
+        '200':
+          description: Directory catalog with collection links and structured records
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - type
+                - humanUrl
+                - jsonUrl
+                - llmsTextUrl
+                - totalRecords
+                - records
+                properties:
+                  type:
+                    const: directory-catalog
+                  humanUrl:
+                    type: string
+                    format: uri
+                  jsonUrl:
+                    type: string
+                    format: uri
+                  llmsTextUrl:
+                    type: string
+                    format: uri
+                  totalRecords:
+                    type: integer
+                  collections:
+                    type: array
+                    items:
+                      type: object
+                      additionalProperties: true
+                  records:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/DirectoryRecord'
+      tags:
+      - Directories.json
+components:
+  schemas:
+    DirectoryRecord:
+      type: object
+      required:
+      - type
+      - id
+      - name
+      - slug
+      - domain
+      - websiteUrl
+      - canonicalUrl
+      - jsonUrl
+      - llmsTextUrl
+      - description
+      - category
+      - pricing
+      - link
+      - directoryScore
+      - scoreConfidence
+      - verificationStatus
+      - operatingStatus
+      - updatedAt
+      properties:
+        type:
+          const: directory-record
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        slug:
+          type: string
+        domain:
+          type: string
+        websiteUrl:
+          type: string
+          format: uri
+        submissionUrl:
+          anyOf:
+          - type: string
+            format: uri
+          - type: 'null'
+        canonicalUrl:
+          type: string
+          format: uri
+        jsonUrl:
+          type: string
+          format: uri
+        llmsTextUrl:
+          type: string
+          format: uri
+        description:
+          type: string
+        category:
+          type: string
+        pricing:
+          type: object
+          additionalProperties: true
+        link:
+          type: object
+          additionalProperties: true
+        directoryScore:
+          type: integer
+          minimum: 0
+          maximum: 100
+        scoreConfidence:
+          type: number
+          minimum: 0
+          maximum: 1
+        domainRating:
+          anyOf:
+          - type: integer
+            minimum: 0
+            maximum: 100
+          - type: 'null'
+        verificationStatus:
+          type: string
+        operatingStatus:
+          type: string
+        updatedAt:
+          type: string
+          format: date-time
+externalDocs:
+  description: Use the Mydentify public API
+  url: https://mydentify.com/developers
+x-cors:
+  description: Directory JSON endpoints allow browser requests from any origin.
+  allowOrigins:
+  - '*'

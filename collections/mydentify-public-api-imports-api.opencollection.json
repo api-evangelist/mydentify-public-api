@@ -1,0 +1,172 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Mydentify Public Imports API",
+    "version": "1.4.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Imports",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Inspect identity and duplicates without creating a product",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://mydentify.com/api/imports/dry-run",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Inspect identity and duplicates without creating a product"
+        },
+        {
+          "info": {
+            "name": "Create or reuse a durable product diagnostic or product import",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://mydentify.com/api/imports",
+            "headers": [
+              {
+                "name": "Idempotency-Key",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create or reuse a durable product diagnostic or product import"
+        },
+        {
+          "info": {
+            "name": "Get current import state, evidence candidates, warnings, duplicate resolution, and next action",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://mydentify.com/api/imports/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get current import state, evidence candidates, warnings, duplicate resolution, and next action"
+        },
+        {
+          "info": {
+            "name": "Stream durable import events",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://mydentify.com/api/imports/:id/events",
+            "headers": [
+              {
+                "name": "Last-Event-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Stream durable import events"
+        },
+        {
+          "info": {
+            "name": "Queue an allowed retry",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://mydentify.com/api/imports/:id/retry",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Queue an allowed retry"
+        },
+        {
+          "info": {
+            "name": "Preserve a failed import and send it to editorial review",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://mydentify.com/api/imports/:id/manual-review",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Preserve a failed import and send it to editorial review"
+        },
+        {
+          "info": {
+            "name": "Confirm evidence-backed intents and choose the publication path",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://mydentify.com/api/imports/:id/goals",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Free products must publish a followed link to https://mydentify.com/. The link may use text, a custom image, or the optional official badge from https://mydentify.com/badges/listed-on-mydentify.svg. A Player Pass publishes the product and enters the selected leaderboard after checkout or a free offer claim."
+        },
+        {
+          "info": {
+            "name": "Recheck the required free-product backlink and publish when verified",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://mydentify.com/api/imports/:id/verify-badge",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Recheck the required free-product backlink and publish when verified"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

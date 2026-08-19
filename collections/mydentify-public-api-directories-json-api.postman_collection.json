@@ -1,0 +1,99 @@
+{
+  "item": [
+    {
+      "id": "518ad7c7-fab3-4e0a-822b-7e36760a1e6a",
+      "name": "Directories.json",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1c4eef80-42eb-4371-ba7b-1ab203fa3864",
+          "name": "Get the complete public product-directory catalog",
+          "request": {
+            "name": "Get the complete public product-directory catalog",
+            "description": {},
+            "url": {
+              "path": [
+                "directories.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4e68d50f-9d07-4ba3-bbb5-57a9c88173a0",
+              "name": "Directory catalog with collection links and structured records",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "directories.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"type\": {},\n  \"humanUrl\": \"https://aSxj.gbHcVmY8MDB1B23P8QI1yfjAHPKpfKBLXEyQoCKcmFVsu9dK\",\n  \"jsonUrl\": \"http://oOqsFUQsxBQozTcQHJriAFM.tyfcnL+zFaTSRlcRPYT\",\n  \"llmsTextUrl\": \"https://nvZVqlVLzXLZQukzpzUhbwicn.mgdFq9MceKlKPPeC0w02CNQLsl2MkgpPQHgEzAkArGTDR,BpGnk\",\n  \"totalRecords\": 7947,\n  \"records\": [\n    {\n      \"type\": {},\n      \"id\": \"5ce25c65-853d-0306-521d-dc89024197c2\",\n      \"name\": \"string\",\n      \"slug\": \"string\",\n      \"domain\": \"string\",\n      \"websiteUrl\": \"https://JlOxEQJBjPzyUCUpPppdOLQBojGNwdG.gipdTUvrZJAhUYjRwu3,ecjLShoDgLBEjN3HIgpEpCDVKZwxOLzeNlLIOtPCaac1PXDlPesSEERW\",\n      \"canonicalUrl\": \"http://FPxhkwqtVvyMykDhpl.xhKkKNyozeef2oer4YnD7Zb.7Cbd7atCfqi0wGET8FvD,z4q,JcjK+rOI1XIE,4w\",\n      \"jsonUrl\": \"https://xBmGRHvbAzqqEuCMvxqbYjvnmWdZurQak.avb4+5M8tm5FOfFIv9NAh2OOQbipl6+lSjtETQhQ3pDQf,Io.L9OuXddD0\",\n      \"llmsTextUrl\": \"https://sYwNeDypDTdSs.xshqhETKf8zLBV,E\",\n      \"description\": \"string\",\n      \"category\": \"string\",\n      \"pricing\": {\n        \"key_0\": 4826,\n        \"key_1\": true\n      },\n      \"link\": {\n        \"key_0\": true,\n        \"key_1\": 7804,\n        \"key_2\": \"string\"\n      },\n      \"directoryScore\": 56,\n      \"scoreConfidence\": 0.3571719664200941,\n      \"verificationStatus\": \"string\",\n      \"operatingStatus\": \"string\",\n      \"updatedAt\": \"2001-01-04T08:40:04.941Z\",\n      \"submissionUrl\": \"http://XFfPpiHJUVGZivJTycFSA.avzEmQ3QrKX7UC5AdRwvf06zqRzzP7P1HcqVPKJ8-ZWDJ6nk6BAZaY,26qLQu44\",\n      \"domainRating\": 23\n    },\n    {\n      \"type\": {},\n      \"id\": \"dd85353c-7ebf-11db-f088-2e7b753f76d2\",\n      \"name\": \"string\",\n      \"slug\": \"string\",\n      \"domain\": \"string\",\n      \"websiteUrl\": \"https://SeaOVPwiosLIbNAVIBGjNjkqsk.jpguROgqmCD8FLO\",\n      \"canonicalUrl\": \"http://fCTgdDIrJjUwMLLbwJbyddEYP.sduRUC78Hv7S49Wek6Aqpctuu5f,TSL8irVGbw\",\n      \"jsonUrl\": \"https://YaTDPuebMSmrStgDubODVhRddwdnbUN.yzvsvVgKTn3ThaTWftc6teVpD9UFxO71n9RC\",\n      \"llmsTextUrl\": \"http://BaraUHAIVMse.iaX7WmnngG5kCwbOIkKZTud7q\",\n      \"description\": \"string\",\n      \"category\": \"string\",\n      \"pricing\": {\n        \"key_0\": 5207.202365005174\n      },\n      \"link\": {\n        \"key_0\": true,\n        \"key_1\": 1241,\n        \"key_2\": true\n      },\n      \"directoryScore\": 45,\n      \"scoreConfidence\": 0.7408207091442874,\n      \"verificationStatus\": \"string\",\n      \"operatingStatus\": \"string\",\n      \"updatedAt\": \"1982-07-04T15:22:18.408Z\",\n      \"submissionUrl\": \"http://zKFhDhSDTUQlRPAaYgJ.fnfDyErBSFx7pP-OnDINNf.deVqXh9iavZlIWv7,yIOGh1XwGOFzHHI0gEDC\",\n      \"domainRating\": 97\n    }\n  ],\n  \"collections\": [\n    {\n      \"key_0\": \"string\"\n    },\n    {\n      \"key_0\": 4760,\n      \"key_1\": 3330\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://mydentify.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "5b9d9e9b-f4a8-408a-badd-0be55ef120b5",
+    "name": "Mydentify Public Directories.json API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Read product directories and weekly leaderboard data or create a product. Public endpoints use HTTPS and need no API key. Directory JSON endpoints allow browser requests from any origin.",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+openapi: 3.2.0
+info:
+  title: Mydentify Public Directories API
+  version: 1.4.0
+  description: Read product directories and weekly leaderboard data or create a product. Public endpoints use HTTPS and need no API key. Directory JSON endpoints allow browser requests from any origin.
+servers:
+- url: https://mydentify.com
+security: []
+tags:
+- name: Directories
+paths:
+  /api/directories/{slug}/json:
+    get:
+      summary: Get structured data for a directory record, collection, or facet index
+      parameters:
+      - $ref: '#/components/parameters/DirectorySlug'
+      responses:
+        '200':
+          description: Page-specific directory payload
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '404':
+          description: Directory page not found
+      tags:
+      - Directories
+  /directories/{slug}/llms.txt:
+    get:
+      summary: Get the concise Markdown representation of a directory record, collection, or facet index
+      parameters:
+      - $ref: '#/components/parameters/DirectorySlug'
+      responses:
+        '200':
+          description: LLM-readable directory page
+          content:
+            text/markdown:
+              schema:
+                type: string
+        '404':
+          description: Directory page not found
+      tags:
+      - Directories
+components:
+  parameters:
+    DirectorySlug:
+      in: path
+      name: slug
+      required: true
+      schema:
+        type: string
+externalDocs:
+  description: Use the Mydentify public API
+  url: https://mydentify.com/developers
+x-cors:
+  description: Directory JSON endpoints allow browser requests from any origin.
+  allowOrigins:
+  - '*'

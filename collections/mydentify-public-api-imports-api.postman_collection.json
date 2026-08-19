@@ -1,0 +1,1431 @@
+{
+  "item": [
+    {
+      "id": "03adef84-e160-444d-a703-de5c42e2562e",
+      "name": "Imports",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "14726d23-255e-43b5-af40-b079227937a7",
+          "name": "Inspect identity and duplicates without creating a product",
+          "request": {
+            "name": "Inspect identity and duplicates without creating a product",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "imports",
+                "dry-run"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"url\": \"<uri>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "b7ed8b18-0ca5-4274-a7d2-157db782ae37",
+              "name": "Inspection result",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "imports",
+                    "dry-run"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"url\": \"<uri>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"normalizedUrl\": \"http://oWuqrTTBBTrQRrgXX.sdecCv2aOgAHZrvcGCx5D.Rv2eTX4r4C6VJHPI\",\n  \"finalUrl\": \"http://HBC.eiLx+M08ztaycWULfhUMe51HV70hy,K3YL6LMEIlz8i,E6GUI+cbRI4zgic\",\n  \"canonicalUrl\": \"https://tGDjcxBkzNleTwiqtiqLQXoyctjQp.fqdgn,hVggohhHfez2XE5hgdaMrY05p6a9FjYRspoXLX9EM\",\n  \"identity\": {\n    \"key_0\": 9866.6821409254,\n    \"key_1\": 9381.471549815946,\n    \"key_2\": 5097.070277909399,\n    \"key_3\": false\n  },\n  \"discovered\": {\n    \"key_0\": \"string\"\n  },\n  \"nextAction\": {\n    \"key_0\": true\n  },\n  \"duplicate\": {\n    \"classification\": \"renamed_product\",\n    \"matchType\": \"string\",\n    \"confidence\": 0.048202168075014096,\n    \"reason\": \"string\",\n    \"claimed\": false,\n    \"product\": {\n      \"id\": \"d88477a0-3d91-0bb5-469e-2deb73b3d532\",\n      \"name\": \"string\",\n      \"slug\": \"string\",\n      \"status\": \"string\",\n      \"url\": \"https://BbiKg.tzqx-pWFUxsDNCg-K3SPVqQzXicJGpiwISCf,jIuEy8rQAFu-jNOdogK4JMoaiRWoqOO\",\n      \"humanUrl\": \"http://HHjUrZpQcYXOPjsEqRwAnAOXvODkBL.rvewm\",\n      \"jsonUrl\": \"http://aiIRLAsWWQ.hfkfUl4VscWgIE\",\n      \"markdownUrl\": \"http://aQUFvhTiDbkGq.uifsc64Gl.xnWk,BTN.JFCFBDYroQUJJB\"\n    },\n    \"proposedChanges\": [\n      {\n        \"field\": \"string\",\n        \"proposed\": \"\",\n        \"sourceUrl\": \"http://BwhGnasRpdtzPAlFMFESoF.znkYAMFusktJ1,.imEFiXEOuRvZjfMLQmxBn1JcdSOFwfu5SCf,6KdGhOiLkD7ywQuk86\",\n        \"current\": \"\"\n      },\n      {\n        \"field\": \"string\",\n        \"proposed\": \"\",\n        \"sourceUrl\": \"https://Fs.jqoURjI9rm7QPw1rU,S2bPqEv2CKw3ObAWY7uyDDWhkTGdefVzjK6zufdcC\",\n        \"current\": \"\"\n      }\n    ],\n    \"allowedActions\": [\n      {\n        \"type\": \"review_proposed_updates\",\n        \"href\": \"string\"\n      },\n      {\n        \"type\": \"review_proposed_updates\",\n        \"href\": \"string\"\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "49a0454b-ea2c-4f5c-85b0-5222923a88e9",
+              "name": "Structured import error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "imports",
+                    "dry-run"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"url\": \"<uri>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"string\",\n    \"message\": \"string\",\n    \"retryable\": true,\n    \"retryAfter\": \"1997-01-30T22:06:16.682Z\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2d69fec7-2d84-45a5-be1d-2fecccadefdd",
+              "name": "Structured import error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "imports",
+                    "dry-run"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"url\": \"<uri>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Service Unavailable",
+              "code": 503,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"string\",\n    \"message\": \"string\",\n    \"retryable\": true,\n    \"retryAfter\": \"1997-01-30T22:06:16.682Z\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6c1008ff-0b04-4f3b-ab12-ef1a157a6433",
+          "name": "Create or reuse a durable product diagnostic or product import",
+          "request": {
+            "name": "Create or reuse a durable product diagnostic or product import",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "imports"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "Idempotency-Key",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"url\": \"<uri>\",\n  \"mode\": \"listing\",\n  \"requestedIntentSlug\": \"<string>\",\n  \"source\": \"human\",\n  \"submittedByAgent\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "3ff29e13-edf7-462f-995c-2dca27c3d062",
+              "name": "Existing idempotent import",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "imports"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "key": "Idempotency-Key",
+                    "value": "<string>",
+                    "description": ""
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"url\": \"<uri>\",\n  \"mode\": \"listing\",\n  \"requestedIntentSlug\": \"<string>\",\n  \"source\": \"human\",\n  \"submittedByAgent\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "3d2b7194-9e46-4d58-80ae-5b2bf812eef8",
+              "name": "Import queued",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "imports"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "key": "Idempotency-Key",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"url\": \"<uri>\",\n  \"mode\": \"listing\",\n  \"requestedIntentSlug\": \"<string>\",\n  \"source\": \"human\",\n  \"submittedByAgent\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Accepted",
+              "code": 202,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"importId\": \"b0101054-05e3-cdee-4eee-f001010bc1af\",\n  \"status\": \"canceled\",\n  \"statusUrl\": \"http://YgSxoSwVq.feXpHOjPuPcSpfOs-eHxzTuEo\",\n  \"eventsUrl\": \"http://YlpizSumuqLyNAGwfFPAQlBRQIUZ.nqfrfdZVf\",\n  \"submittedAt\": \"1973-02-11T23:25:36.769Z\",\n  \"reused\": true,\n  \"nextAction\": {\n    \"key_0\": 4304.857244269048,\n    \"key_1\": 7712.8342650957975\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5d5a6b3f-41e1-4f1a-8eef-a1a8a3fc761c",
+              "name": "Structured import error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "imports"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "key": "Idempotency-Key",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"url\": \"<uri>\",\n  \"mode\": \"listing\",\n  \"requestedIntentSlug\": \"<string>\",\n  \"source\": \"human\",\n  \"submittedByAgent\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"string\",\n    \"message\": \"string\",\n    \"retryable\": true,\n    \"retryAfter\": \"1997-01-30T22:06:16.682Z\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b7b3e20e-fa9b-43de-aac0-a1cfd368e482",
+          "name": "Get current import state, evidence candidates, warnings, duplicate resolution, and next action",
+          "request": {
+            "name": "Get current import state, evidence candidates, warnings, duplicate resolution, and next action",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "imports",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f84fca16-69ab-4dca-b04e-a78ac1265959",
+              "name": "Current import",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "imports",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"d09f8305-6183-46f7-b43c-062e5ac3ea76\",\n  \"status\": \"running\",\n  \"attemptCount\": 777,\n  \"nextAction\": {\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  },\n  \"stages\": [\n    {\n      \"key_0\": 1812.4881619975263\n    },\n    {\n      \"key_0\": false\n    }\n  ],\n  \"candidates\": [\n    {\n      \"key_0\": 9588.415439668339\n    },\n    {\n      \"key_0\": false\n    }\n  ],\n  \"sourceFetches\": [\n    {\n      \"key_0\": 1201,\n      \"key_1\": \"string\",\n      \"key_2\": false,\n      \"key_3\": false,\n      \"key_4\": false\n    },\n    {\n      \"key_0\": \"string\"\n    }\n  ],\n  \"mode\": \"listing\",\n  \"remediation\": {\n    \"summary\": \"string\",\n    \"actions\": [\n      {\n        \"type\": \"try_another_url\",\n        \"label\": \"string\",\n        \"href\": \"string\",\n        \"retryAfter\": \"2008-12-25T05:09:45.440Z\"\n      },\n      {\n        \"type\": \"retry\",\n        \"label\": \"string\",\n        \"href\": \"string\",\n        \"retryAfter\": \"1963-11-23T20:48:25.884Z\"\n      }\n    ]\n  },\n  \"duplicate\": {\n    \"classification\": \"renamed_product\",\n    \"matchType\": \"string\",\n    \"confidence\": 0.12831339548461773,\n    \"reason\": \"string\",\n    \"claimed\": false,\n    \"product\": {\n      \"id\": \"076e756a-553d-0e5b-81f5-bdcb65809ac0\",\n      \"name\": \"string\",\n      \"slug\": \"string\",\n      \"status\": \"string\",\n      \"url\": \"https://lVgVUXhsMACcHUuwnksheqUtuiFWTI.joELJXkmWLU+0Gn\",\n      \"humanUrl\": \"http://lyvLR.tdyxnr5JkM\",\n      \"jsonUrl\": \"https://ZtOfMVWtHLFogHDcjeugN.uooS2piobpiA0LA,0SuoQZMFN5ObbtX1-u3+z-Z+KxnJSOIwfvC7.7,7V\",\n      \"markdownUrl\": \"http://TRLMLlelsJKVUSVlHYnJWwmsAppqwMRR.qjfknOTYI,UWJ2BlSgRrJSqAqHAOL5aKlKJo\"\n    },\n    \"proposedChanges\": [\n      {\n        \"field\": \"string\",\n        \"proposed\": \"\",\n        \"sourceUrl\": \"https://XFwsmVUaviMRwhKV.rpmjTxXNMsrsNks7QiEp.vbw9Hoo\",\n        \"current\": \"\"\n      },\n      {\n        \"field\": \"string\",\n        \"proposed\": \"\",\n        \"sourceUrl\": \"https://egYdzMOhNfCnkxAtkoHTuuQjgYIReBZA.vhZJ.LxSBJxOQfg0+.G7fiUiqdIi6KWmyJYUF.w+A0uTn+Dd3XX.KJUAkwnALuEB12Xku82yOpm\",\n        \"current\": \"\"\n      }\n    ],\n    \"allowedActions\": [\n      {\n        \"type\": \"view_existing\",\n        \"href\": \"string\"\n      },\n      {\n        \"type\": \"restore_access\",\n        \"href\": \"string\"\n      }\n    ]\n  },\n  \"publication\": {\n    \"productId\": \"d77fa548-f815-114d-2bee-2d0d50e6bacf\",\n    \"humanUrl\": \"https://sXnrZlwQxfylaKXOOQPa.tqDnB2leyFOyk6PY9VHyggdue8e-meeKZ4FLRmy\",\n    \"jsonUrl\": \"http://fZnELkCIVylnnwYbMTxylje.zxcadmkC4rjTG5n8W+7Ae7wR-Pt43ISYNhMzZksHNGqFY,\",\n    \"markdownUrl\": \"https://HOdlEMqUObSgXTOkhxQNj.hhzk1QdvZLwyRVj.An.55wAxSR2ub0QucscTYkx26wgcQeDF\",\n    \"supportedIntents\": [\n      {\n        \"id\": \"b20772a3-845c-18da-8d2a-0b1cf212924f\",\n        \"title\": \"string\",\n        \"slug\": \"string\",\n        \"humanUrl\": \"https://NqcVOtCQnkCpasvSpNIG.ypqJax2OrxUXidrF7ZKkxWrVKK\",\n        \"jsonUrl\": \"https://mMu.siouMod6BwCyBpnNFBgj42gil8c.4APrG6G\",\n        \"markdownUrl\": \"http://eKWfQPbKAfSHA.klylvBpHLRcl-2WTpbJsdJpV+xROrU7FJMu7K2PiqNw1oKfCskCgvASk+a8tmvkAZ,RP\"\n      },\n      {\n        \"id\": \"5f29e1a5-14e4-d19f-923d-3915653e1b14\",\n        \"title\": \"string\",\n        \"slug\": \"string\",\n        \"humanUrl\": \"http://LLuxXnGsNbwfgffjr.prtbJs1zooMirCGWqfrIlYvkFJ0UP\",\n        \"jsonUrl\": \"https://mBYzd.lpZHVjyYjgon8qXltPOgnufN8lzr8qvYrJWlo\",\n        \"markdownUrl\": \"https://OvLqTpwXqKFISpeEpEvfwGZ.hgch2XKTIGQOktBTLtxonXlm.E,O31smTY0Blm-HxPAcx\"\n      }\n    ]\n  },\n  \"rejection\": {\n    \"category\": \"unsupported_or_private_source\",\n    \"message\": \"string\",\n    \"correctionHint\": \"string\",\n    \"publicNote\": \"string\"\n  },\n  \"readinessReport\": {\n    \"rubricVersion\": \"string\",\n    \"status\": \"complete\",\n    \"totalScore\": 42,\n    \"confidence\": 0.5170380245699425,\n    \"summary\": \"string\",\n    \"sourceCount\": 9974,\n    \"scannedAt\": \"1946-11-23T01:00:11.584Z\",\n    \"dimensions\": [\n      {\n        \"key\": \"recommendation_readiness\",\n        \"label\": \"string\",\n        \"score\": 1,\n        \"maxScore\": {},\n        \"summary\": \"string\",\n        \"findings\": [\n          {\n            \"code\": \"string\",\n            \"label\": \"string\",\n            \"status\": \"partial\",\n            \"score\": 1659.693496735979,\n            \"maxScore\": 1464.0829825942492,\n            \"recommendation\": \"string\",\n            \"evidence\": [\n              {\n                \"key_0\": 3289.2817714953726,\n                \"key_1\": 2355\n              },\n              {\n                \"key_0\": 989,\n                \"key_1\": 3296,\n                \"key_2\": \"string\",\n                \"key_3\": \"string\"\n              }\n            ]\n          },\n          {\n            \"code\": \"string\",\n            \"label\": \"string\",\n            \"status\": \"unavailable\",\n            \"score\": 244.18865265330436,\n            \"maxScore\": 3627.829649705718,\n            \"recommendation\": \"string\",\n            \"evidence\": [\n              {\n                \"key_0\": 7028.421090044299,\n                \"key_1\": 3108.5691553267748\n              },\n              {\n                \"key_0\": 1298.0834885527547\n              }\n            ]\n          }\n        ]\n      },\n      {\n        \"key\": \"product_understood\",\n        \"label\": \"string\",\n        \"score\": 5,\n        \"maxScore\": {},\n        \"summary\": \"string\",\n        \"findings\": [\n          {\n            \"code\": \"string\",\n            \"label\": \"string\",\n            \"status\": \"passed\",\n            \"score\": 7855.720251769547,\n            \"maxScore\": 643.4330714802361,\n            \"recommendation\": \"string\",\n            \"evidence\": [\n              {\n                \"key_0\": 2943,\n                \"key_1\": 5419,\n                \"key_2\": \"string\"\n              },\n              {\n                \"key_0\": true,\n                \"key_1\": 4709\n              }\n            ]\n          },\n          {\n            \"code\": \"string\",\n            \"label\": \"string\",\n            \"status\": \"failed\",\n            \"score\": 8673.988930467482,\n            \"maxScore\": 1574.780056890015,\n            \"recommendation\": \"string\",\n            \"evidence\": [\n              {\n                \"key_0\": 5093,\n                \"key_1\": 1273,\n                \"key_2\": 5953,\n                \"key_3\": 9917.105554767284\n              },\n              {\n                \"key_0\": \"string\"\n              }\n            ]\n          }\n        ]\n      },\n      {\n        \"key\": \"agent_accessibility\",\n        \"label\": \"string\",\n        \"score\": 15,\n        \"maxScore\": {},\n        \"summary\": \"string\",\n        \"findings\": [\n          {\n            \"code\": \"string\",\n            \"label\": \"string\",\n            \"status\": \"partial\",\n            \"score\": 2633.7919627019614,\n            \"maxScore\": 9096.749305140596,\n            \"recommendation\": \"string\",\n            \"evidence\": [\n              {\n                \"key_0\": 1566\n              },\n              {\n                \"key_0\": \"string\"\n              }\n            ]\n          },\n          {\n            \"code\": \"string\",\n            \"label\": \"string\",\n            \"status\": \"unavailable\",\n            \"score\": 865.5197055220842,\n            \"maxScore\": 7463.877844719084,\n            \"recommendation\": \"string\",\n            \"evidence\": [\n              {\n                \"key_0\": \"string\",\n                \"key_1\": \"string\",\n                \"key_2\": 1102,\n                \"key_3\": 2708.8119628303452\n              },\n              {\n                \"key_0\": true\n              }\n            ]\n          }\n        ]\n      },\n      {\n        \"key\": \"intent_coverage\",\n        \"label\": \"string\",\n        \"score\": 1,\n        \"maxScore\": {},\n        \"summary\": \"string\",\n        \"findings\": [\n          {\n            \"code\": \"string\",\n            \"label\": \"string\",\n            \"status\": \"failed\",\n            \"score\": 7021.175190282035,\n            \"maxScore\": 8796.32487916231,\n            \"recommendation\": \"string\",\n            \"evidence\": [\n              {\n                \"key_0\": 9906.695283301886\n              },\n              {\n                \"key_0\": \"string\",\n                \"key_1\": 7000.073675393147,\n                \"key_2\": 2530.607479555282\n              }\n            ]\n          },\n          {\n            \"code\": \"string\",\n            \"label\": \"string\",\n            \"status\": \"unavailable\",\n            \"score\": 1181.0557911004782,\n            \"maxScore\": 8227.687334260687,\n            \"recommendation\": \"string\",\n            \"evidence\": [\n              {\n                \"key_0\": 9839.09871088278\n              },\n              {\n                \"key_0\": true\n              }\n            ]\n          }\n        ]\n      },\n      {\n        \"key\": \"evidence_strength\",\n        \"label\": \"string\",\n        \"score\": 8,\n        \"maxScore\": {},\n        \"summary\": \"string\",\n        \"findings\": [\n          {\n            \"code\": \"string\",\n            \"label\": \"string\",\n            \"status\": \"passed\",\n            \"score\": 8810.01264054338,\n            \"maxScore\": 9543.008446458398,\n            \"recommendation\": \"string\",\n            \"evidence\": [\n              {\n                \"key_0\": 2302.554041304977,\n                \"key_1\": 3335,\n                \"key_2\": 3119.4096522344507\n              },\n              {\n                \"key_0\": false,\n                \"key_1\": \"string\"\n              }\n            ]\n          },\n          {\n            \"code\": \"string\",\n            \"label\": \"string\",\n            \"status\": \"not_applicable\",\n            \"score\": 2576.4193063408,\n            \"maxScore\": 2770.0474418408226,\n            \"recommendation\": \"string\",\n            \"evidence\": [\n              {\n                \"key_0\": false,\n                \"key_1\": 2979\n              },\n              {\n                \"key_0\": true\n              }\n            ]\n          }\n        ]\n      }\n    ]\n  },\n  \"warnings\": [\n    {\n      \"key_0\": true,\n      \"key_1\": \"string\"\n    },\n    {\n      \"key_0\": 8537.222146351975\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "44aa0ba6-c7c3-4bb2-ae92-85289dc2b612",
+              "name": "Structured import error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "imports",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"string\",\n    \"message\": \"string\",\n    \"retryable\": true,\n    \"retryAfter\": \"1997-01-30T22:06:16.682Z\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f775a88d-75ca-4532-b794-ef2b3f62ca81",
+          "name": "Stream durable import events",
+          "request": {
+            "name": "Stream durable import events",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "imports",
+                ":id",
+                "events"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "Last-Event-ID",
+                "value": "<integer>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/event-stream"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "33753eec-596e-42d1-8c55-bd189c0883a8",
+              "name": "SSE stream",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "imports",
+                    ":id",
+                    "events"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "key": "Last-Event-ID",
+                    "value": "<integer>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/event-stream"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/event-stream"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b623ad36-bacf-42d3-804f-25e500ab415e",
+          "name": "Queue an allowed retry",
+          "request": {
+            "name": "Queue an allowed retry",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "imports",
+                ":id",
+                "retry"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4283c344-eba1-4cf8-b4f3-da822ed2b47e",
+              "name": "Retry queued",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "imports",
+                    ":id",
+                    "retry"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Accepted",
+              "code": 202,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ad149edc-c03f-446d-a9fd-8f4814c0228a",
+              "name": "Structured import error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "imports",
+                    ":id",
+                    "retry"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"string\",\n    \"message\": \"string\",\n    \"retryable\": true,\n    \"retryAfter\": \"1997-01-30T22:06:16.682Z\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6a015cea-b4ce-4415-9a52-a5e7bb10a8f9",
+              "name": "Structured import error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "imports",
+                    ":id",
+                    "retry"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"string\",\n    \"message\": \"string\",\n    \"retryable\": true,\n    \"retryAfter\": \"1997-01-30T22:06:16.682Z\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e500546f-524c-4114-9c02-6323405ce48f",
+          "name": "Preserve a failed import and send it to editorial review",
+          "request": {
+            "name": "Preserve a failed import and send it to editorial review",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "imports",
+                ":id",
+                "manual-review"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "87d8c5dd-41b4-400c-9e15-ba80c95369f5",
+              "name": "Manual review requested",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "imports",
+                    ":id",
+                    "manual-review"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b3873ede-258a-4ffe-be83-3c63c5cfb221",
+              "name": "Structured import error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "imports",
+                    ":id",
+                    "manual-review"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"string\",\n    \"message\": \"string\",\n    \"retryable\": true,\n    \"retryAfter\": \"1997-01-30T22:06:16.682Z\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "22f5b586-8ae3-4250-a515-e1c08606fbb2",
+              "name": "Structured import error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "imports",
+                    ":id",
+                    "manual-review"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"string\",\n    \"message\": \"string\",\n    \"retryable\": true,\n    \"retryAfter\": \"1997-01-30T22:06:16.682Z\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "15180c88-e071-42e0-81ea-9ab0f6bd92f2",
+          "name": "Confirm evidence-backed intents and choose the publication path",
+          "request": {
+            "name": "Confirm evidence-backed intents and choose the publication path",
+            "description": {
+              "content": "Free products must publish a followed link to https://mydentify.com/. The link may use text, a custom image, or the optional official badge from https://mydentify.com/badges/listed-on-mydentify.svg. A Player Pass publishes the product and enters the selected leaderboard after checkout or a free offer claim.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "imports",
+                ":id",
+                "goals"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"intentIds\": [\n    \"<uuid>\"\n  ],\n  \"path\": \"free\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "5a9c58dd-9756-4fff-9f70-e865e498d4bf",
+              "name": "Intent selection saved and publication path prepared",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "imports",
+                    ":id",
+                    "goals"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"intentIds\": [\n    \"<uuid>\"\n  ],\n  \"path\": \"free\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "05bbdeec-340e-42aa-aee2-695f988aa331",
+              "name": "Structured import error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "imports",
+                    ":id",
+                    "goals"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"intentIds\": [\n    \"<uuid>\"\n  ],\n  \"path\": \"free\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"string\",\n    \"message\": \"string\",\n    \"retryable\": true,\n    \"retryAfter\": \"1997-01-30T22:06:16.682Z\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "fe51bfc6-7f37-41d5-9e2b-f49eeeb7f517",
+              "name": "Structured import error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "imports",
+                    ":id",
+                    "goals"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"intentIds\": [\n    \"<uuid>\"\n  ],\n  \"path\": \"free\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"string\",\n    \"message\": \"string\",\n    \"retryable\": true,\n    \"retryAfter\": \"1997-01-30T22:06:16.682Z\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "57407407-c799-43e6-be8c-14794accffbd",
+          "name": "Recheck the required free-product backlink and publish when verified",
+          "request": {
+            "name": "Recheck the required free-product backlink and publish when verified",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "imports",
+                ":id",
+                "verify-badge"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "adcd8d43-f3be-497b-9586-f8d3eb1c0e4d",
+              "name": "Current backlink verification and publication state",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "imports",
+                    ":id",
+                    "verify-badge"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "055ce272-3a8b-4a5a-9203-22d205d0d23f",
+              "name": "Structured import error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "imports",
+                    ":id",
+                    "verify-badge"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"string\",\n    \"message\": \"string\",\n    \"retryable\": true,\n    \"retryAfter\": \"1997-01-30T22:06:16.682Z\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ad462cc9-3eed-4e21-bd52-2404622e8bd7",
+              "name": "Structured import error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "imports",
+                    ":id",
+                    "verify-badge"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"string\",\n    \"message\": \"string\",\n    \"retryable\": true,\n    \"retryAfter\": \"1997-01-30T22:06:16.682Z\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9cd5405b-a5b0-4704-9209-8d8b921746d8",
+              "name": "Structured import error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "imports",
+                    ":id",
+                    "verify-badge"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"string\",\n    \"message\": \"string\",\n    \"retryable\": true,\n    \"retryAfter\": \"1997-01-30T22:06:16.682Z\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://mydentify.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "21ccf0e9-2795-4db6-a620-ed97e65b2746",
+    "name": "Mydentify Public Imports API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Read product directories and weekly leaderboard data or create a product. Public endpoints use HTTPS and need no API key. Directory JSON endpoints allow browser requests from any origin.",
+      "type": "text/plain"
+    }
+  }
+}

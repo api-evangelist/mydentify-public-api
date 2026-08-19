@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Mydentify Public Leaderboards API",
+    "version": "1.4.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Leaderboards",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get a permanent weekly leaderboard record and its public standings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://mydentify.com/api/leaderboards/:slug/json",
+            "params": [
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a permanent weekly leaderboard record and its public standings"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
