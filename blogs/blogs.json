@@ -1,0 +1,14 @@
+{
+  "repo": "mydentify-public-api",
+  "feeds": [
+    {
+      "source": "https://mydentify.com/articles",
+      "feed_url": "https://mydentify.com/articles/feed.xml",
+      "title": "",
+      "saved": 2,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 2,
+  "fetched": "2026-08-22T20:20:02Z"
+}
