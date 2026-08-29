@@ -10,6 +10,18 @@ description: >-
   unusually complete agent-native discovery surface — an APIs.json index, an RFC 9727 API
   Catalog, site-wide and per-resource llms.txt, an ai.txt usage policy, robots.txt Content
   Signals, and three published agentskills.io skills.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://mydentify.com/favicon.svg
 url: https://raw.githubusercontent.com/api-evangelist/mydentify-public-api/refs/heads/main/apis.yml
 created: '2026-07-27'
