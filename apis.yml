@@ -147,6 +147,8 @@ apis:
   humanURL: https://mydentify.com/developers
   baseURL: https://mydentify.com
   tags:
+  - Import
+  tags_raw:
   - Imports
   properties:
   - type: OpenAPI
