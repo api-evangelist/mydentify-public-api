@@ -34,6 +34,8 @@ paths:
                       $ref: '#/components/schemas/ProductCategory'
       tags:
       - Product Categories.json
+      operationId: getProductCategoriesJson
+      x-operation-id-source: derived
 components:
   schemas:
     ProductCategory:

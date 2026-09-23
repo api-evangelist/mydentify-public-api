@@ -37,6 +37,8 @@ paths:
           $ref: '#/components/responses/ImportError'
       tags:
       - Imports
+      operationId: postApiImportsDryRun
+      x-operation-id-source: derived
   /api/imports:
     post:
       summary: Create or reuse a durable product diagnostic or product import
@@ -67,9 +69,11 @@ paths:
           $ref: '#/components/responses/ImportError'
       tags:
       - Imports
+      operationId: postApiImports
+      x-operation-id-source: derived
   /api/imports/{id}:
     get:
-      summary: Get current import state, evidence candidates, warnings, duplicate resolution, and next action
+      summary: Get current import state, evidence candidates, warnings, duplicate resolution…
       parameters:
       - $ref: '#/components/parameters/ImportId'
       responses:
@@ -83,6 +87,8 @@ paths:
           $ref: '#/components/responses/ImportError'
       tags:
       - Imports
+      operationId: getApiImportsById
+      x-operation-id-source: derived
   /api/imports/{id}/events:
     get:
       summary: Stream durable import events
@@ -99,6 +105,8 @@ paths:
             text/event-stream: {}
       tags:
       - Imports
+      operationId: getApiImportsByIdEvents
+      x-operation-id-source: derived
   /api/imports/{id}/retry:
     post:
       summary: Queue an allowed retry
@@ -113,6 +121,8 @@ paths:
           $ref: '#/components/responses/ImportError'
       tags:
       - Imports
+      operationId: postApiImportsByIdRetry
+      x-operation-id-source: derived
   /api/imports/{id}/manual-review:
     post:
       summary: Preserve a failed import and send it to editorial review
@@ -127,6 +137,8 @@ paths:
           $ref: '#/components/responses/ImportError'
       tags:
       - Imports
+      operationId: postApiImportsByIdManualReview
+      x-operation-id-source: derived
   /api/imports/{id}/goals:
     post:
       summary: Confirm evidence-backed intents and choose the publication path
@@ -165,6 +177,8 @@ paths:
           $ref: '#/components/responses/ImportError'
       tags:
       - Imports
+      operationId: postApiImportsByIdGoals
+      x-operation-id-source: derived
   /api/imports/{id}/verify-badge:
     post:
       summary: Recheck the required free-product backlink and publish when verified
@@ -181,6 +195,8 @@ paths:
           $ref: '#/components/responses/ImportError'
       tags:
       - Imports
+      operationId: postApiImportsByIdVerifyBadge
+      x-operation-id-source: derived
 components:
   schemas:
     DuplicateResolution:
@@ -251,6 +267,110 @@ components:
                 - review_proposed_updates
               href:
                 type: string
+    Rejection:
+      type: object
+      required:
+      - category
+      - message
+      - correctionHint
+      - publicNote
+      properties:
+        category:
+          type: string
+          enum:
+          - identity_unclear
+          - insufficient_public_evidence
+          - unsupported_or_private_source
+          - duplicate_listing
+          - inaccurate_claims
+          - unsafe_or_prohibited
+        message:
+          type: string
+        correctionHint:
+          type: string
+        publicNote:
+          type: string
+    Publication:
+      type: object
+      required:
+      - productId
+      - humanUrl
+      - jsonUrl
+      - markdownUrl
+      - supportedIntents
+      properties:
+        productId:
+          type: string
+          format: uuid
+        humanUrl:
+          type: string
+          format: uri
+        jsonUrl:
+          type: string
+          format: uri
+        markdownUrl:
+          type: string
+          format: uri
+        supportedIntents:
+          type: array
+          items:
+            type: object
+            required:
+            - id
+            - title
+            - slug
+            - humanUrl
+            - jsonUrl
+            - markdownUrl
+            properties:
+              id:
+                type: string
+                format: uuid
+              title:
+                type: string
+              slug:
+                type: string
+              humanUrl:
+                type: string
+                format: uri
+              jsonUrl:
+                type: string
+                format: uri
+              markdownUrl:
+                type: string
+                format: uri
+    DryRunResult:
+      type: object
+      required:
+      - normalizedUrl
+      - finalUrl
+      - canonicalUrl
+      - identity
+      - discovered
+      - nextAction
+      properties:
+        normalizedUrl:
+          type: string
+          format: uri
+        finalUrl:
+          type: string
+          format: uri
+        canonicalUrl:
+          type: string
+          format: uri
+        identity:
+          type: object
+          additionalProperties: true
+        duplicate:
+          anyOf:
+          - $ref: '#/components/schemas/DuplicateResolution'
+          - type: 'null'
+        discovered:
+          type: object
+          additionalProperties: true
+        nextAction:
+          type: object
+          additionalProperties: true
     Remediation:
       type: object
       required:
@@ -282,6 +402,27 @@ components:
               retryAfter:
                 type: string
                 format: date-time
+    Error:
+      type: object
+      required:
+      - error
+      properties:
+        error:
+          type: object
+          required:
+          - code
+          - message
+          - retryable
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+            retryable:
+              type: boolean
+            retryAfter:
+              type: string
+              format: date-time
     ImportStatus:
       type: object
       required:
@@ -361,6 +502,64 @@ components:
           items:
             type: object
             additionalProperties: true
+    ImportRequest:
+      type: object
+      required:
+      - url
+      properties:
+        url:
+          type: string
+          format: uri
+        mode:
+          type: string
+          enum:
+          - diagnostic
+          - listing
+          default: listing
+        requestedIntentSlug:
+          type: string
+        source:
+          type: string
+          enum:
+          - human
+          - agent
+          default: human
+        submittedByAgent:
+          type: string
+          maxLength: 120
+    CanonicalProduct:
+      type: object
+      required:
+      - id
+      - name
+      - slug
+      - status
+      - url
+      - humanUrl
+      - jsonUrl
+      - markdownUrl
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        slug:
+          type: string
+        status:
+          type: string
+        url:
+          type: string
+          format: uri
+        humanUrl:
+          type: string
+          format: uri
+        jsonUrl:
+          type: string
+          format: uri
+        markdownUrl:
+          type: string
+          format: uri
     ImportAccepted:
       type: object
       required:
@@ -403,87 +602,6 @@ components:
         nextAction:
           type: object
           additionalProperties: true
-    CanonicalProduct:
-      type: object
-      required:
-      - id
-      - name
-      - slug
-      - status
-      - url
-      - humanUrl
-      - jsonUrl
-      - markdownUrl
-      properties:
-        id:
-          type: string
-          format: uuid
-        name:
-          type: string
-        slug:
-          type: string
-        status:
-          type: string
-        url:
-          type: string
-          format: uri
-        humanUrl:
-          type: string
-          format: uri
-        jsonUrl:
-          type: string
-          format: uri
-        markdownUrl:
-          type: string
-          format: uri
-    Rejection:
-      type: object
-      required:
-      - category
-      - message
-      - correctionHint
-      - publicNote
-      properties:
-        category:
-          type: string
-          enum:
-          - identity_unclear
-          - insufficient_public_evidence
-          - unsupported_or_private_source
-          - duplicate_listing
-          - inaccurate_claims
-          - unsafe_or_prohibited
-        message:
-          type: string
-        correctionHint:
-          type: string
-        publicNote:
-          type: string
-    ImportRequest:
-      type: object
-      required:
-      - url
-      properties:
-        url:
-          type: string
-          format: uri
-        mode:
-          type: string
-          enum:
-          - diagnostic
-          - listing
-          default: listing
-        requestedIntentSlug:
-          type: string
-        source:
-          type: string
-          enum:
-          - human
-          - agent
-          default: human
-        submittedByAgent:
-          type: string
-          maxLength: 120
     ReadinessReport:
       type: object
       required:
@@ -589,108 +707,13 @@ components:
                       items:
                         type: object
                         additionalProperties: true
-    DryRunResult:
-      type: object
-      required:
-      - normalizedUrl
-      - finalUrl
-      - canonicalUrl
-      - identity
-      - discovered
-      - nextAction
-      properties:
-        normalizedUrl:
-          type: string
-          format: uri
-        finalUrl:
-          type: string
-          format: uri
-        canonicalUrl:
-          type: string
-          format: uri
-        identity:
-          type: object
-          additionalProperties: true
-        duplicate:
-          anyOf:
-          - $ref: '#/components/schemas/DuplicateResolution'
-          - type: 'null'
-        discovered:
-          type: object
-          additionalProperties: true
-        nextAction:
-          type: object
-          additionalProperties: true
-    Publication:
-      type: object
-      required:
-      - productId
-      - humanUrl
-      - jsonUrl
-      - markdownUrl
-      - supportedIntents
-      properties:
-        productId:
-          type: string
-          format: uuid
-        humanUrl:
-          type: string
-          format: uri
-        jsonUrl:
-          type: string
-          format: uri
-        markdownUrl:
-          type: string
-          format: uri
-        supportedIntents:
-          type: array
-          items:
-            type: object
-            required:
-            - id
-            - title
-            - slug
-            - humanUrl
-            - jsonUrl
-            - markdownUrl
-            properties:
-              id:
-                type: string
-                format: uuid
-              title:
-                type: string
-              slug:
-                type: string
-              humanUrl:
-                type: string
-                format: uri
-              jsonUrl:
-                type: string
-                format: uri
-              markdownUrl:
-                type: string
-                format: uri
-    Error:
-      type: object
-      required:
-      - error
-      properties:
-        error:
-          type: object
-          required:
-          - code
-          - message
-          - retryable
-          properties:
-            code:
-              type: string
-            message:
-              type: string
-            retryable:
-              type: boolean
-            retryAfter:
-              type: string
-              format: date-time
+  responses:
+    ImportError:
+      description: Structured import error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
   parameters:
     ImportId:
       in: path
@@ -699,13 +722,6 @@ components:
       schema:
         type: string
         format: uuid
-  responses:
-    ImportError:
-      description: Structured import error
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
 externalDocs:
   description: Use the Mydentify public API
   url: https://mydentify.com/developers

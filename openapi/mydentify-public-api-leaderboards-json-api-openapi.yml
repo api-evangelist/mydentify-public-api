@@ -22,6 +22,8 @@ paths:
                 additionalProperties: true
       tags:
       - Leaderboards.json
+      operationId: getLeaderboardsJson
+      x-operation-id-source: derived
 externalDocs:
   description: Use the Mydentify public API
   url: https://mydentify.com/developers

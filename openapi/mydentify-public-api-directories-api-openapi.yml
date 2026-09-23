@@ -26,9 +26,11 @@ paths:
           description: Directory page not found
       tags:
       - Directories
+      operationId: getApiDirectoriesBySlugJson
+      x-operation-id-source: derived
   /directories/{slug}/llms.txt:
     get:
-      summary: Get the concise Markdown representation of a directory record, collection, or facet index
+      summary: Get the concise Markdown representation of a directory record, collection, or…
       parameters:
       - $ref: '#/components/parameters/DirectorySlug'
       responses:
@@ -42,6 +44,8 @@ paths:
           description: Directory page not found
       tags:
       - Directories
+      operationId: getDirectoriesBySlugLlmsTxt
+      x-operation-id-source: derived
 components:
   parameters:
     DirectorySlug:

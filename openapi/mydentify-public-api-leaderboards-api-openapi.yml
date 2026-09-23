@@ -26,6 +26,8 @@ paths:
           description: Leaderboard not found
       tags:
       - Leaderboards
+      operationId: getApiLeaderboardsBySlugJson
+      x-operation-id-source: derived
 components:
   parameters:
     LeaderboardSlug:

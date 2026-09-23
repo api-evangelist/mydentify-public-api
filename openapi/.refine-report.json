@@ -1,12 +1,7 @@
 {
   "provider": "mydentify-public-api",
   "sources": [
-    "mydentify-public-api-directories-api-openapi.yml",
-    "mydentify-public-api-directories-json-api-openapi.yml",
-    "mydentify-public-api-imports-api-openapi.yml",
-    "mydentify-public-api-leaderboards-api-openapi.yml",
-    "mydentify-public-api-leaderboards-json-api-openapi.yml",
-    "mydentify-public-api-product-categories-json-api-openapi.yml"
+    "_original/mydentify-public-api-openapi-original.json"
   ],
   "outputs": [
     "mydentify-public-api-directories-api-openapi.yml",
@@ -20,13 +15,36 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "mydentify-public-api-directories-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "mydentify-public-api-directories-json-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "mydentify-public-api-imports-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "mydentify-public-api-leaderboards-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "mydentify-public-api-leaderboards-json-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "mydentify-public-api-product-categories-json-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "mydentify-public-api-openapi-original.json: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "mydentify-public-api-openapi-original.json: tagged paths GET /leaderboards.json -> Leaderboards.json",
+    "mydentify-public-api-openapi-original.json: tagged paths GET /api/leaderboards/{slug}/json -> Leaderboards",
+    "mydentify-public-api-openapi-original.json: tagged paths GET /directories.json -> Directories.json",
+    "mydentify-public-api-openapi-original.json: tagged paths GET /product-categories.json -> Product Categories.json",
+    "mydentify-public-api-openapi-original.json: tagged paths GET /api/directories/{slug}/json -> Directories",
+    "mydentify-public-api-openapi-original.json: tagged paths GET /directories/{slug}/llms.txt -> Directories",
+    "mydentify-public-api-openapi-original.json: tagged paths POST /api/imports/dry-run -> Imports",
+    "mydentify-public-api-openapi-original.json: tagged paths POST /api/imports -> Imports",
+    "mydentify-public-api-openapi-original.json: tagged paths GET /api/imports/{id} -> Imports",
+    "mydentify-public-api-openapi-original.json: tagged paths GET /api/imports/{id}/events -> Imports",
+    "mydentify-public-api-openapi-original.json: tagged paths POST /api/imports/{id}/retry -> Imports",
+    "mydentify-public-api-openapi-original.json: tagged paths POST /api/imports/{id}/manual-review -> Imports",
+    "mydentify-public-api-openapi-original.json: tagged paths POST /api/imports/{id}/goals -> Imports",
+    "mydentify-public-api-openapi-original.json: tagged paths POST /api/imports/{id}/verify-badge -> Imports",
+    "mydentify-public-api-openapi-original.json: declared missing tag: Directories",
+    "mydentify-public-api-openapi-original.json: declared missing tag: Directories.json",
+    "mydentify-public-api-openapi-original.json: declared missing tag: Imports",
+    "mydentify-public-api-openapi-original.json: declared missing tag: Leaderboards",
+    "mydentify-public-api-openapi-original.json: declared missing tag: Leaderboards.json",
+    "mydentify-public-api-openapi-original.json: declared missing tag: Product Categories.json",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "mydentify-public-api-directories-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mydentify-public-api-directories-json-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mydentify-public-api-imports-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mydentify-public-api-leaderboards-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mydentify-public-api-leaderboards-json-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mydentify-public-api-product-categories-json-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

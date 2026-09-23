@@ -51,6 +51,8 @@ paths:
                       $ref: '#/components/schemas/DirectoryRecord'
       tags:
       - Directories.json
+      operationId: getDirectoriesJson
+      x-operation-id-source: derived
 components:
   schemas:
     DirectoryRecord:
