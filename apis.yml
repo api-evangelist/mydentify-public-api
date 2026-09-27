@@ -48,7 +48,7 @@ tags:
   - Research
   - Software-as-a-Service
   - Developer Tools
-  - agent-native
+  - Agent-Native
   - llms-txt
   - Agent Skills
   - Directories
@@ -68,7 +68,6 @@ apis:
   name: Mydentify Public API Directories API
   description: The Directories API from Mydentify Public API — 2 operation(s) for directories.
   humanURL: https://mydentify.com/developers
-  baseURL: https://mydentify.com
   tags:
   - Directories
   properties:
@@ -107,7 +106,6 @@ apis:
   description: >-
     The Directories.json API from Mydentify Public API — 1 operation(s) for directories.json.
   humanURL: https://mydentify.com/developers
-  baseURL: https://mydentify.com
   tags:
   - Directories.json
   properties:
@@ -145,7 +143,6 @@ apis:
   name: Mydentify Public API Imports API
   description: The Imports API from Mydentify Public API — 8 operation(s) for imports.
   humanURL: https://mydentify.com/developers
-  baseURL: https://mydentify.com
   tags:
   - Import
   tags_raw:
@@ -185,7 +182,6 @@ apis:
   name: Mydentify Public API Leaderboards API
   description: The Leaderboards API from Mydentify Public API — 1 operation(s) for leaderboards.
   humanURL: https://mydentify.com/developers
-  baseURL: https://mydentify.com
   tags:
   - Leaderboards
   properties:
@@ -224,7 +220,6 @@ apis:
   description: >-
     The Leaderboards.json API from Mydentify Public API — 1 operation(s) for leaderboards.json.
   humanURL: https://mydentify.com/developers
-  baseURL: https://mydentify.com
   tags:
   - Leaderboards.json
   properties:
@@ -263,7 +258,6 @@ apis:
   description: >-
     The Product Categories.json API from Mydentify Public API — 1 operation(s) for product categories.json.
   humanURL: https://mydentify.com/developers
-  baseURL: https://mydentify.com
   tags:
   - Product Categories.json
   properties:
