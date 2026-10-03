@@ -199,39 +199,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    CanonicalProduct:
-      type: object
-      required:
-      - id
-      - name
-      - slug
-      - status
-      - url
-      - humanUrl
-      - jsonUrl
-      - markdownUrl
-      properties:
-        id:
-          type: string
-          format: uuid
-        name:
-          type: string
-        slug:
-          type: string
-        status:
-          type: string
-        url:
-          type: string
-          format: uri
-        humanUrl:
-          type: string
-          format: uri
-        jsonUrl:
-          type: string
-          format: uri
-        markdownUrl:
-          type: string
-          format: uri
     ReadinessReport:
       type: object
       required:
@@ -337,59 +304,37 @@ components:
                       items:
                         type: object
                         additionalProperties: true
-    Error:
+    Remediation:
       type: object
       required:
-      - error
+      - summary
+      - actions
       properties:
-        error:
-          type: object
-          required:
-          - code
-          - message
-          - retryable
-          properties:
-            code:
-              type: string
-            message:
-              type: string
-            retryable:
-              type: boolean
-            retryAfter:
-              type: string
-              format: date-time
-    DryRunResult:
-      type: object
-      required:
-      - normalizedUrl
-      - finalUrl
-      - canonicalUrl
-      - identity
-      - discovered
-      - nextAction
-      properties:
-        normalizedUrl:
+        summary:
           type: string
-          format: uri
-        finalUrl:
-          type: string
-          format: uri
-        canonicalUrl:
-          type: string
-          format: uri
-        identity:
-          type: object
-          additionalProperties: true
-        duplicate:
-          anyOf:
-          - $ref: '#/components/schemas/DuplicateResolution'
-          - type: 'null'
-        discovered:
-          type: object
-          additionalProperties: true
-        nextAction:
-          type: object
-          additionalProperties: true
+        actions:
+          type: array
+          items:
+            type: object
+            required:
+            - type
+            - label
+            - href
+            properties:
+              type:
+                type: string
+                enum:
+                - retry
+                - retry_after
+                - try_another_url
+                - manual_review
+              label:
+                type: string
+              href:
+                type: string
+              retryAfter:
+                type: string
+                format: date-time
     Rejection:
       type: object
       required:
@@ -413,74 +358,39 @@ components:
           type: string
         publicNote:
           type: string
-    DuplicateResolution:
+    CanonicalProduct:
       type: object
       required:
-      - classification
-      - matchType
-      - confidence
-      - reason
-      - claimed
-      - product
-      - proposedChanges
-      - allowedActions
+      - id
+      - name
+      - slug
+      - status
+      - url
+      - humanUrl
+      - jsonUrl
+      - markdownUrl
       properties:
-        classification:
+        id:
           type: string
-          enum:
-          - exact_duplicate
-          - probable_duplicate
-          - renamed_product
-        matchType:
+          format: uuid
+        name:
           type: string
-          examples:
-          - exact_url
-          - known_url
-          - external_github
-          - domain_and_name
-        confidence:
-          type: number
-          minimum: 0
-          maximum: 1
-        reason:
+        slug:
           type: string
-        claimed:
-          type: boolean
-        product:
-          $ref: '#/components/schemas/CanonicalProduct'
-        proposedChanges:
-          type: array
-          items:
-            type: object
-            required:
-            - field
-            - proposed
-            - sourceUrl
-            properties:
-              field:
-                type: string
-              current: {}
-              proposed: {}
-              sourceUrl:
-                type: string
-                format: uri
-        allowedActions:
-          type: array
-          items:
-            type: object
-            required:
-            - type
-            - href
-            properties:
-              type:
-                type: string
-                enum:
-                - view_existing
-                - claim_product
-                - restore_access
-                - review_proposed_updates
-              href:
-                type: string
+        status:
+          type: string
+        url:
+          type: string
+          format: uri
+        humanUrl:
+          type: string
+          format: uri
+        jsonUrl:
+          type: string
+          format: uri
+        markdownUrl:
+          type: string
+          format: uri
     ImportStatus:
       type: object
       required:
@@ -560,37 +470,6 @@ components:
           items:
             type: object
             additionalProperties: true
-    Remediation:
-      type: object
-      required:
-      - summary
-      - actions
-      properties:
-        summary:
-          type: string
-        actions:
-          type: array
-          items:
-            type: object
-            required:
-            - type
-            - label
-            - href
-            properties:
-              type:
-                type: string
-                enum:
-                - retry
-                - retry_after
-                - try_another_url
-                - manual_review
-              label:
-                type: string
-              href:
-                type: string
-              retryAfter:
-                type: string
-                format: date-time
     Publication:
       type: object
       required:
@@ -707,13 +586,127 @@ components:
         submittedByAgent:
           type: string
           maxLength: 120
-  responses:
-    ImportError:
-      description: Structured import error
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
+    Error:
+      type: object
+      required:
+      - error
+      properties:
+        error:
+          type: object
+          required:
+          - code
+          - message
+          - retryable
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+            retryable:
+              type: boolean
+            retryAfter:
+              type: string
+              format: date-time
+    DuplicateResolution:
+      type: object
+      required:
+      - classification
+      - matchType
+      - confidence
+      - reason
+      - claimed
+      - product
+      - proposedChanges
+      - allowedActions
+      properties:
+        classification:
+          type: string
+          enum:
+          - exact_duplicate
+          - probable_duplicate
+          - renamed_product
+        matchType:
+          type: string
+          examples:
+          - exact_url
+          - known_url
+          - external_github
+          - domain_and_name
+        confidence:
+          type: number
+          minimum: 0
+          maximum: 1
+        reason:
+          type: string
+        claimed:
+          type: boolean
+        product:
+          $ref: '#/components/schemas/CanonicalProduct'
+        proposedChanges:
+          type: array
+          items:
+            type: object
+            required:
+            - field
+            - proposed
+            - sourceUrl
+            properties:
+              field:
+                type: string
+              current: {}
+              proposed: {}
+              sourceUrl:
+                type: string
+                format: uri
+        allowedActions:
+          type: array
+          items:
+            type: object
+            required:
+            - type
+            - href
+            properties:
+              type:
+                type: string
+                enum:
+                - view_existing
+                - claim_product
+                - restore_access
+                - review_proposed_updates
+              href:
+                type: string
+    DryRunResult:
+      type: object
+      required:
+      - normalizedUrl
+      - finalUrl
+      - canonicalUrl
+      - identity
+      - discovered
+      - nextAction
+      properties:
+        normalizedUrl:
+          type: string
+          format: uri
+        finalUrl:
+          type: string
+          format: uri
+        canonicalUrl:
+          type: string
+          format: uri
+        identity:
+          type: object
+          additionalProperties: true
+        duplicate:
+          anyOf:
+          - $ref: '#/components/schemas/DuplicateResolution'
+          - type: 'null'
+        discovered:
+          type: object
+          additionalProperties: true
+        nextAction:
+          type: object
+          additionalProperties: true
   parameters:
     ImportId:
       in: path
@@ -722,6 +715,13 @@ components:
       schema:
         type: string
         format: uuid
+  responses:
+    ImportError:
+      description: Structured import error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
 externalDocs:
   description: Use the Mydentify public API
   url: https://mydentify.com/developers
