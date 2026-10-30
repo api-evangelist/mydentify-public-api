@@ -1,4 +1,4 @@
-# Mydentify Public API (mydentify-public-api)
+# Mydentify Public API
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,244 +66,136 @@
 
 Public, keyless REST API for Mydentify — a permanent product directory with weekly community-signaled product leaderboards. The OpenAPI 3.1 contract covers intent-based product discovery, the curated startup/SaaS/AI directory catalog with Directory Score and link-type metadata, a portable product-category taxonomy mapped to G2/Capterra/Product Hunt, and a diagnostic-first product submission workflow: a non-destructive dry run, an idempotency-keyed durable import with a resumable SSE event stream, an AI-readiness rubric report, duplicate resolution, editorial manual review and backlink-verified publication. Mydentify also ships an unusually complete agent-native discovery surface — an APIs.json index, an RFC 9727 API Catalog, site-wide and per-resource llms.txt, an ai.txt usage policy, robots.txt Content Signals, and three published agentskills.io skills.
 
-**APIs.json:** [https://mydentify-public-api.apievangelist.com/apis.yml](https://mydentify-public-api.apievangelist.com/apis.yml)
+**Areas:** Product Discovery · startup directories · Leaderboards · Research · Software-as-a-Service · Developer Tools · Agent-Native · llms-txt · Agent Skills · Directories
 
-## Tags
+## Mydentify Public API on APIs.io
 
-- product discovery
-- startup directories
-- leaderboards
-- research
-- SaaS
-- developer tools
-- agent-native
-- llms.txt
-- agent skills
-- directories
+Everything profiled for Mydentify Public API is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/mydentify-public-api/](https://apis.io/providers/mydentify-public-api/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (6)
 
-- **Created:** 2026-07-27
-- **Modified:** 2026-08-09
+- [Mydentify Public API Directories API](https://apis.io/apis/mydentify-public-api/mydentify-public-api-directories-api/) — The Directories API from Mydentify Public API — 2 operation(s) for directories.
+- [Mydentify Public API Directories.json API](https://apis.io/apis/mydentify-public-api/mydentify-public-api-directories-json-api/) — The Directories.json API from Mydentify Public API — 1 operation(s) for directories.json.
+- [Mydentify Public API Imports API](https://apis.io/apis/mydentify-public-api/mydentify-public-api-imports-api/) — The Imports API from Mydentify Public API — 8 operation(s) for imports.
+- [Mydentify Public API Leaderboards API](https://apis.io/apis/mydentify-public-api/mydentify-public-api-leaderboards-api/) — The Leaderboards API from Mydentify Public API — 1 operation(s) for leaderboards.
+- [Mydentify Public API Leaderboards.json API](https://apis.io/apis/mydentify-public-api/mydentify-public-api-leaderboards-json-api/) — The Leaderboards.json API from Mydentify Public API — 1 operation(s) for leaderboards.json.
+- [Mydentify Public API Product Categories.json API](https://apis.io/apis/mydentify-public-api/mydentify-public-api-product-categories-json-api/) — The Product Categories.json API from Mydentify Public API — 1 operation(s) for product categories.json.
 
-## APIs
+### Published properties
 
-### Mydentify Public API Directories API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-The Directories API from Mydentify Public API — 2 operation(s) for directories.
+#### MCP servers (1)
 
-- **Human URL:** [https://mydentify.com/developers](https://mydentify.com/developers)
-- **Base URL:** `https://mydentify.com`
+Model Context Protocol servers that expose the API to agents.
 
-#### Tags
+- [mydentify](https://apis.io/servers/mydentify-public-api/mydentify/)
 
-- Directories
+#### Agentic access (1)
 
-#### Properties
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- [OpenAPI](openapi/mydentify-public-api-directories-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/mydentify-public-api-directories-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/mydentify-public-api-directories-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Examples](examples/_index.yml)
-- [Documentation](https://mydentify.com/submit.md)
-- [Getting Started](https://mydentify.com/submit.md)
-- [Developer Portal](https://mydentify.com/developers)
-- [L L Ms Txt](llms/mydentify-public-api-llms.txt)
-- [Tool Crosswalk](mcp/mydentify-public-api-tool-crosswalk.yml)
-- [Authentication](authentication/mydentify-public-api-authentication.yml)
-- [Conventions](conventions/mydentify-public-api-conventions.yml)
-- [Idempotency](conventions/mydentify-public-api-conventions.yml)
-- [Error Catalog](errors/mydentify-public-api-problem-types.yml)
-- [Data Model](data-model/mydentify-public-api-data-model.yml)
-- [Lifecycle](lifecycle/mydentify-public-api-lifecycle.yml)
-- [Sandbox](sandbox/mydentify-public-api-sandbox.yml)
-- [Conformance](conformance/mydentify-public-api-conformance.yml)
+- [Mydentify Public Api Agentic Access](https://apis.io/agentic-access/mydentify-public-api/mydentify-public-api-agentic-access/)
 
-### Mydentify Public API Directories.json API
+#### Examples (4)
 
-The Directories.json API from Mydentify Public API — 1 operation(s) for directories.json.
+Example requests and responses.
 
-- **Human URL:** [https://mydentify.com/developers](https://mydentify.com/developers)
-- **Base URL:** `https://mydentify.com`
+- [Mydentify Public Api Directories Response](https://apis.io/examples/mydentify-public-api/mydentify-public-api-directories-response/)
+- [Mydentify Public Api Health Response](https://apis.io/examples/mydentify-public-api/mydentify-public-api-health-response/)
+- [Mydentify Public Api Imports Dry Run Response](https://apis.io/examples/mydentify-public-api/mydentify-public-api-imports-dry-run-response/)
+- [Mydentify Public Api Product Categories Response](https://apis.io/examples/mydentify-public-api/mydentify-public-api-product-categories-response/)
 
-#### Tags
+#### Collections (6)
 
-- Directories.json
+Postman and Open Collection request collections.
 
-#### Properties
+- [Mydentify Public Directories API](https://apis.io/collections/mydentify-public-api/open-mydentify-public-api-directories-api/)
+- [Mydentify Public Directories.json API](https://apis.io/collections/mydentify-public-api/open-mydentify-public-api-directories-json-api/)
+- [Mydentify Public Imports API](https://apis.io/collections/mydentify-public-api/open-mydentify-public-api-imports-api/)
+- [Mydentify Public Leaderboards API](https://apis.io/collections/mydentify-public-api/open-mydentify-public-api-leaderboards-api/)
+- [Mydentify Public Leaderboards.json API](https://apis.io/collections/mydentify-public-api/open-mydentify-public-api-leaderboards-json-api/)
+- [Mydentify Public Product Categories.json API](https://apis.io/collections/mydentify-public-api/open-mydentify-public-api-product-categories-json-api/)
 
-- [OpenAPI](openapi/mydentify-public-api-directories-json-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/mydentify-public-api-directories-json-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/mydentify-public-api-directories-json-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Examples](examples/_index.yml)
-- [Documentation](https://mydentify.com/submit.md)
-- [Getting Started](https://mydentify.com/submit.md)
-- [Developer Portal](https://mydentify.com/developers)
-- [L L Ms Txt](llms/mydentify-public-api-llms.txt)
-- [Tool Crosswalk](mcp/mydentify-public-api-tool-crosswalk.yml)
-- [Authentication](authentication/mydentify-public-api-authentication.yml)
-- [Conventions](conventions/mydentify-public-api-conventions.yml)
-- [Idempotency](conventions/mydentify-public-api-conventions.yml)
-- [Error Catalog](errors/mydentify-public-api-problem-types.yml)
-- [Data Model](data-model/mydentify-public-api-data-model.yml)
-- [Lifecycle](lifecycle/mydentify-public-api-lifecycle.yml)
-- [Sandbox](sandbox/mydentify-public-api-sandbox.yml)
-- [Conformance](conformance/mydentify-public-api-conformance.yml)
+#### Overlays (1)
 
-### Mydentify Public API Imports API
+OpenAPI overlays, including conversational phrasing for each operation.
 
-The Imports API from Mydentify Public API — 8 operation(s) for imports.
+- [Mydentify Public Api Overlay](https://apis.io/overlays/mydentify-public-api/mydentify-public-api-overlay/)
 
-- **Human URL:** [https://mydentify.com/developers](https://mydentify.com/developers)
-- **Base URL:** `https://mydentify.com`
+#### Security (2)
 
-#### Tags
+Authentication, trust centre, and vulnerability disclosure.
 
-- Imports
+- [Mydentify Public Api Authentication](https://apis.io/security/mydentify-public-api/mydentify-public-api-authentication/)
+- [Mydentify Public Api Domain Security](https://apis.io/security/mydentify-public-api/mydentify-public-api-domain-security/)
 
-#### Properties
+## Where to find this API
 
-- [OpenAPI](openapi/mydentify-public-api-imports-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/mydentify-public-api-imports-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/mydentify-public-api-imports-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Examples](examples/_index.yml)
-- [Documentation](https://mydentify.com/submit.md)
-- [Getting Started](https://mydentify.com/submit.md)
-- [Developer Portal](https://mydentify.com/developers)
-- [L L Ms Txt](llms/mydentify-public-api-llms.txt)
-- [Tool Crosswalk](mcp/mydentify-public-api-tool-crosswalk.yml)
-- [Authentication](authentication/mydentify-public-api-authentication.yml)
-- [Conventions](conventions/mydentify-public-api-conventions.yml)
-- [Idempotency](conventions/mydentify-public-api-conventions.yml)
-- [Error Catalog](errors/mydentify-public-api-problem-types.yml)
-- [Data Model](data-model/mydentify-public-api-data-model.yml)
-- [Lifecycle](lifecycle/mydentify-public-api-lifecycle.yml)
-- [Sandbox](sandbox/mydentify-public-api-sandbox.yml)
-- [Conformance](conformance/mydentify-public-api-conformance.yml)
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-### Mydentify Public API Leaderboards API
-
-The Leaderboards API from Mydentify Public API — 1 operation(s) for leaderboards.
-
-- **Human URL:** [https://mydentify.com/developers](https://mydentify.com/developers)
-- **Base URL:** `https://mydentify.com`
-
-#### Tags
-
-- Leaderboards
-
-#### Properties
-
-- [OpenAPI](openapi/mydentify-public-api-leaderboards-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/mydentify-public-api-leaderboards-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/mydentify-public-api-leaderboards-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Examples](examples/_index.yml)
-- [Documentation](https://mydentify.com/submit.md)
-- [Getting Started](https://mydentify.com/submit.md)
-- [Developer Portal](https://mydentify.com/developers)
-- [L L Ms Txt](llms/mydentify-public-api-llms.txt)
-- [Tool Crosswalk](mcp/mydentify-public-api-tool-crosswalk.yml)
-- [Authentication](authentication/mydentify-public-api-authentication.yml)
-- [Conventions](conventions/mydentify-public-api-conventions.yml)
-- [Idempotency](conventions/mydentify-public-api-conventions.yml)
-- [Error Catalog](errors/mydentify-public-api-problem-types.yml)
-- [Data Model](data-model/mydentify-public-api-data-model.yml)
-- [Lifecycle](lifecycle/mydentify-public-api-lifecycle.yml)
-- [Sandbox](sandbox/mydentify-public-api-sandbox.yml)
-- [Conformance](conformance/mydentify-public-api-conformance.yml)
-
-### Mydentify Public API Leaderboards.json API
-
-The Leaderboards.json API from Mydentify Public API — 1 operation(s) for leaderboards.json.
-
-- **Human URL:** [https://mydentify.com/developers](https://mydentify.com/developers)
-- **Base URL:** `https://mydentify.com`
-
-#### Tags
-
-- Leaderboards.json
-
-#### Properties
-
-- [OpenAPI](openapi/mydentify-public-api-leaderboards-json-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/mydentify-public-api-leaderboards-json-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/mydentify-public-api-leaderboards-json-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Examples](examples/_index.yml)
-- [Documentation](https://mydentify.com/submit.md)
-- [Getting Started](https://mydentify.com/submit.md)
-- [Developer Portal](https://mydentify.com/developers)
-- [L L Ms Txt](llms/mydentify-public-api-llms.txt)
-- [Tool Crosswalk](mcp/mydentify-public-api-tool-crosswalk.yml)
-- [Authentication](authentication/mydentify-public-api-authentication.yml)
-- [Conventions](conventions/mydentify-public-api-conventions.yml)
-- [Idempotency](conventions/mydentify-public-api-conventions.yml)
-- [Error Catalog](errors/mydentify-public-api-problem-types.yml)
-- [Data Model](data-model/mydentify-public-api-data-model.yml)
-- [Lifecycle](lifecycle/mydentify-public-api-lifecycle.yml)
-- [Sandbox](sandbox/mydentify-public-api-sandbox.yml)
-- [Conformance](conformance/mydentify-public-api-conformance.yml)
-
-### Mydentify Public API Product Categories.json API
-
-The Product Categories.json API from Mydentify Public API — 1 operation(s) for product categories.json.
-
-- **Human URL:** [https://mydentify.com/developers](https://mydentify.com/developers)
-- **Base URL:** `https://mydentify.com`
-
-#### Tags
-
-- Product Categories.json
-
-#### Properties
-
-- [OpenAPI](openapi/mydentify-public-api-product-categories-json-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/mydentify-public-api-product-categories-json-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/mydentify-public-api-product-categories-json-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Examples](examples/_index.yml)
-- [Documentation](https://mydentify.com/submit.md)
-- [Getting Started](https://mydentify.com/submit.md)
-- [Developer Portal](https://mydentify.com/developers)
-- [L L Ms Txt](llms/mydentify-public-api-llms.txt)
-- [Tool Crosswalk](mcp/mydentify-public-api-tool-crosswalk.yml)
-- [Authentication](authentication/mydentify-public-api-authentication.yml)
-- [Conventions](conventions/mydentify-public-api-conventions.yml)
-- [Idempotency](conventions/mydentify-public-api-conventions.yml)
-- [Error Catalog](errors/mydentify-public-api-problem-types.yml)
-- [Data Model](data-model/mydentify-public-api-data-model.yml)
-- [Lifecycle](lifecycle/mydentify-public-api-lifecycle.yml)
-- [Sandbox](sandbox/mydentify-public-api-sandbox.yml)
-- [Conformance](conformance/mydentify-public-api-conformance.yml)
-
-## Common Properties
-
-- [M C P Server](mcp/mydentify-public-api-mcp.yml)
-- [Overlay](overlays/mydentify-public-api-overlay.yaml)
-- [Agentic Access](agentic-access/mydentify-public-api-agentic-access.yml)
-- [Domain Security](security/mydentify-public-api-domain-security.yml)
 - [Website](https://mydentify.com)
-- [Developer Portal](https://mydentify.com/developers)
 - [Documentation](https://mydentify.com/submit.md)
-- [Getting Started](https://mydentify.com/submit.md)
-- [Status Page](https://mydentify.com/api/health)
+- [Getting started](https://mydentify.com/submit.md)
 - [Pricing](https://mydentify.com/pricing)
-- [Sign Up](https://mydentify.com/join)
-- [Terms of Service](https://mydentify.com/terms)
-- [Privacy Policy](https://mydentify.com/privacy)
-- [Support](mailto:hello@mydentify.com)
+- [Sign up](https://mydentify.com/join)
 - [Blog](https://mydentify.com/articles)
-- [Blog Feeds](https://mydentify.com/articles/feed.xml)
-- [GitHub Organization](https://github.com/mitdralla)
-- [Well Known](well-known/mydentify-public-api-well-known.yml)
-- [A P I Catalog](well-known/mydentify-public-api-api-catalog.json)
-- [Content Signal](https://mydentify.com/robots.txt)
-- [Acceptable Use Policy](well-known/mydentify-public-api-ai.txt)
-- [A P Is Json](https://mydentify.com/apis.json)
-- [Agent Skill](skills/_index.yml)
-- [Lifecycle](lifecycle/mydentify-public-api-lifecycle.yml)
-- [Conformance](conformance/mydentify-public-api-conformance.yml)
+- [Terms of service](https://mydentify.com/terms)
+- [Privacy policy](https://mydentify.com/privacy)
+- [GitHub](https://github.com/mitdralla)
+- [Status](https://mydentify.com/api/health)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Mydentify
-**Email:** hello@mydentify.com
-**URL:** https://mydentify.com/about
+**Kin Score 41.7** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 43.4 |
+| Contract governance | 4.5 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 64.3 |
+| Access clarity | 44.7 |
+
+**Agent readiness 34.5** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | verified |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | yes |
+| Well Known Catalog | yes |
+| Consent Identity | yes |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | — |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/mydentify-public-api/](https://apis.io/providers/mydentify-public-api/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Mydentify Public API: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/mydentify-public-api/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
