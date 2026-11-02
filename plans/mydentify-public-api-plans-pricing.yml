@@ -1,0 +1,126 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-28'
+method: searched
+source: https://mydentify.com/pricing
+sources:
+- https://mydentify.com/pricing
+provenance:
+  tool: engine/economics/harvest_pricing.py
+  run: 20261028T161713
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: tiered-subscription
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-28'
+published: true
+note: Pricing page for product listings and sponsorships on a directory site; no API usage pricing stated
+  despite a 'Public API' link in the footer.
+plan_count: 6
+currency: USD
+plans:
+- name: Free
+  price_text: $0 forever
+  price: 0
+  currency: USD
+  period: none
+  unit: product listing
+  included_quota: Verified backlink required; reviewed product page; 1 evidence-supported solution; up
+    to 3 product images; agent-readable JSON and Markdown profile
+- name: Enhanced page
+  price_text: $19 one time / product
+  price: 19
+  currency: USD
+  period: one-time
+  unit: product
+  included_quota: Permanent reviewed product page, no backlink required, up to 3 images, up to 3 supported
+    solutions, leaderboard entry
+- name: Sponsor Leaderboard
+  price_text: $29/mo
+  price: 29
+  currency: USD
+  period: month
+  unit: sponsorship
+  included_quota: Appear after the top three on weekly boards
+  overage: Add to a rail for $10/mo more
+- name: Sponsor Category
+  price_text: From $29/mo
+  price: 29
+  currency: USD
+  period: month
+  unit: category placement
+  included_quota: Distinct top placement on a product category
+  overage: Price can vary by category
+- name: Feature a use case
+  price_text: $29/mo
+  price: 29
+  currency: USD
+  period: month
+  unit: solution page placement
+  included_quota: One labeled featured product on one solution page
+- name: Sponsor Site Rails
+  price_text: From $15/mo
+  price: 15
+  currency: USD
+  period: month
+  unit: rail slot
+  included_quota: Left or right rail slot on high-traffic pages, 1-month rounds
+  overage: Price rises as more slots fill
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - free
+  - hybrid
+  - subscription
+  units: []
+  plans:
+  - name: Free
+    access: other
+    model: free
+    model_how: derived
+    units:
+    - other
+    periods:
+    - none
+  - name: Enhanced page
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - one-time
+  - name: Sponsor Leaderboard
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: Sponsor Category
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: Feature a use case
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: Sponsor Site Rails
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
