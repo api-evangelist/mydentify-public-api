@@ -77,10 +77,13 @@ artifacts:
   front-door-ai/2026-09-17.yml:
     method: unknown
     evidence: no authorship recorded
+  heartbeat/2026-11-02.yml:
+    method: unknown
+    evidence: no authorship recorded
   kin/checks-2026-10-23T222754.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  kin/checks-2026-10-31T095417.yml:
+  kin/checks-2026-11-02T082323.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-23T000603.yml:
@@ -137,6 +140,15 @@ artifacts:
   kin/score-2026-10-31T095417.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-11-01T171331.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-11-01T200237.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-11-02T082323.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
   lifecycle/mydentify-public-api-lifecycle.yml:
     method: searched
     evidence: declared in the artifact
@@ -173,12 +185,18 @@ artifacts:
   overlays/mydentify-public-api-overlay.yaml:
     method: derived
     evidence: an API Evangelist overlay (title) over the provider's contract
+  patterns/mydentify-public-api-patterns.yml:
+    method: derived
+    evidence: declared in the artifact
   plans/mydentify-public-api-plans-pricing.yml:
     method: searched
     evidence: declared in the artifact
   plans/mydentify-public-api-price-estimates.yml:
     method: unknown
     evidence: no authorship recorded
+  rules/mydentify-public-api-rules.yml:
+    method: generated
+    evidence: declared in the artifact
   sandbox/mydentify-public-api-sandbox.yml:
     method: searched
     evidence: declared in the artifact
@@ -200,6 +218,9 @@ artifacts:
   skills/mydentify-public-api-submit-to-mydentify.md:
     method: unknown
     evidence: no authorship recorded
+  sla/mydentify-public-api-sla.yml:
+    method: generated
+    evidence: declared in the artifact
   well-known/mydentify-public-api-agent-skills-index.json:
     method: unknown
     evidence: no authorship recorded
