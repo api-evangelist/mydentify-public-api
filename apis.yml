@@ -38,7 +38,7 @@ accessModel:
   - authentication
   - security
   - sandbox
-  generated: '2026-11-06'
+  generated: '2026-11-13'
   method: derived
 image: https://mydentify.com/favicon.svg
 url: https://raw.githubusercontent.com/api-evangelist/mydentify-public-api/refs/heads/main/apis.yml
@@ -358,6 +358,14 @@ common:
   url: lifecycle/mydentify-public-api-lifecycle.yml
 - type: Conformance
   url: conformance/mydentify-public-api-conformance.yml
+- type: UsageTerms
+  url: terms/mydentify-public-api-terms-of-service.yml
+- type: DataProcessing
+  url: privacy/mydentify-public-api-privacy-policy.yml
+- type: Eligibility
+  url: eligibility/mydentify-public-api-eligibility.yml
+- type: AIPreferences
+  url: ai-preferences/mydentify-public-api-ai-preferences.yml
 x-enrichment:
   date: '2026-08-09'
   status: enriched

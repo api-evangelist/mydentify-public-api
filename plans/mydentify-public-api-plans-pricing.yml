@@ -68,7 +68,7 @@ plans:
   included_quota: Left or right rail slot on high-traffic pages, 1-month rounds
   overage: Price rises as more slots fill
 x-canonical:
-  generated: '2026-11-06'
+  generated: '2026-11-13'
   vocabulary: engine/economics/plans-canonical.yml
   models:
   - free
